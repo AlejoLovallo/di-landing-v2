@@ -1,0 +1,28 @@
+const stats = [
+  { value: "5", label: "Marcas propias" },
+  { value: "100%", label: "Producción artesanal" },
+  { value: "Arg", label: "Origen e identidad" },
+  { value: "∞", label: "Pasión por el oficio" },
+]
+
+export function Marquee() {
+  return (
+    <section className="border-y border-border bg-card">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-border lg:grid-cols-4">
+        {stats.map((stat) => (
+          <div
+            key={stat.label}
+            className="flex flex-col items-center gap-2 px-4 py-10 text-center [&:nth-child(3)]:border-t [&:nth-child(4)]:border-t lg:[&:nth-child(n)]:border-t-0"
+          >
+            <span className="font-heading text-4xl font-bold text-primary">
+              {stat.value}
+            </span>
+            <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+              {stat.label}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
