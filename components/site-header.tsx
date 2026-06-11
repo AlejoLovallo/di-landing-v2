@@ -28,12 +28,19 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
-        <a href="#inicio" className="flex flex-col leading-none">
-          <span className="font-heading text-lg font-bold tracking-tight text-foreground">
-            Destilería
-          </span>
-          <span className="text-[0.7rem] uppercase tracking-[0.35em] text-primary">
-            Independencia
+        <a href="#inicio" className="flex items-center gap-3 leading-none">
+          <img
+            src="/logo-di-white.png"
+            alt="Destilería Independencia"
+            className="h-12 w-12 object-contain"
+          />
+          <span className="flex flex-col">
+            <span className="font-heading text-lg font-bold tracking-tight text-foreground">
+              Destilería
+            </span>
+            <span className="text-[0.7rem] uppercase tracking-[0.35em] text-primary">
+              Independencia
+            </span>
           </span>
         </a>
 
