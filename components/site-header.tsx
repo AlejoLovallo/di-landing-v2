@@ -1,18 +1,54 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
 
-const navLinks = [
-  { label: "Marcas", href: "#marcas" },
-  { label: "Destilería", href: "#destileria" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Contacto", href: "#contacto" },
-]
+import { useTranslation } from "@/components/language-provider"
+import { Button } from "@/components/ui/button"
+import { images } from "@/lib/images"
+import type { Locale } from "@/lib/i18n"
+import { cn } from "@/lib/utils"
+
+function LanguageToggle() {
+  const { locale, setLocale, t } = useTranslation()
+
+  const toggle = (nextLocale: Locale) => {
+    setLocale(nextLocale)
+  }
+
+  return (
+    <div className="flex items-center gap-1 border border-border">
+      {(["es", "en"] as const).map((code) => (
+        <button
+          key={code}
+          type="button"
+          onClick={() => toggle(code)}
+          className={cn(
+            "px-2.5 py-1.5 text-xs uppercase tracking-widest transition-colors",
+            locale === code
+              ? "bg-primary text-primary-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+          aria-pressed={locale === code}
+        >
+          {t.language[code]}
+        </button>
+      ))}
+    </div>
+  )
+}
 
 export function SiteHeader() {
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const navLinks = [
+    { label: t.nav.brands, href: "#marcas" },
+    { label: t.nav.distillery, href: "#destileria" },
+    { label: t.nav.aboutUs, href: "#nosotros" },
+    { label: t.nav.process, href: "#proceso" },
+    { label: t.nav.contact, href: "#contacto" },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -24,13 +60,15 @@ export function SiteHeader() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
+        scrolled
+          ? "border-b border-border bg-background/90 backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
         <a href="#inicio" className="flex items-center gap-3 leading-none">
           <img
-            src="/logo-di-white.png"
+            src={images.logos.diWhite}
             alt="Destilería Independencia"
             className="h-12 w-12 object-contain"
           />
@@ -56,28 +94,36 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageToggle />
           <Button
             nativeButton={false}
             render={
-              <a href="https://capitangin.mitiendanube.com/" target="_blank" rel="noreferrer" />
+              <a
+                href="https://capitangin.mitiendanube.com/"
+                target="_blank"
+                rel="noreferrer"
+              />
             }
             className="rounded-none bg-primary px-4 text-primary-foreground hover:bg-primary/90"
           >
-            Tienda
+            {t.nav.shop}
           </Button>
         </div>
 
-        <button
-          className="flex flex-col gap-1.5 md:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Abrir menú"
-          aria-expanded={open}
-        >
-          <span className="h-0.5 w-6 bg-foreground" />
-          <span className="h-0.5 w-6 bg-foreground" />
-          <span className="h-0.5 w-6 bg-foreground" />
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageToggle />
+          <button
+            className="flex flex-col gap-1.5"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={t.nav.openMenu}
+            aria-expanded={open}
+          >
+            <span className="h-0.5 w-6 bg-foreground" />
+            <span className="h-0.5 w-6 bg-foreground" />
+            <span className="h-0.5 w-6 bg-foreground" />
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -99,7 +145,7 @@ export function SiteHeader() {
               rel="noreferrer"
               className="py-3 text-sm uppercase tracking-widest text-primary"
             >
-              Tienda
+              {t.nav.shop}
             </a>
           </nav>
         </div>
