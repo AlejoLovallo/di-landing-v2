@@ -3,7 +3,8 @@ export const images = {
     still: "/di/distillery-still.jpg",
     detail: "/di/distillery-detail.jpg",
     gauge: "/di/distillery-gauge.jpg",
-    team: "/di/team.jpeg",
+    team: "/team.jpeg",
+    us: "/us.jpg",
   },
   logos: {
     diWhite: "/logos/logo-di-white.png",
@@ -13,7 +14,8 @@ export const images = {
   brands: {
     capitan: "/brands/capitan/capitan-gin.png",
     capitanEtiquetaNegra: "/brands/capitan/capitan-etiqueta-negra.png",
-    etheryo: "/brands/etheryo/gin-etheryo.png",
+    etheryo: "/brands/etheryo/etheryo.png",
+    refuerzo: "/brands/refuerzo/refuerzo.png",
     plazaGrillos: "/brands/pdg/plaza-grillos-wine.png",
   },
 } as const

@@ -5,6 +5,7 @@ import { useState } from "react"
 import { ContactModal } from "@/components/contact-modal"
 import { useTranslation } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/contact"
 import { images } from "@/lib/images"
 
 export function CtaContact() {
@@ -38,13 +39,28 @@ export function CtaContact() {
           <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {t.contact.description}
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
             <Button
               size="lg"
               onClick={() => setModalOpen(true)}
               className="rounded-none bg-primary px-8 text-primary-foreground hover:bg-primary/90"
             >
               {t.contact.writeUs}
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              nativeButton={false}
+              render={
+                <a
+                  href={getWhatsAppUrl(t.contact.whatsappMessage)}
+                  target="_blank"
+                  rel="noreferrer"
+                />
+              }
+              className="rounded-none border-[#25D366]/50 bg-transparent px-8 text-foreground hover:border-[#25D366] hover:bg-[#25D366]/10"
+            >
+              {t.contact.whatsapp}
             </Button>
             <Button
               size="lg"

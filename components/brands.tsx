@@ -7,6 +7,7 @@ import { images } from "@/lib/images"
 const brandMeta = [
   {
     image: images.brands.capitan,
+    secondaryImage: images.brands.capitanEtiquetaNegra,
     instagram: "https://www.instagram.com/capitanginarg/",
     shop: "https://capitangin.mitiendanube.com/",
     featured: true,
@@ -16,7 +17,7 @@ const brandMeta = [
     instagram: "https://www.instagram.com/ginetheryo/",
   },
   {
-    image: images.di.gauge,
+    image: images.brands.refuerzo,
     instagram: "https://www.instagram.com/elrefuerzoginvermu/",
   },
   {
@@ -60,13 +61,34 @@ export function Brands() {
                     meta.featured ? "md:w-1/2" : ""
                   }`}
                 >
-                  <img
-                    src={meta.image}
-                    alt={brand.imageAlt}
-                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
-                      meta.featured ? "h-full min-h-72" : "h-64"
-                    }`}
-                  />
+                  {meta.secondaryImage ? (
+                    <div
+                      className={`grid h-full ${
+                        meta.featured
+                          ? "min-h-72 grid-cols-1 sm:grid-cols-2"
+                          : "grid-cols-1"
+                      }`}
+                    >
+                      <img
+                        src={meta.image}
+                        alt={brand.imageAlt}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:min-h-72"
+                      />
+                      <img
+                        src={meta.secondaryImage}
+                        alt={brand.secondaryImageAlt ?? brand.imageAlt}
+                        className="h-full w-full border-t border-border object-cover transition-transform duration-700 group-hover:scale-105 sm:min-h-72 sm:border-t-0 sm:border-l"
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={meta.image}
+                      alt={brand.imageAlt}
+                      className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                        meta.featured ? "h-full min-h-72" : "h-64"
+                      }`}
+                    />
+                  )}
                 </div>
                 <div
                   className={`flex flex-1 flex-col p-8 ${

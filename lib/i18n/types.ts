@@ -41,6 +41,7 @@ export type Dictionary = {
       category: string
       description: string
       imageAlt: string
+      secondaryImageAlt?: string
     }>
   }
   distillery: {
@@ -69,8 +70,10 @@ export type Dictionary = {
     title: string
     description: string
     writeUs: string
+    whatsapp: string
     followInstagram: string
     imageAlt: string
+    whatsappMessage: string
     modal: {
       title: string
       description: string

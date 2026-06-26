@@ -39,7 +39,7 @@ export function Nosotros() {
 
         <div className="relative order-1 lg:order-2">
           <img
-            src={images.di.team}
+            src={images.di.us}
             alt={t.aboutUs.imageAlt}
             className="h-full w-full border border-border object-cover"
           />

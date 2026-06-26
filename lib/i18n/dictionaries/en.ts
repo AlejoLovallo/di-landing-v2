@@ -40,10 +40,11 @@ export const en: Dictionary = {
     items: [
       {
         name: "Capitán Gin",
-        category: "London Dry · Black Label",
+        category: "London Dry",
         description:
           "Our premium Argentine gin. A balanced, aromatic London Dry with prominent juniper and a clean finish. The Black Label adds an intense infusion for bolder palates.",
-        imageAlt: "Capitán Gin bottle",
+        imageAlt: "Capitán Gin London Dry bottle",
+        secondaryImageAlt: "Capitán Gin Black Label bottle",
       },
       {
         name: "Gin Etheryo",
@@ -57,7 +58,7 @@ export const en: Dictionary = {
         category: "Gin Vermouth",
         description:
           "The perfect union of gin and vermouth. Bitter, herbal and citrus notes that pay homage to the Argentine aperitif tradition.",
-        imageAlt: "Copper still at Destilería Independencia",
+        imageAlt: "El Refuerzo Gin Vermú bottle",
       },
       {
         name: "Plaza de Grillos",
@@ -147,8 +148,11 @@ export const en: Dictionary = {
     description:
       "We work with shops, bars and lovers of fine spirits. Write to us about distribution, events or special orders.",
     writeUs: "Write to us",
+    whatsapp: "Message us on WhatsApp",
     followInstagram: "Follow on Instagram",
     imageAlt: "Copper still thermometer at Destilería Independencia",
+    whatsappMessage:
+      "Hi Destilería Independencia, I'd like to ask about your products.",
     modal: {
       title: "Contact us",
       description: "Fill out the form and we'll get back to you shortly.",

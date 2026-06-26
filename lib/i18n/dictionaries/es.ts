@@ -40,10 +40,11 @@ export const es: Dictionary = {
     items: [
       {
         name: "Capitán Gin",
-        category: "London Dry · Etiqueta Negra",
+        category: "London Dry",
         description:
           "Nuestro gin premium argentino. Un London Dry equilibrado y aromático, con un enebro protagonista y un final limpio. La Etiqueta Negra suma una infusión intensa para los paladares más audaces.",
-        imageAlt: "Botella de Capitán Gin",
+        imageAlt: "Botella de Capitán Gin London Dry",
+        secondaryImageAlt: "Botella de Capitán Gin Etiqueta Negra",
       },
       {
         name: "Gin Etheryo",
@@ -57,7 +58,7 @@ export const es: Dictionary = {
         category: "Gin Vermú",
         description:
           "La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.",
-        imageAlt: "Alambique en la Destilería Independencia",
+        imageAlt: "Botella de El Refuerzo Gin Vermú",
       },
       {
         name: "Plaza de Grillos",
@@ -147,8 +148,11 @@ export const es: Dictionary = {
     description:
       "Trabajamos con comercios, bares y amantes de los buenos destilados. Escribinos y conversemos sobre distribución, eventos o pedidos especiales.",
     writeUs: "Escribinos",
+    whatsapp: "Escribinos por WhatsApp",
     followInstagram: "Seguinos en Instagram",
     imageAlt: "Termómetro del alambique de cobre de la Destilería Independencia",
+    whatsappMessage:
+      "Hola Destilería Independencia, me gustaría consultar sobre sus productos.",
     modal: {
       title: "Contactanos",
       description:
