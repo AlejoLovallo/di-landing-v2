@@ -1,0 +1,36 @@
+{
+  "name": "Destilería Independencia",
+  "description": "Sitio oficial de Destilería Independencia S.R.L. Sin API A2A; ver /llms.txt para índice de contenido y /llms-full.txt para documentación completa.",
+  "url": "https://destileriaindependencia.com",
+  "version": "1.0.0",
+  "protocolVersion": "0.3.0",
+  "documentationUrl": "https://destileriaindependencia.com/llms-full.txt",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "provider": {
+    "organization": "Destilería Independencia S.R.L.",
+    "url": "https://destileriaindependencia.com"
+  },
+  "skills": [
+    {
+      "id": "brand-information",
+      "name": "Información de marcas",
+      "description": "Responde preguntas sobre Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú y Plaza de Grillos usando el contenido público del sitio.",
+      "tags": ["spirits", "gin", "wine", "argentina"],
+      "inputModes": ["text/plain"],
+      "outputModes": ["text/plain"]
+    },
+    {
+      "id": "commercial-contact",
+      "name": "Contacto comercial",
+      "description": "Orienta a usuarios hacia el formulario de contacto, email hola@destileriaindependencia.com o WhatsApp +54 11 2295-2023 para distribución, eventos y prensa.",
+      "tags": ["contact", "distribution", "wholesale"],
+      "inputModes": ["text/plain"],
+      "outputModes": ["text/plain"]
+    }
+  ]
+}
