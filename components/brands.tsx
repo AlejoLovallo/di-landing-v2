@@ -1,129 +1,140 @@
+"use client"
+
+import { useTranslation } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
+import { images } from "@/lib/images"
 
-type Brand = {
-  name: string
-  category: string
-  image: string
-  description: string
-  instagram: string
-  shop?: string
-  featured?: boolean
-}
-
-const brands: Brand[] = [
+const brandMeta = [
   {
-    name: "Capitán Gin",
-    category: "London Dry · Etiqueta Negra",
-    image: "/capitan-gin.png",
-    description:
-      "Nuestro gin premium argentino. Un London Dry equilibrado y aromático, con un enebro protagonista y un final limpio. La Etiqueta Negra suma una infusión intensa para los paladares más audaces.",
+    image: images.brands.capitan,
+    secondaryImage: images.brands.capitanEtiquetaNegra,
     instagram: "https://www.instagram.com/capitanginarg/",
     shop: "https://capitangin.mitiendanube.com/",
     featured: true,
   },
   {
-    name: "Gin Etheryo",
-    category: "Gin botánico",
-    image: "/placeholder.svg?height=600&width=600",
-    description:
-      "Un gin de inspiración botánica, fresco y floral, pensado para quienes buscan una experiencia más delicada y contemporánea en cada trago.",
+    image: images.brands.etheryo,
     instagram: "https://www.instagram.com/ginetheryo/",
   },
   {
-    name: "El Refuerzo Gin Vermú",
-    category: "Gin Vermú",
-    image: "/placeholder.svg?height=600&width=600",
-    description:
-      "La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.",
+    image: images.brands.refuerzo,
     instagram: "https://www.instagram.com/elrefuerzoginvermu/",
   },
   {
-    name: "Plaza de Grillos",
-    category: "Bodega · Valle de Uco",
-    image: "/plaza-grillos-wine.png",
-    description:
-      "Vinos elegantes y sofisticados del Valle de Uco, Mendoza. Malbecs y blends con gran potencial de guarda, hechos para conversar.",
+    image: images.brands.plazaGrillos,
     instagram: "https://www.instagram.com/plazadegrillos/",
     shop: "https://plazadegrillos.com/",
   },
 ]
 
 export function Brands() {
+  const { t } = useTranslation()
+
   return (
     <section id="marcas" className="bg-background py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 max-w-2xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-primary">
             <span className="h-px w-10 bg-primary" />
-            Nuestras marcas
+            {t.brands.label}
           </p>
           <h2 className="font-heading text-4xl font-bold text-balance text-foreground lg:text-5xl">
-            Una familia de espíritus con identidad
+            {t.brands.title}
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Bajo el sello de Destilería Independencia conviven marcas que
-            comparten el mismo compromiso: producir con honestidad, creatividad
-            y un profundo respeto por el origen.
+            {t.brands.description}
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {brands.map((brand) => (
-            <article
-              key={brand.name}
-              className={`group flex flex-col overflow-hidden border border-border bg-card transition-colors hover:border-primary/60 ${
-                brand.featured ? "md:col-span-2 md:flex-row" : ""
-              }`}
-            >
-              <div
-                className={`relative overflow-hidden bg-secondary ${
-                  brand.featured ? "md:w-1/2" : ""
+          {t.brands.items.map((brand, index) => {
+            const meta = brandMeta[index]
+            return (
+              <article
+                key={brand.name}
+                className={`group flex flex-col overflow-hidden border border-border bg-card transition-colors hover:border-primary/60 ${
+                  meta.featured ? "md:col-span-2 md:flex-row" : ""
                 }`}
               >
-                <img
-                  src={brand.image || "/placeholder.svg"}
-                  alt={`Botella de ${brand.name}`}
-                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
-                    brand.featured ? "h-full min-h-72" : "h-64"
+                <div
+                  className={`relative overflow-hidden bg-secondary ${
+                    meta.featured ? "md:w-1/2" : ""
                   }`}
-                />
-              </div>
-              <div
-                className={`flex flex-1 flex-col p-8 ${
-                  brand.featured ? "justify-center md:p-12" : ""
-                }`}
-              >
-                <span className="text-xs uppercase tracking-[0.25em] text-primary">
-                  {brand.category}
-                </span>
-                <h3 className="mt-3 font-heading text-2xl font-bold text-foreground lg:text-3xl">
-                  {brand.name}
-                </h3>
-                <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-                  {brand.description}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  {brand.shop && (
-                    <Button
-                      nativeButton={false}
-                      render={<a href={brand.shop} target="_blank" rel="noreferrer" />}
-                      className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  {meta.secondaryImage ? (
+                    <div
+                      className={`grid h-full ${
+                        meta.featured
+                          ? "min-h-72 grid-cols-1 sm:grid-cols-2"
+                          : "grid-cols-1"
+                      }`}
                     >
-                      Comprar online
-                    </Button>
+                      <img
+                        src={meta.image}
+                        alt={brand.imageAlt}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:min-h-72"
+                      />
+                      <img
+                        src={meta.secondaryImage}
+                        alt={brand.secondaryImageAlt ?? brand.imageAlt}
+                        className="h-full w-full border-t border-border object-cover transition-transform duration-700 group-hover:scale-105 sm:min-h-72 sm:border-t-0 sm:border-l"
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={meta.image}
+                      alt={brand.imageAlt}
+                      className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                        meta.featured ? "h-full min-h-72" : "h-64"
+                      }`}
+                    />
                   )}
-                  <Button
-                    variant="outline"
-                    nativeButton={false}
-                    render={<a href={brand.instagram} target="_blank" rel="noreferrer" />}
-                    className="rounded-none border-border bg-transparent text-foreground hover:bg-foreground/10"
-                  >
-                    Ver en Instagram
-                  </Button>
                 </div>
-              </div>
-            </article>
-          ))}
+                <div
+                  className={`flex flex-1 flex-col p-8 ${
+                    meta.featured ? "justify-center md:p-12" : ""
+                  }`}
+                >
+                  <span className="text-xs uppercase tracking-[0.25em] text-primary">
+                    {brand.category}
+                  </span>
+                  <h3 className="mt-3 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+                    {brand.name}
+                  </h3>
+                  <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                    {brand.description}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {meta.shop && (
+                      <Button
+                        nativeButton={false}
+                        render={
+                          <a href={meta.shop} target="_blank" rel="noreferrer" />
+                        }
+                        className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
+                      >
+                        {t.brands.buyOnline}
+                      </Button>
+                    )}
+                    <Button
+                      variant="outline"
+                      nativeButton={false}
+                      render={
+                        <a
+                          href={meta.instagram}
+                          target="_blank"
+                          rel="noreferrer"
+                        />
+                      }
+                      className="rounded-none border-border bg-transparent text-foreground hover:bg-foreground/10"
+                    >
+                      {t.brands.viewInstagram}
+                    </Button>
+                  </div>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>

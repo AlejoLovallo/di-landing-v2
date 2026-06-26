@@ -1,23 +1,30 @@
-const brandLinks = [
-  { label: "Capitán Gin", href: "https://www.instagram.com/capitanginarg/" },
-  { label: "Gin Etheryo", href: "https://www.instagram.com/ginetheryo/" },
-  { label: "El Refuerzo Gin Vermú", href: "https://www.instagram.com/elrefuerzoginvermu/" },
-  { label: "Plaza de Grillos", href: "https://www.instagram.com/plazadegrillos/" },
+"use client"
+
+import { useTranslation } from "@/components/language-provider"
+import { images } from "@/lib/images"
+
+const brandHrefs = [
+  "https://www.instagram.com/capitanginarg/",
+  "https://www.instagram.com/ginetheryo/",
+  "https://www.instagram.com/elrefuerzoginvermu/",
+  "https://www.instagram.com/plazadegrillos/",
 ]
 
-const tiendaLinks = [
-  { label: "Capitán Gin Tienda", href: "https://capitangin.mitiendanube.com/" },
-  { label: "Plaza de Grillos", href: "https://plazadegrillos.com/" },
+const shopHrefs = [
+  "https://capitangin.mitiendanube.com/",
+  "https://plazadegrillos.com/",
 ]
 
 export function SiteFooter() {
+  const { t } = useTranslation()
+
   return (
     <footer className="border-t border-border bg-card">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-4 lg:px-10">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-4 leading-none">
             <img
-              src="/logo-di-white.png"
+              src={images.logos.diWhite}
               alt="Destilería Independencia"
               className="h-16 w-16 object-contain"
             />
@@ -31,25 +38,24 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-5 max-w-sm text-pretty leading-relaxed text-muted-foreground">
-            Espíritus artesanales con identidad argentina. Gins, vermús y vinos
-            elaborados con oficio y libertad creativa.
+            {t.footer.description}
           </p>
         </div>
 
         <div>
           <h3 className="text-xs uppercase tracking-[0.25em] text-foreground">
-            Marcas
+            {t.footer.brands}
           </h3>
           <ul className="mt-5 space-y-3">
-            {brandLinks.map((link) => (
-              <li key={link.href}>
+            {t.footer.brandLinks.map((label, index) => (
+              <li key={brandHrefs[index]}>
                 <a
-                  href={link.href}
+                  href={brandHrefs[index]}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-muted-foreground transition-colors hover:text-primary"
                 >
-                  {link.label}
+                  {label}
                 </a>
               </li>
             ))}
@@ -58,18 +64,18 @@ export function SiteFooter() {
 
         <div>
           <h3 className="text-xs uppercase tracking-[0.25em] text-foreground">
-            Tiendas
+            {t.footer.shops}
           </h3>
           <ul className="mt-5 space-y-3">
-            {tiendaLinks.map((link) => (
-              <li key={link.href}>
+            {t.footer.shopLinks.map((label, index) => (
+              <li key={shopHrefs[index]}>
                 <a
-                  href={link.href}
+                  href={shopHrefs[index]}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-muted-foreground transition-colors hover:text-primary"
                 >
-                  {link.label}
+                  {label}
                 </a>
               </li>
             ))}
@@ -79,8 +85,10 @@ export function SiteFooter() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-muted-foreground sm:flex-row lg:px-10">
-          <p>© {new Date().getFullYear()} Destilería Independencia. Todos los derechos reservados.</p>
-          <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
+          <p>
+            © {new Date().getFullYear()} {t.footer.copyright}
+          </p>
+          <p>{t.footer.legal}</p>
         </div>
       </div>
     </footer>
