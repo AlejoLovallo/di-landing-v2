@@ -24,7 +24,7 @@ const brands: Brand[] = [
   {
     name: "Gin Etheryo",
     category: "Gin botánico",
-    image: "/gin-etheryo.png",
+    image: "/placeholder.svg?height=600&width=600",
     description:
       "Un gin de inspiración botánica, fresco y floral, pensado para quienes buscan una experiencia más delicada y contemporánea en cada trago.",
     instagram: "https://www.instagram.com/ginetheryo/",
@@ -32,7 +32,7 @@ const brands: Brand[] = [
   {
     name: "El Refuerzo Gin Vermú",
     category: "Gin Vermú",
-    image: "/refuerzo-vermut.png",
+    image: "/placeholder.svg?height=600&width=600",
     description:
       "La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.",
     instagram: "https://www.instagram.com/elrefuerzoginvermu/",

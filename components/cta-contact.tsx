@@ -4,11 +4,11 @@ export function CtaContact() {
   return (
     <section id="contacto" className="relative overflow-hidden">
       <img
-        src="/cocktail.png"
-        alt="Coctel artesanal preparado con destilados de Destilería Independencia"
+        src="/distillery-gauge.jpg"
+        alt="Termómetro del alambique de cobre de la Destilería Independencia"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-background/85" />
+      <div className="absolute inset-0 bg-background/90" />
       <div className="relative mx-auto max-w-3xl px-6 py-24 text-center lg:py-32">
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-primary">
           Contacto

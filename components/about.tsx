@@ -4,8 +4,8 @@ export function About() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <div className="relative">
           <img
-            src="/distillery.png"
-            alt="Interior de la Destilería Independencia con alambique de cobre"
+            src="/distillery-detail.jpg"
+            alt="Detalle del alambique de cobre de la Destilería Independencia"
             className="h-full w-full border border-border object-cover"
           />
           <div className="absolute -bottom-6 -right-6 hidden border border-primary bg-background px-8 py-6 lg:block">

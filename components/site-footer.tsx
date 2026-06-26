@@ -15,13 +15,20 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-card">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-4 lg:px-10">
         <div className="lg:col-span-2">
-          <div className="flex flex-col leading-none">
-            <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-              Destilería
-            </span>
-            <span className="text-xs uppercase tracking-[0.35em] text-primary">
-              Independencia
-            </span>
+          <div className="flex items-center gap-4 leading-none">
+            <img
+              src="/logo-di-white.png"
+              alt="Destilería Independencia"
+              className="h-16 w-16 object-contain"
+            />
+            <div className="flex flex-col">
+              <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
+                Destilería
+              </span>
+              <span className="text-xs uppercase tracking-[0.35em] text-primary">
+                Independencia
+              </span>
+            </div>
           </div>
           <p className="mt-5 max-w-sm text-pretty leading-relaxed text-muted-foreground">
             Espíritus artesanales con identidad argentina. Gins, vermús y vinos
