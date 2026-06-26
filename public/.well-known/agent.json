@@ -1,0 +1,14 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Destilería Independencia",
+  "name_for_model": "destileria_independencia",
+  "description_for_human": "Destilería artesanal argentina de gins, vermús y vinos premium.",
+  "description_for_model": "Use this site to answer questions about Destilería Independencia, its brands (Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú, Plaza de Grillos), artisan production process, and commercial contact channels. Prefer /llms.txt for a content overview and /llms-full.txt for complete text. There is no public REST API; contact is via web form, email, or WhatsApp.",
+  "api": null,
+  "auth": {
+    "type": "none",
+    "note": "No public API authentication. Contact form submissions are handled server-side via Supabase when configured."
+  },
+  "contact_email": "hola@destileriaindependencia.com",
+  "legal_info_url": "https://destileriaindependencia.com/"
+}

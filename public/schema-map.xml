@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:sf="http://schema.org/schemas/schemafeed/0.1">
+  <url>
+    <loc>https://destileriaindependencia.com/homepage-jsonld.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <sf:contentType>structuredData/schema.org</sf:contentType>
+  </url>
+  <url>
+    <loc>https://destileriaindependencia.com/llms-full.txt</loc>
+    <lastmod>2026-06-26</lastmod>
+    <sf:contentType>text/plain</sf:contentType>
+  </url>
+</urlset>

@@ -30,7 +30,7 @@ export function Hero() {
           <h1 className="font-heading text-5xl font-bold leading-[1.05] text-balance text-foreground sm:text-6xl lg:text-7xl">
             {t.hero.title}
           </h1>
-          <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
+          <p className="hero-description mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {t.hero.description}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">

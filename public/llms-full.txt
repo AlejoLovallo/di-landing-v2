@@ -1,0 +1,225 @@
+# Destilería Independencia — Documentación completa
+
+> Destilería Independencia S.R.L. es una destilería artesanal argentina. Microdestilería en Capitán Sarmiento, provincia de Buenos Aires. Oficina comercial: Cádiz 3757, 1° B, Ciudad Autónoma de Buenos Aires, Argentina. Contacto: hola@destileriaindependencia.com · WhatsApp +54 11 2295-2023.
+
+---
+
+## Identidad y contacto
+
+- **Razón social:** Destilería Independencia S.R.L.
+- **Sitio web:** https://destileriaindependencia.com
+- **Email:** hola@destileriaindependencia.com
+- **WhatsApp:** +54 11 2295-2023 (https://wa.me/5491122952023)
+- **Instagram corporativo:** https://www.instagram.com/destileriaindependencia/
+- **Microdestilería:** Capitán Sarmiento, Provincia de Buenos Aires, Argentina
+- **Oficina:** Cádiz 3757, 1° B, CABA, Argentina
+- **Idiomas del sitio:** Español (principal), Inglés
+
+---
+
+## Hero / Inicio
+
+**Tagline:** Destilería artesanal · Argentina
+
+**Título:** Espíritus que cuentan su propia historia
+
+**Descripción:** En Destilería Independencia elaboramos gins, vermús y vinos con carácter propio. Cada botella nace del oficio, la paciencia y la búsqueda incansable de un sabor auténtico.
+
+**Estadísticas:**
+- 5 marcas propias
+- 100% producción artesanal
+- Origen argentino e identidad local
+- Pasión por el oficio
+
+---
+
+## Marcas
+
+### Capitán Gin — London Dry
+Nuestro gin premium argentino. Un London Dry equilibrado y aromático, con un enebro protagonista y un final limpio. La Etiqueta Negra suma una infusión intensa para los paladares más audaces.
+- Instagram: https://www.instagram.com/capitanginarg/
+- Tienda: https://capitangin.mitiendanube.com/
+
+### Gin Etheryo — Gin botánico
+Un gin de inspiración botánica, fresco y floral, pensado para quienes buscan una experiencia más delicada y contemporánea en cada trago.
+- Instagram: https://www.instagram.com/ginetheryo/
+
+### El Refuerzo Gin Vermú — Gin Vermú
+La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.
+- Instagram: https://www.instagram.com/elrefuerzoginvermu/
+
+### Plaza de Grillos — Bodega · Valle de Uco
+Vinos elegantes y sofisticados del Valle de Uco, Mendoza. Malbecs y blends con gran potencial de guarda, hechos para conversar.
+- Instagram: https://www.instagram.com/plazadegrillos/
+- Tienda: https://plazadegrillos.com/
+
+---
+
+## La destilería
+
+**Título:** Independencia es una forma de hacer las cosas
+
+Nacimos con la convicción de que un buen destilado se construye con tiempo, materia prima honesta y una mirada propia. Esa libertad creativa es la que da nombre a la casa: Destilería Independencia.
+
+Desde nuestros gins hasta los vinos del Valle de Uco, cada producto es el resultado de un proceso cuidado de principio a fin. No seguimos modas: buscamos sabores que perduren y que inviten a compartir.
+
+**Destacados:**
+- Producción artesanal en pequeños lotes
+- Botánicos e ingredientes seleccionados
+- Identidad argentina, alcance regional
+- Control de calidad en cada etapa
+
+---
+
+## Nosotros
+
+**Título:** Las personas detrás de cada botella
+
+Destilería Independencia nació de la pasión de un grupo de amigos por los buenos destilados y por hacer las cosas a nuestra manera. Lo que empezó como un proyecto artesanal en un taller se convirtió en una casa con varias marcas, pero el espíritu sigue siendo el mismo.
+
+Hoy somos destiladores, enólogos, diseñadores y comerciales que compartimos la misma obsesión: crear espíritus con identidad argentina, sin atajos ni compromisos con la calidad.
+
+**Valores:**
+1. **Oficio y paciencia** — Cada lote se destila con atención al detalle. Preferimos hacer menos y hacerlo bien.
+2. **Creatividad con raíces** — Innovamos desde el respeto por la tradición del destilado y los ingredientes locales.
+3. **Comunidad** — Trabajamos con bares, comercios y amantes del buen beber que valoran lo artesanal.
+
+---
+
+## Proceso productivo
+
+**Título:** Del botánico a la botella
+
+1. **Selección** — Elegimos cuidadosamente cada botánico, fruta y materia prima que da carácter a nuestros destilados.
+2. **Maceración** — Infusionamos los ingredientes el tiempo justo para extraer aromas y sabores en su punto óptimo.
+3. **Destilación** — Destilamos en pequeños lotes, controlando cada corte para lograr un resultado limpio y preciso.
+4. **Embotellado** — Embotellamos a mano y revisamos cada unidad, asegurando que llegue tal como la imaginamos.
+
+---
+
+## Contacto comercial
+
+**Título:** ¿Querés conocer más o sumar nuestras marcas?
+
+Trabajamos con comercios, bares y amantes de los buenos destilados. Escribinos y conversemos sobre distribución, eventos o pedidos especiales.
+
+**Canales:**
+- Formulario web en https://destileriaindependencia.com/#contacto
+- WhatsApp: +54 11 2295-2023
+- Email: hola@destileriaindependencia.com
+- Instagram: https://www.instagram.com/destileriaindependencia/
+
+**Motivos de contacto aceptados en el formulario:**
+- Distribución
+- Eventos
+- Pedido especial
+- Prensa
+- Otro
+
+---
+
+## API, autenticación e integraciones
+
+Este sitio **no expone una API REST pública** ni endpoints OpenAPI para terceros.
+
+### Formulario de contacto (server action)
+
+El formulario de contacto en la landing envía datos mediante una Server Action de Next.js (`submitContactForm`). Cuando Supabase está configurado, los envíos se persisten en la tabla `contact_submissions`.
+
+**Método:** POST (formulario HTML → Server Action)  
+**Autenticación:** Ninguna (formulario público)  
+**Anti-spam:** Campo honeypot `website` (debe permanecer vacío)
+
+**Campos requeridos:**
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| nombre | string | Nombre |
+| apellido | string | Apellido |
+| email | string | Email válido |
+| telefono | string | Teléfono |
+| motivo | enum | `distribution`, `events`, `special_order`, `press`, `other` |
+| empresa | string | Opcional |
+| locale | string | `es` o `en` |
+| website | string | Honeypot — debe estar vacío |
+
+**Respuestas:**
+- `{ success: true }` — envío exitoso
+- `{ error: "missing_fields" }` — campos incompletos
+- `{ error: "invalid_email" }` — email inválido
+- `{ error: "invalid_reason" }` — motivo no válido
+- `{ error: "submit_failed" }` — error de base de datos
+- `{ configError: true }` — Supabase no configurado (fallback a email)
+
+**Ejemplo conceptual (no es un endpoint HTTP directo):**
+```
+POST / (Server Action: submitContactForm)
+Content-Type: multipart/form-data
+
+nombre=María&apellido=López&email=maria@ejemplo.com&telefono=+541123456789&motivo=distribution&locale=es
+```
+
+### WhatsApp (enlace externo)
+
+```
+GET https://wa.me/5491122952023?text={mensaje_codificado}
+```
+Sin autenticación. Mensaje predeterminado en español disponible en el sitio.
+
+### Variables de entorno (operador del sitio)
+
+El formulario requiere configuración Supabase en el servidor:
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY` (o clave anónima según implementación)
+
+Sin estas variables, el formulario muestra error de configuración y sugiere contacto por email.
+
+### MCP / A2A
+
+- **MCP:** No disponible (`/.well-known/mcp.json` no publicado).
+- **A2A:** Tarjeta de descubrimiento en `/.well-known/agent-card.json` con skills informativos (sin endpoint RPC).
+- **Agent plugin:** `/.well-known/agent.json` con `"api": null`.
+
+### Tiendas externas (e-commerce)
+
+Las compras al público se realizan en plataformas de terceros:
+- Capitán Gin: https://capitangin.mitiendanube.com/ (Tiendanube)
+- Plaza de Grillos: https://plazadegrillos.com/
+
+No hay API unificada de pedidos desde destileriaindependencia.com.
+
+---
+
+## Preguntas frecuentes
+
+**¿Qué productos elaboran?**  
+Gins artesanales (Capitán Gin, Gin Etheryo), El Refuerzo Gin Vermú y vinos Plaza de Grillos del Valle de Uco.
+
+**¿Dónde están ubicados?**  
+Microdestilería en Capitán Sarmiento, PBA. Oficina en Cádiz 3757, CABA.
+
+**¿Cómo compro?**  
+Tiendas online oficiales de cada marca o contacto comercial para mayoristas.
+
+**¿Trabajan con bares y distribuidores?**  
+Sí. Contactar por formulario, email o WhatsApp con motivo "distribución".
+
+**¿Hay visitas a la destilería?**  
+Consultar disponibilidad por los canales de contacto comercial.
+
+---
+
+## Aviso legal
+
+© Destilería Independencia. Todos los derechos reservados.  
+Beber con moderación. Prohibida su venta a menores de 18 años.
+
+---
+
+## Recursos machine-readable
+
+- llms.txt: https://destileriaindependencia.com/llms.txt
+- JSON-LD: https://destileriaindependencia.com/homepage-jsonld.html
+- agent.json: https://destileriaindependencia.com/.well-known/agent.json
+- agent-card.json: https://destileriaindependencia.com/.well-known/agent-card.json
+- schema-map.xml: https://destileriaindependencia.com/schema-map.xml
+- robots.txt: https://destileriaindependencia.com/robots.txt

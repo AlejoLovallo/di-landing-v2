@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Destilería Independencia — Structured Data</title>
+  <link rel="canonical" href="https://destileriaindependencia.com/">
+</head>
+<body>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://destileriaindependencia.com/#org",
+      "name": "Destilería Independencia S.R.L.",
+      "legalName": "Destilería Independencia S.R.L.",
+      "url": "https://destileriaindependencia.com",
+      "logo": "https://destileriaindependencia.com/logos/logo-di-blue.png",
+      "description": "Destilería artesanal argentina que elabora gins, vermús y vinos premium bajo marcas propias como Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú y Plaza de Grillos.",
+      "email": "hola@destileriaindependencia.com",
+      "telephone": "+54-11-2295-2023",
+      "sameAs": [
+        "https://www.instagram.com/destileriaindependencia/",
+        "https://www.instagram.com/capitanginarg/",
+        "https://www.instagram.com/ginetheryo/",
+        "https://www.instagram.com/elrefuerzoginvermu/",
+        "https://www.instagram.com/plazadegrillos/",
+        "https://capitangin.mitiendanube.com/",
+        "https://plazadegrillos.com/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+54-11-2295-2023",
+        "email": "hola@destileriaindependencia.com",
+        "contactType": "customer service",
+        "availableLanguage": ["Spanish", "English"],
+        "areaServed": "AR"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cádiz 3757, 1° B",
+        "addressLocality": "Ciudad Autónoma de Buenos Aires",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "C1425",
+        "addressCountry": "AR"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://destileriaindependencia.com/#website",
+      "url": "https://destileriaindependencia.com",
+      "name": "Destilería Independencia",
+      "description": "Sitio oficial de Destilería Independencia: marcas, destilería, proceso artesanal y contacto.",
+      "inLanguage": ["es", "en"],
+      "publisher": { "@id": "https://destileriaindependencia.com/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://destileriaindependencia.com/#webpage",
+      "url": "https://destileriaindependencia.com",
+      "name": "Destilería Independencia | Destilería de espíritus artesanales",
+      "description": "Destilería Independencia elabora gins, vermús y vinos premium en Argentina.",
+      "isPartOf": { "@id": "https://destileriaindependencia.com/#website" },
+      "about": { "@id": "https://destileriaindependencia.com/#org" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero-description"]
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://destileriaindependencia.com/#app",
+      "name": "Destilería Independencia",
+      "description": "Sitio web oficial de Destilería Independencia para descubrir marcas, conocer la destilería artesanal y contactar al equipo comercial.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "url": "https://destileriaindependencia.com",
+      "inLanguage": ["es", "en"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS"
+      },
+      "provider": { "@id": "https://destileriaindependencia.com/#org" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://destileriaindependencia.com/#spirits-production",
+      "name": "Producción artesanal de espíritus",
+      "description": "Elaboración en pequeños lotes de gins, vermús y vinos con botánicos seleccionados y control de calidad en cada etapa.",
+      "serviceType": "Artisan spirits production",
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "provider": { "@id": "https://destileriaindependencia.com/#org" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://destileriaindependencia.com/#distribution",
+      "name": "Distribución y ventas mayoristas",
+      "description": "Distribución para comercios, bares y partners gastronómicos interesados en las marcas de Destilería Independencia.",
+      "serviceType": "Beverage distribution",
+      "provider": { "@id": "https://destileriaindependencia.com/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://destileriaindependencia.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué productos elabora Destilería Independencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Destilería Independencia elabora gins artesanales (Capitán Gin, Gin Etheryo), El Refuerzo Gin Vermú y vinos de Plaza de Grillos del Valle de Uco, Mendoza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde está ubicada Destilería Independencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La microdestilería está en Capitán Sarmiento, provincia de Buenos Aires. La oficina comercial está en Cádiz 3757, 1° B, Ciudad Autónoma de Buenos Aires, Argentina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo comprar los productos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Podés comprar Capitán Gin en capitangin.mitiendanube.com y Plaza de Grillos en plazadegrillos.com. Para consultas comerciales, usá el formulario de contacto del sitio o WhatsApp al +54 11 2295-2023."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan con bares, comercios y distribuidores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Destilería Independencia trabaja con comercios, bares y partners gastronómicos. Escribí a hola@destileriaindependencia.com o completá el formulario de contacto indicando distribución como motivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son las marcas de Destilería Independencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las marcas propias son Capitán Gin (London Dry), Gin Etheryo (botánico), El Refuerzo Gin Vermú y Plaza de Grillos (bodega en Valle de Uco)."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</body>
+</html>
