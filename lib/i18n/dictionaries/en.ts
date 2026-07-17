@@ -8,6 +8,7 @@ export const en: Dictionary = {
   },
   nav: {
     brands: "Brands",
+    services: "Services",
     distillery: "Distillery",
     aboutUs: "About us",
     process: "Process",
@@ -17,9 +18,12 @@ export const en: Dictionary = {
   },
   hero: {
     tagline: "Artisan distillery · Argentina",
-    title: "Spirits that tell their own story",
-    description:
-      "At Destilería Independencia we craft gins, vermouths and wines with a character of their own. Every bottle is born from craft, patience and an endless pursuit of authentic flavor.",
+    title: "Behind many brands, there is a distillery.",
+    paragraphs: [
+      "At Destilería Independencia we develop and produce spirits for companies, brands, distributors, bars and restaurants looking to launch, scale or consolidate their products.",
+      "We offer contract production, bulk elaboration and private-label development, combining industrial capacity, technical excellence and operational flexibility. With a consolidated team, certified processes and products recognized in national and international competitions, we turn ideas into market-ready drinks.",
+      "We are the production partner behind brands that grow.",
+    ],
     ctaBrands: "Discover our brands",
     ctaDistillery: "About the distillery",
     imageAlt: "Copper still at Destilería Independencia",
@@ -32,9 +36,10 @@ export const en: Dictionary = {
   ],
   brands: {
     label: "Our brands",
-    title: "A family of spirits with identity",
+    title: "Brands that trust us",
+    subtitle: "Quality reflected in every project",
     description:
-      "Under the Destilería Independencia label, brands share the same commitment: to produce with honesty, creativity and deep respect for origin.",
+      "We work alongside brands that chose Destilería Independencia as their production and commercial partner. Some develop their spirits with us under contract production, while others are part of our distribution portfolio. All share the same commitment to quality.",
     buyOnline: "Buy online",
     viewInstagram: "View on Instagram",
     items: [
@@ -66,6 +71,58 @@ export const en: Dictionary = {
         description:
           "Elegant, sophisticated wines from the Uco Valley, Mendoza. Malbecs and blends with great aging potential, made for conversation.",
         imageAlt: "Plaza de Grillos bottle",
+      },
+    ],
+  },
+  services: {
+    label: "Our services",
+    title: "Production, development and supply for your brand",
+    subtitle:
+      "We support factories, brands, distributors, bars and restaurants with a reliable production partner.",
+    items: [
+      {
+        name: "Gin — Bulk & Contract",
+        description:
+          "Premium gin production for factories, brands, distributors and hospitality projects. We craft standard recipes or custom developments, with bulk production or finished product ready for sale.",
+        features: [
+          "Bulk: loose gin with your own or registered recipe",
+          "Contract: sealed, labeled and boxed bottle under your brand",
+          "Recipe development + RNPA included at no charge",
+          "Distillation run, botanicals, sterilization and bottling",
+        ],
+      },
+      {
+        name: "Barrelled Gin & Tonic",
+        description:
+          "Ready-to-serve gin and tonic made with premium gin and quality tonic, available in barrels for events, bars, restaurants and catering. Consistent quality, fast service and strong margins for the hospitality channel.",
+        features: [
+          "Standard formulation: 20% gin / 80% tonic",
+          "Recipe based on Capitán Gin or custom development",
+          "Flavor and profile adjustments on request",
+          "Delivered in stainless steel barrels",
+        ],
+      },
+      {
+        name: "Bulk Wine",
+        description:
+          "Young, fresh and fruity wines selected for hospitality, private-label bottling, vermouth projects and ready-to-drink beverages. Available in different formats and supply scales, with INV certification and enabling documentation.",
+        features: [
+          "Varietals: Malbec, Muscat of Alexandria and Rosé",
+          "Ideal for vermouth, tinto de verano, sangria and RTD",
+          "Private-label bottling",
+          "INV certificate and free circulation documents",
+        ],
+      },
+      {
+        name: "Other Developments",
+        description:
+          "Through our strategic alliance with Bodega Plaza de Grillos, we offer access to Uco Valley wines and enological developments for brands, distributors, hospitality projects and companies seeking differentiated products.",
+        features: [
+          "Private-label wines and limited releases",
+          "Barrel-aged wines",
+          "Artisan vermouth, Vermouth Tonic and Tinto de Verano",
+          "Wine bases for ready-to-drink beverages (RTD)",
+        ],
       },
     ],
   },

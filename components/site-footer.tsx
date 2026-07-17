@@ -28,14 +28,11 @@ export function SiteFooter() {
               alt="Destilería Independencia"
               className="h-16 w-16 object-contain"
             />
-            <div className="flex flex-col">
-              <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                Destilería
-              </span>
-              <span className="text-xs uppercase tracking-[0.35em] text-primary">
-                Independencia
-              </span>
-            </div>
+            <span className="font-heading text-2xl font-bold leading-tight tracking-tight text-foreground">
+              Destilería
+              <br />
+              Independencia
+            </span>
           </div>
           <p className="mt-5 max-w-sm text-pretty leading-relaxed text-muted-foreground">
             {t.footer.description}

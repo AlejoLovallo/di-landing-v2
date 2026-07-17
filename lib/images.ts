@@ -7,7 +7,8 @@ export const images = {
     us: "/us.jpg",
   },
   logos: {
-    diWhite: "/logos/logo-di-white.png",
+    diWhite: "/logos/di-white-transparent.png",
+    diBlack: "/logos/di-black-transparent.png",
     diBlue: "/logos/logo-di-blue.png",
     plazaGrillos: "/logos/plaza-grillos-logo.png",
   },

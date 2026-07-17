@@ -27,12 +27,14 @@ export function Hero() {
             <span className="h-px w-10 bg-primary" />
             {t.hero.tagline}
           </p>
-          <h1 className="font-heading text-5xl font-bold leading-[1.05] text-balance text-foreground sm:text-6xl lg:text-7xl">
+          <h1 className="font-heading text-4xl font-bold leading-[1.1] text-balance text-foreground sm:text-5xl lg:text-6xl">
             {t.hero.title}
           </h1>
-          <p className="hero-description mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            {t.hero.description}
-          </p>
+          <div className="hero-description mt-6 max-w-xl space-y-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+            {t.hero.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button
               size="lg"

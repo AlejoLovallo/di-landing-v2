@@ -14,6 +14,7 @@ export type Dictionary = {
   }
   nav: {
     brands: string
+    services: string
     distillery: string
     aboutUs: string
     process: string
@@ -24,7 +25,7 @@ export type Dictionary = {
   hero: {
     tagline: string
     title: string
-    description: string
+    paragraphs: string[]
     ctaBrands: string
     ctaDistillery: string
     imageAlt: string
@@ -33,6 +34,7 @@ export type Dictionary = {
   brands: {
     label: string
     title: string
+    subtitle: string
     description: string
     buyOnline: string
     viewInstagram: string
@@ -42,6 +44,16 @@ export type Dictionary = {
       description: string
       imageAlt: string
       secondaryImageAlt?: string
+    }>
+  }
+  services: {
+    label: string
+    title: string
+    subtitle: string
+    items: Array<{
+      name: string
+      description: string
+      features: string[]
     }>
   }
   distillery: {

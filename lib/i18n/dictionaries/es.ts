@@ -8,6 +8,7 @@ export const es: Dictionary = {
   },
   nav: {
     brands: "Marcas",
+    services: "Servicios",
     distillery: "Destilería",
     aboutUs: "Nosotros",
     process: "Proceso",
@@ -17,9 +18,12 @@ export const es: Dictionary = {
   },
   hero: {
     tagline: "Destilería artesanal · Argentina",
-    title: "Espíritus que cuentan su propia historia",
-    description:
-      "En Destilería Independencia elaboramos gins, vermús y vinos con carácter propio. Cada botella nace del oficio, la paciencia y la búsqueda incansable de un sabor auténtico.",
+    title: "Detrás de muchas marcas, hay una destilería.",
+    paragraphs: [
+      "En Destilería Independencia desarrollamos y producimos bebidas espirituosas para empresas, marcas, distribuidores, bares y restaurantes que buscan lanzar, escalar o consolidar sus productos.",
+      "Ofrecemos producción a fasón, elaboración a granel y desarrollo de marcas propias, combinando capacidad industrial, excelencia técnica y flexibilidad operativa. Con un equipo de trabajo consolidado, procesos certificados y productos reconocidos en competencias nacionales e internacionales, transformamos ideas en bebidas listas para el mercado.",
+      "Somos el socio productivo detrás de marcas que crecen.",
+    ],
     ctaBrands: "Conocer nuestras marcas",
     ctaDistillery: "Sobre la destilería",
     imageAlt: "Alambique de cobre en la Destilería Independencia",
@@ -32,9 +36,10 @@ export const es: Dictionary = {
   ],
   brands: {
     label: "Nuestras marcas",
-    title: "Una familia de espíritus con identidad",
+    title: "Marcas que confían en nosotros",
+    subtitle: "Calidad que se refleja en cada proyecto",
     description:
-      "Bajo el sello de Destilería Independencia conviven marcas que comparten el mismo compromiso: producir con honestidad, creatividad y un profundo respeto por el origen.",
+      "Trabajamos junto a marcas que eligieron Destilería Independencia como su socio productivo y comercial. Algunas desarrollan sus bebidas con nosotros bajo la modalidad de producción a fasón, mientras que otras forman parte de nuestro portfolio de distribución. Todas comparten el mismo compromiso con la calidad.",
     buyOnline: "Comprar online",
     viewInstagram: "Ver en Instagram",
     items: [
@@ -66,6 +71,58 @@ export const es: Dictionary = {
         description:
           "Vinos elegantes y sofisticados del Valle de Uco, Mendoza. Malbecs y blends con gran potencial de guarda, hechos para conversar.",
         imageAlt: "Botella de Plaza de Grillos",
+      },
+    ],
+  },
+  services: {
+    label: "Nuestros servicios",
+    title: "Producción, desarrollo y suministro para tu marca",
+    subtitle:
+      "Acompañamos fábricas, marcas, distribuidores, bares y restaurantes con un socio productivo confiable.",
+    items: [
+      {
+        name: "Gin — Granel y Fasón",
+        description:
+          "Producción de gin premium para fábricas, marcas, distribuidores y proyectos gastronómicos. Elaboramos recetas estándar o desarrollos personalizados, con posibilidad de producción a granel o producto terminado listo para comercialización.",
+        features: [
+          "Granel: gin suelto con receta propia o registrada",
+          "Fasón: botella cerrada, precintada, etiquetada y encajada con tu marca",
+          "Desarrollo de receta + RNPA incluido sin cargo",
+          "Turno de destilación, botánicos, esterilización y embotellado",
+        ],
+      },
+      {
+        name: "Gin Tonic Embarrilado",
+        description:
+          "Gin tonic listo para servir, elaborado con gin premium y tónica de calidad, disponible en barriles para eventos, bares, restaurantes y servicios de catering. Calidad constante, rapidez de servicio y excelente rentabilidad para el canal gastronómico.",
+        features: [
+          "Formulación estándar: 20% gin / 80% tónica",
+          "Receta basada en Capitán Gin o desarrollo personalizado",
+          "Ajustes de sabor y perfil según requerimientos",
+          "Entrega en barriles de acero inoxidable",
+        ],
+      },
+      {
+        name: "Vino a Granel",
+        description:
+          "Vinos jóvenes, frescos y frutados seleccionados para proyectos de gastronomía, fraccionamiento, vermutería y bebidas listas para consumir. Disponibles en distintos formatos y escalas de suministro, con certificación INV y documentación habilitante.",
+        features: [
+          "Varietales: Malbec, Moscatel de Alejandría y Rosado",
+          "Ideal para vermú, tinto de verano, sangrías y RTD",
+          "Fraccionamiento bajo marca propia",
+          "Certificado INV y libre de circulación",
+        ],
+      },
+      {
+        name: "Otros Desarrollos",
+        description:
+          "A través de nuestra alianza estratégica con Bodega Plaza de Grillos, ofrecemos acceso a vinos y desarrollos enológicos de origen Valle de Uco para marcas, distribuidores, proyectos gastronómicos y empresas que buscan productos diferenciados.",
+        features: [
+          "Vinos con marca propia y partidas limitadas",
+          "Vinos con crianza en barrica",
+          "Vermú artesanal, Vermú Tonic y Tinto de Verano",
+          "Bases vínicas para bebidas listas para consumir (RTD)",
+        ],
       },
     ],
   },

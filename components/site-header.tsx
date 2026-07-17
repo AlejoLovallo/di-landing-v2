@@ -44,6 +44,7 @@ export function SiteHeader() {
 
   const navLinks = [
     { label: t.nav.brands, href: "#marcas" },
+    { label: t.nav.services, href: "#servicios" },
     { label: t.nav.distillery, href: "#destileria" },
     { label: t.nav.aboutUs, href: "#nosotros" },
     { label: t.nav.process, href: "#proceso" },
@@ -72,13 +73,10 @@ export function SiteHeader() {
             alt="Destilería Independencia"
             className="h-12 w-12 object-contain"
           />
-          <span className="flex flex-col">
-            <span className="font-heading text-lg font-bold tracking-tight text-foreground">
-              Destilería
-            </span>
-            <span className="text-[0.7rem] uppercase tracking-[0.35em] text-primary">
-              Independencia
-            </span>
+          <span className="font-heading text-lg font-bold leading-tight tracking-tight text-foreground">
+            Destilería
+            <br />
+            Independencia
           </span>
         </a>
 

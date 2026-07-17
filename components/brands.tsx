@@ -41,6 +41,9 @@ export function Brands() {
           <h2 className="font-heading text-4xl font-bold text-balance text-foreground lg:text-5xl">
             {t.brands.title}
           </h2>
+          <p className="mt-4 font-heading text-xl text-pretty text-primary lg:text-2xl">
+            {t.brands.subtitle}
+          </p>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
             {t.brands.description}
           </p>
