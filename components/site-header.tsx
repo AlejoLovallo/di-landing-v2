@@ -44,6 +44,7 @@ export function SiteHeader() {
 
   const navLinks = [
     { label: t.nav.brands, href: "#marcas" },
+    { label: t.nav.services, href: "#servicios" },
     { label: t.nav.distillery, href: "#destileria" },
     { label: t.nav.aboutUs, href: "#nosotros" },
     { label: t.nav.process, href: "#proceso" },

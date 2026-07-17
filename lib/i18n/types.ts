@@ -14,6 +14,7 @@ export type Dictionary = {
   }
   nav: {
     brands: string
+    services: string
     distillery: string
     aboutUs: string
     process: string
@@ -43,6 +44,16 @@ export type Dictionary = {
       description: string
       imageAlt: string
       secondaryImageAlt?: string
+    }>
+  }
+  services: {
+    label: string
+    title: string
+    subtitle: string
+    items: Array<{
+      name: string
+      description: string
+      features: string[]
     }>
   }
   distillery: {
