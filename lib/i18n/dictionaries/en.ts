@@ -17,9 +17,12 @@ export const en: Dictionary = {
   },
   hero: {
     tagline: "Artisan distillery · Argentina",
-    title: "Spirits that tell their own story",
-    description:
-      "At Destilería Independencia we craft gins, vermouths and wines with a character of their own. Every bottle is born from craft, patience and an endless pursuit of authentic flavor.",
+    title: "Behind many brands, there is a distillery.",
+    paragraphs: [
+      "At Destilería Independencia we develop and produce spirits for companies, brands, distributors, bars and restaurants looking to launch, scale or consolidate their products.",
+      "We offer contract production, bulk elaboration and private-label development, combining industrial capacity, technical excellence and operational flexibility. With a consolidated team, certified processes and products recognized in national and international competitions, we turn ideas into market-ready drinks.",
+      "We are the production partner behind brands that grow.",
+    ],
     ctaBrands: "Discover our brands",
     ctaDistillery: "About the distillery",
     imageAlt: "Copper still at Destilería Independencia",
@@ -32,9 +35,10 @@ export const en: Dictionary = {
   ],
   brands: {
     label: "Our brands",
-    title: "A family of spirits with identity",
+    title: "Brands that trust us",
+    subtitle: "Quality reflected in every project",
     description:
-      "Under the Destilería Independencia label, brands share the same commitment: to produce with honesty, creativity and deep respect for origin.",
+      "We work alongside brands that chose Destilería Independencia as their production and commercial partner. Some develop their spirits with us under contract production, while others are part of our distribution portfolio. All share the same commitment to quality.",
     buyOnline: "Buy online",
     viewInstagram: "View on Instagram",
     items: [

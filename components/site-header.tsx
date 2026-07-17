@@ -72,13 +72,10 @@ export function SiteHeader() {
             alt="Destilería Independencia"
             className="h-12 w-12 object-contain"
           />
-          <span className="flex flex-col">
-            <span className="font-heading text-lg font-bold tracking-tight text-foreground">
-              Destilería
-            </span>
-            <span className="text-[0.7rem] uppercase tracking-[0.35em] text-primary">
-              Independencia
-            </span>
+          <span className="font-heading text-lg font-bold leading-tight tracking-tight text-foreground">
+            Destilería
+            <br />
+            Independencia
           </span>
         </a>
 

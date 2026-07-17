@@ -17,9 +17,12 @@ export const es: Dictionary = {
   },
   hero: {
     tagline: "Destilería artesanal · Argentina",
-    title: "Espíritus que cuentan su propia historia",
-    description:
-      "En Destilería Independencia elaboramos gins, vermús y vinos con carácter propio. Cada botella nace del oficio, la paciencia y la búsqueda incansable de un sabor auténtico.",
+    title: "Detrás de muchas marcas, hay una destilería.",
+    paragraphs: [
+      "En Destilería Independencia desarrollamos y producimos bebidas espirituosas para empresas, marcas, distribuidores, bares y restaurantes que buscan lanzar, escalar o consolidar sus productos.",
+      "Ofrecemos producción a fasón, elaboración a granel y desarrollo de marcas propias, combinando capacidad industrial, excelencia técnica y flexibilidad operativa. Con un equipo de trabajo consolidado, procesos certificados y productos reconocidos en competencias nacionales e internacionales, transformamos ideas en bebidas listas para el mercado.",
+      "Somos el socio productivo detrás de marcas que crecen.",
+    ],
     ctaBrands: "Conocer nuestras marcas",
     ctaDistillery: "Sobre la destilería",
     imageAlt: "Alambique de cobre en la Destilería Independencia",
@@ -32,9 +35,10 @@ export const es: Dictionary = {
   ],
   brands: {
     label: "Nuestras marcas",
-    title: "Una familia de espíritus con identidad",
+    title: "Marcas que confían en nosotros",
+    subtitle: "Calidad que se refleja en cada proyecto",
     description:
-      "Bajo el sello de Destilería Independencia conviven marcas que comparten el mismo compromiso: producir con honestidad, creatividad y un profundo respeto por el origen.",
+      "Trabajamos junto a marcas que eligieron Destilería Independencia como su socio productivo y comercial. Algunas desarrollan sus bebidas con nosotros bajo la modalidad de producción a fasón, mientras que otras forman parte de nuestro portfolio de distribución. Todas comparten el mismo compromiso con la calidad.",
     buyOnline: "Comprar online",
     viewInstagram: "Ver en Instagram",
     items: [
