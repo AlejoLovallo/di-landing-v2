@@ -44,6 +44,7 @@ export type Dictionary = {
       description: string
       imageAlt: string
       secondaryImageAlt?: string
+      galleryAlts?: string[]
     }>
   }
   services: {

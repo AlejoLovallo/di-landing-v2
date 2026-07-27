@@ -13,7 +13,7 @@ export function About() {
           <img
             src={images.di.detail}
             alt={t.distillery.imageAlt}
-            className="h-full w-full border border-border object-cover"
+            className="aspect-[4/5] h-full w-full border border-border object-cover lg:aspect-[3/4]"
           />
           <div className="absolute -bottom-6 -right-6 hidden border border-primary bg-background px-8 py-6 lg:block">
             <p className="font-heading text-3xl font-bold text-primary">

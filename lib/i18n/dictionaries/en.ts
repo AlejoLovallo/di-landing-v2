@@ -45,11 +45,16 @@ export const en: Dictionary = {
     items: [
       {
         name: "Capitán Gin",
-        category: "London Dry",
+        category: "House brand · London Dry",
         description:
           "Our premium Argentine gin. A balanced, aromatic London Dry with prominent juniper and a clean finish. The Black Label adds an intense infusion for bolder palates.",
-        imageAlt: "Capitán Gin London Dry bottle",
-        secondaryImageAlt: "Capitán Gin Black Label bottle",
+        imageAlt: "Capitán Gin London Dry and Black Label",
+        galleryAlts: [
+          "Capitán Gin London Dry and Black Label",
+          "Capitán Gin Black Label detail",
+          "Capitán Gin London Dry detail",
+          "Capitán Gin stopper Destilería Independencia",
+        ],
       },
       {
         name: "Gin Etheryo",
@@ -70,7 +75,8 @@ export const en: Dictionary = {
         category: "Winery · Uco Valley",
         description:
           "Elegant, sophisticated wines from the Uco Valley, Mendoza. Malbecs and blends with great aging potential, made for conversation.",
-        imageAlt: "Plaza de Grillos bottle",
+        imageAlt: "Plaza de Grillos vineyard in the Uco Valley",
+        secondaryImageAlt: "Plaza de Grillos Gran Reserva Malbec bottles",
       },
     ],
   },
@@ -141,7 +147,7 @@ export const en: Dictionary = {
     ],
     badgeTitle: "Craft",
     badgeSubtitle: "in every spirit",
-    imageAlt: "Copper still detail at Destilería Independencia",
+    imageAlt: "Botanicals and copper still at Destilería Independencia",
   },
   aboutUs: {
     label: "About us",

@@ -45,11 +45,16 @@ export const es: Dictionary = {
     items: [
       {
         name: "Capitán Gin",
-        category: "London Dry",
+        category: "Marca propia · London Dry",
         description:
           "Nuestro gin premium argentino. Un London Dry equilibrado y aromático, con un enebro protagonista y un final limpio. La Etiqueta Negra suma una infusión intensa para los paladares más audaces.",
-        imageAlt: "Botella de Capitán Gin London Dry",
-        secondaryImageAlt: "Botella de Capitán Gin Etiqueta Negra",
+        imageAlt: "Capitán Gin London Dry y Etiqueta Negra",
+        galleryAlts: [
+          "Capitán Gin London Dry y Etiqueta Negra",
+          "Detalle de Capitán Gin Etiqueta Negra",
+          "Detalle de Capitán Gin London Dry",
+          "Tapón de Capitán Gin Destilería Independencia",
+        ],
       },
       {
         name: "Gin Etheryo",
@@ -70,7 +75,8 @@ export const es: Dictionary = {
         category: "Bodega · Valle de Uco",
         description:
           "Vinos elegantes y sofisticados del Valle de Uco, Mendoza. Malbecs y blends con gran potencial de guarda, hechos para conversar.",
-        imageAlt: "Botella de Plaza de Grillos",
+        imageAlt: "Viñedo de Plaza de Grillos en el Valle de Uco",
+        secondaryImageAlt: "Botellas Gran Reserva Malbec de Plaza de Grillos",
       },
     ],
   },
@@ -141,7 +147,7 @@ export const es: Dictionary = {
     ],
     badgeTitle: "Oficio",
     badgeSubtitle: "en cada destilado",
-    imageAlt: "Detalle del alambique de cobre de la Destilería Independencia",
+    imageAlt: "Botánicos y alambique de cobre en la Destilería Independencia",
   },
   aboutUs: {
     label: "Nosotros",
