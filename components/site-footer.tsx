@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import { useTranslation } from "@/components/language-provider"
 import { images } from "@/lib/images"
 
@@ -11,9 +13,14 @@ const brandHrefs = [
 ]
 
 const shopHrefs = [
+  "/tienda",
   "https://capitangin.mitiendanube.com/",
   "https://plazadegrillos.com/",
 ]
+
+function isExternalHref(href: string) {
+  return href.startsWith("http")
+}
 
 export function SiteFooter() {
   const { t } = useTranslation()
@@ -64,18 +71,36 @@ export function SiteFooter() {
             {t.footer.shops}
           </h3>
           <ul className="mt-5 space-y-3">
-            {t.footer.shopLinks.map((label, index) => (
-              <li key={shopHrefs[index]}>
-                <a
-                  href={shopHrefs[index]}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
+            {t.footer.shopLinks.map((label, index) => {
+              const href = shopHrefs[index]
+              if (!href) return null
+
+              if (isExternalHref(href)) {
+                return (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                )
+              }
+
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>

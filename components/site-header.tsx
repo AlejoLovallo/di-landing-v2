@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 
 import { useTranslation } from "@/components/language-provider"
@@ -37,18 +39,24 @@ function LanguageToggle() {
   )
 }
 
+function homeSectionHref(hash: string, isHome: boolean) {
+  return isHome ? hash : `/${hash}`
+}
+
 export function SiteHeader() {
   const { t } = useTranslation()
+  const pathname = usePathname()
+  const isHome = pathname === "/"
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
   const navLinks = [
-    { label: t.nav.brands, href: "#marcas" },
-    { label: t.nav.services, href: "#servicios" },
-    { label: t.nav.distillery, href: "#destileria" },
-    { label: t.nav.aboutUs, href: "#nosotros" },
-    { label: t.nav.process, href: "#proceso" },
-    { label: t.nav.contact, href: "#contacto" },
+    { label: t.nav.brands, href: homeSectionHref("#marcas", isHome) },
+    { label: t.nav.services, href: homeSectionHref("#servicios", isHome) },
+    { label: t.nav.distillery, href: homeSectionHref("#destileria", isHome) },
+    { label: t.nav.aboutUs, href: homeSectionHref("#nosotros", isHome) },
+    { label: t.nav.process, href: homeSectionHref("#proceso", isHome) },
+    { label: t.nav.contact, href: homeSectionHref("#contacto", isHome) },
   ]
 
   useEffect(() => {
@@ -67,7 +75,10 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
-        <a href="#inicio" className="flex items-center gap-3 leading-none">
+        <Link
+          href={isHome ? "#inicio" : "/"}
+          className="flex items-center gap-3 leading-none"
+        >
           <img
             src={images.logos.diWhite}
             alt="Destilería Independencia"
@@ -78,7 +89,7 @@ export function SiteHeader() {
             <br />
             Independencia
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
@@ -96,13 +107,7 @@ export function SiteHeader() {
           <LanguageToggle />
           <Button
             nativeButton={false}
-            render={
-              <a
-                href="https://capitangin.mitiendanube.com/"
-                target="_blank"
-                rel="noreferrer"
-              />
-            }
+            render={<Link href="/tienda" />}
             className="rounded-none bg-primary px-4 text-primary-foreground hover:bg-primary/90"
           >
             {t.nav.shop}
@@ -137,14 +142,13 @@ export function SiteHeader() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="https://capitangin.mitiendanube.com/"
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/tienda"
+              onClick={() => setOpen(false)}
               className="py-3 text-sm uppercase tracking-widest text-primary"
             >
               {t.nav.shop}
-            </a>
+            </Link>
           </nav>
         </div>
       )}

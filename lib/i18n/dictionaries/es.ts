@@ -257,7 +257,25 @@ export const es: Dictionary = {
       "El Refuerzo Gin Vermú",
       "Plaza de Grillos",
     ],
-    shopLinks: ["Capitán Gin Tienda", "Plaza de Grillos"],
+    shopLinks: ["Tienda DI", "Capitán Gin Tienda", "Plaza de Grillos"],
+  },
+  shop: {
+    label: "Tienda",
+    title: "Tienda Destilería Independencia",
+    subtitle: "Espíritus artesanales, directo de la destilería.",
+    description:
+      "Comprá seleccionados de la casa. El checkout se completa de forma segura en Shopify.",
+    emptyTitle: "Pronto vas a poder comprar acá",
+    emptyDescription:
+      "Estamos preparando el catálogo. Mientras tanto, Capitán Gin sigue disponible en su tienda y podés contactarnos por pedidos especiales.",
+    backToShop: "Volver a la tienda",
+    backHome: "Volver al inicio",
+    buyNow: "Comprar ahora",
+    buying: "Redirigiendo…",
+    unavailable: "Sin stock",
+    from: "Desde",
+    buyError: "No pudimos iniciar el checkout. Intentá de nuevo.",
+    productFallbackAlt: "Producto Destilería Independencia",
   },
   language: {
     es: "ES",

@@ -256,7 +256,25 @@ export const en: Dictionary = {
       "El Refuerzo Gin Vermú",
       "Plaza de Grillos",
     ],
-    shopLinks: ["Capitán Gin Shop", "Plaza de Grillos"],
+    shopLinks: ["DI Shop", "Capitán Gin Shop", "Plaza de Grillos"],
+  },
+  shop: {
+    label: "Shop",
+    title: "Destilería Independencia Shop",
+    subtitle: "Artisan spirits, straight from the distillery.",
+    description:
+      "Buy house selections. Checkout is completed securely on Shopify.",
+    emptyTitle: "Coming soon",
+    emptyDescription:
+      "We're preparing the catalog. Meanwhile, Capitán Gin remains available in its shop, and you can contact us for special orders.",
+    backToShop: "Back to shop",
+    backHome: "Back to home",
+    buyNow: "Buy now",
+    buying: "Redirecting…",
+    unavailable: "Out of stock",
+    from: "From",
+    buyError: "We couldn't start checkout. Please try again.",
+    productFallbackAlt: "Destilería Independencia product",
   },
   language: {
     es: "ES",

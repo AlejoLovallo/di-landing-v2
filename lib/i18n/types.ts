@@ -116,6 +116,22 @@ export type Dictionary = {
     brandLinks: string[]
     shopLinks: string[]
   }
+  shop: {
+    label: string
+    title: string
+    subtitle: string
+    description: string
+    emptyTitle: string
+    emptyDescription: string
+    backToShop: string
+    backHome: string
+    buyNow: string
+    buying: string
+    unavailable: string
+    from: string
+    buyError: string
+    productFallbackAlt: string
+  }
   language: {
     es: string
     en: string
