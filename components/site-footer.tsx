@@ -34,7 +34,7 @@ export function SiteFooter() {
               Independencia
             </span>
           </div>
-          <p className="mt-5 max-w-sm text-pretty leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-sm text-pretty leading-relaxed text-subtle-foreground">
             {t.footer.description}
           </p>
         </div>
@@ -50,7 +50,7 @@ export function SiteFooter() {
                   href={brandHrefs[index]}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                  className="text-sm text-subtle-foreground transition-colors hover:text-primary"
                 >
                   {label}
                 </a>
@@ -70,7 +70,7 @@ export function SiteFooter() {
                   href={shopHrefs[index]}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                  className="text-sm text-subtle-foreground transition-colors hover:text-primary"
                 >
                   {label}
                 </a>
@@ -81,7 +81,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-muted-foreground sm:flex-row lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-subtle-foreground sm:flex-row lg:px-10">
           <p>
             © {new Date().getFullYear()} {t.footer.copyright}
           </p>

@@ -64,8 +64,8 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
             <DialogFooter>
               <Button
                 type="button"
+                variant="brand"
                 onClick={() => onOpenChange(false)}
-                className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 {t.contact.modal.close}
               </Button>
@@ -173,11 +173,7 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
             )}
 
             <DialogFooter>
-              <Button
-                type="submit"
-                disabled={isPending}
-                className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
-              >
+              <Button type="submit" variant="brand" disabled={isPending}>
                 {isPending ? t.contact.modal.submitting : t.contact.modal.submit}
               </Button>
             </DialogFooter>

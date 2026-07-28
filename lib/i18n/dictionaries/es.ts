@@ -263,4 +263,10 @@ export const es: Dictionary = {
     es: "ES",
     en: "EN",
   },
+  ageGate: {
+    title: "Para ingresar a nuestro sitio debés ser mayor de edad",
+    question: "¿Eres mayor de 18 años?",
+    confirm: "Sí",
+    deny: "No",
+  },
 }

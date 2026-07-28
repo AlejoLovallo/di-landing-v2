@@ -120,4 +120,10 @@ export type Dictionary = {
     es: string
     en: string
   }
+  ageGate: {
+    title: string
+    question: string
+    confirm: string
+    deny: string
+  }
 }

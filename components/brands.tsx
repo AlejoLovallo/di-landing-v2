@@ -1,7 +1,10 @@
 "use client"
 
+import { useState } from "react"
+
 import { useTranslation } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
+import { SectionTabs } from "@/components/section-tabs"
 import { images } from "@/lib/images"
 
 const brandMeta = [
@@ -49,9 +52,9 @@ function BrandActions({
     <div className="mt-8 flex flex-wrap gap-3">
       {shop && (
         <Button
+          variant="brand"
           nativeButton={false}
           render={<a href={shop} target="_blank" rel="noreferrer" />}
-          className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
         >
           {buyLabel}
         </Button>
@@ -70,11 +73,27 @@ function BrandActions({
 
 export function Brands() {
   const { t } = useTranslation()
+  const [activeTab, setActiveTab] = useState(t.brands.items[0].name)
+
+  const tabs = t.brands.items.map((brand, index) => ({
+    id: brand.name,
+    label: brand.name,
+    number: String(index + 1).padStart(2, "0"),
+  }))
+
+  const activeIndex = t.brands.items.findIndex(
+    (brand) => brand.name === activeTab
+  )
+  const brand = t.brands.items[activeIndex >= 0 ? activeIndex : 0]
+  const meta = brandMeta[activeIndex >= 0 ? activeIndex : 0]
+  const gallery = "gallery" in meta ? meta.gallery : undefined
+  const secondaryImage =
+    "secondaryImage" in meta ? meta.secondaryImage : undefined
 
   return (
     <section id="marcas" className="bg-background py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-10 max-w-2xl lg:mb-12">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-primary">
             <span className="h-px w-10 bg-primary" />
             {t.brands.label}
@@ -90,146 +109,131 @@ export function Brands() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {t.brands.items.map((brand, index) => {
-            const meta = brandMeta[index]
-            const gallery = "gallery" in meta ? meta.gallery : undefined
-            const secondaryImage =
-              "secondaryImage" in meta ? meta.secondaryImage : undefined
+        <SectionTabs
+          tabs={tabs}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+          className="-mx-6 px-6 lg:-mx-10 lg:px-10"
+        />
 
-            if (meta.featured && gallery) {
-              return (
-                <article
-                  key={brand.name}
-                  className="group col-span-full overflow-hidden border border-border bg-card transition-colors hover:border-primary/60"
-                >
-                  <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
-                    <div className="relative min-h-[28rem] overflow-hidden lg:min-h-full">
-                      <img
-                        src={meta.image}
-                        alt={brand.imageAlt}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                      />
-                    </div>
-
-                    <div className="flex flex-col justify-center p-8 lg:p-12 xl:p-14">
-                      <span className="text-xs uppercase tracking-[0.25em] text-primary">
-                        {brand.category}
-                      </span>
-                      <h3 className="mt-3 font-heading text-3xl font-bold text-foreground lg:text-4xl xl:text-5xl">
-                        {brand.name}
-                      </h3>
-                      <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
-                        {brand.description}
-                      </p>
-                      <BrandActions
-                        shop={meta.shop}
-                        instagram={meta.instagram}
-                        buyLabel={t.brands.buyOnline}
-                        instagramLabel={t.brands.viewInstagram}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 border-t border-border md:grid-cols-4">
-                    {gallery.map((src, photoIndex) => (
-                      <div
-                        key={src}
-                        className="relative aspect-[4/5] overflow-hidden bg-secondary md:aspect-[3/4]"
-                      >
-                        <img
-                          src={src}
-                          alt={
-                            brand.galleryAlts?.[photoIndex] ?? brand.imageAlt
-                          }
-                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              )
-            }
-
-            if (meta.featured && secondaryImage) {
-              return (
-                <article
-                  key={brand.name}
-                  className="group col-span-full overflow-hidden border border-border bg-card transition-colors hover:border-primary/60"
-                >
-                  <div className="grid lg:grid-cols-2">
-                    <div className="relative min-h-[26rem] overflow-hidden lg:min-h-[34rem]">
-                      <img
-                        src={meta.image}
-                        alt={brand.imageAlt}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                      />
-                    </div>
-                    <div className="relative min-h-[26rem] overflow-hidden border-t border-border lg:min-h-[34rem] lg:border-t-0 lg:border-l">
-                      <img
-                        src={secondaryImage}
-                        alt={brand.secondaryImageAlt ?? brand.imageAlt}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col justify-center border-t border-border p-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:p-12">
-                    <div className="max-w-2xl">
-                      <span className="text-xs uppercase tracking-[0.25em] text-primary">
-                        {brand.category}
-                      </span>
-                      <h3 className="mt-3 font-heading text-3xl font-bold text-foreground lg:text-4xl xl:text-5xl">
-                        {brand.name}
-                      </h3>
-                      <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
-                        {brand.description}
-                      </p>
-                    </div>
-                    <BrandActions
-                      shop={meta.shop}
-                      instagram={meta.instagram}
-                      buyLabel={t.brands.buyOnline}
-                      instagramLabel={t.brands.viewInstagram}
-                    />
-                  </div>
-                </article>
-              )
-            }
-
-            return (
-              <article
-                key={brand.name}
-                className="group flex flex-col overflow-hidden border border-border bg-card transition-colors hover:border-primary/60"
-              >
-                <div className="relative overflow-hidden bg-secondary">
+        <article
+          key={brand.name}
+          className="group mt-8 overflow-hidden border border-border bg-card transition-colors hover:border-primary/60"
+          role="tabpanel"
+        >
+          {meta.featured && gallery ? (
+            <>
+              <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+                <div className="relative min-h-[28rem] overflow-hidden lg:min-h-full">
                   <img
                     src={meta.image}
                     alt={brand.imageAlt}
-                    className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-8">
+
+                <div className="flex flex-col justify-center p-8 lg:p-12 xl:p-14">
                   <span className="text-xs uppercase tracking-[0.25em] text-primary">
                     {brand.category}
                   </span>
-                  <h3 className="mt-3 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+                  <h3 className="mt-3 font-heading text-3xl font-bold text-foreground lg:text-4xl xl:text-5xl">
                     {brand.name}
                   </h3>
-                  <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                  <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
                     {brand.description}
                   </p>
                   <BrandActions
-                    shop={"shop" in meta ? meta.shop : undefined}
+                    shop={meta.shop}
                     instagram={meta.instagram}
                     buyLabel={t.brands.buyOnline}
                     instagramLabel={t.brands.viewInstagram}
                   />
                 </div>
-              </article>
-            )
-          })}
-        </div>
+              </div>
+
+              <div className="grid grid-cols-2 border-t border-border md:grid-cols-4">
+                {gallery.map((src, photoIndex) => (
+                  <div
+                    key={src}
+                    className="relative aspect-[4/5] overflow-hidden bg-secondary md:aspect-[3/4]"
+                  >
+                    <img
+                      src={src}
+                      alt={brand.galleryAlts?.[photoIndex] ?? brand.imageAlt}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : meta.featured && secondaryImage ? (
+            <>
+              <div className="grid lg:grid-cols-2">
+                <div className="relative min-h-[26rem] overflow-hidden lg:min-h-[34rem]">
+                  <img
+                    src={meta.image}
+                    alt={brand.imageAlt}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="relative min-h-[26rem] overflow-hidden border-t border-border lg:min-h-[34rem] lg:border-t-0 lg:border-l">
+                  <img
+                    src={secondaryImage}
+                    alt={brand.secondaryImageAlt ?? brand.imageAlt}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col justify-center border-t border-border p-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:p-12">
+                <div className="max-w-2xl">
+                  <span className="text-xs uppercase tracking-[0.25em] text-primary">
+                    {brand.category}
+                  </span>
+                  <h3 className="mt-3 font-heading text-3xl font-bold text-foreground lg:text-4xl xl:text-5xl">
+                    {brand.name}
+                  </h3>
+                  <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
+                    {brand.description}
+                  </p>
+                </div>
+                <BrandActions
+                  shop={meta.shop}
+                  instagram={meta.instagram}
+                  buyLabel={t.brands.buyOnline}
+                  instagramLabel={t.brands.viewInstagram}
+                />
+              </div>
+            </>
+          ) : (
+            <div className="grid lg:grid-cols-2">
+              <div className="relative overflow-hidden bg-secondary">
+                <img
+                  src={meta.image}
+                  alt={brand.imageAlt}
+                  className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 lg:h-full lg:min-h-[24rem]"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 lg:p-12">
+                <span className="text-xs uppercase tracking-[0.25em] text-primary">
+                  {brand.category}
+                </span>
+                <h3 className="mt-3 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+                  {brand.name}
+                </h3>
+                <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                  {brand.description}
+                </p>
+                <BrandActions
+                  shop={"shop" in meta ? meta.shop : undefined}
+                  instagram={meta.instagram}
+                  buyLabel={t.brands.buyOnline}
+                  instagramLabel={t.brands.viewInstagram}
+                />
+              </div>
+            </div>
+          )}
+        </article>
       </div>
     </section>
   )

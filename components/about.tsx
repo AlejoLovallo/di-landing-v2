@@ -15,11 +15,11 @@ export function About() {
             alt={t.distillery.imageAlt}
             className="aspect-[4/5] h-full w-full border border-border object-cover lg:aspect-[3/4]"
           />
-          <div className="absolute -bottom-6 -right-6 hidden border border-primary bg-background px-8 py-6 lg:block">
-            <p className="font-heading text-3xl font-bold text-primary">
+          <div className="absolute -bottom-6 -right-6 hidden border border-accent bg-background px-8 py-6 lg:block">
+            <p className="font-heading text-3xl font-bold text-accent">
               {t.distillery.badgeTitle}
             </p>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            <p className="text-xs uppercase tracking-[0.25em] text-subtle-foreground">
               {t.distillery.badgeSubtitle}
             </p>
           </div>

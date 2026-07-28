@@ -13,10 +13,10 @@ export function Marquee() {
             key={stat.label}
             className="flex flex-col items-center gap-2 px-4 py-10 text-center [&:nth-child(3)]:border-t [&:nth-child(4)]:border-t lg:[&:nth-child(n)]:border-t-0"
           >
-            <span className="font-heading text-4xl font-bold text-primary">
+            <span className="font-heading text-4xl font-bold text-accent">
               {stat.value}
             </span>
-            <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            <span className="text-xs uppercase tracking-[0.25em] text-subtle-foreground">
               {stat.label}
             </span>
           </div>

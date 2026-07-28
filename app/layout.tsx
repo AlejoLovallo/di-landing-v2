@@ -2,6 +2,8 @@ import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
 import { Playfair_Display, Inter, Geist_Mono } from "next/font/google"
 
+import { AgeGateModal } from "@/components/age-gate-modal"
+import { ContactModalProvider } from "@/components/contact-modal-provider"
 import { HomepageJsonLd } from "@/components/homepage-jsonld"
 import { LanguageProvider } from "@/components/language-provider"
 import { es } from "@/lib/i18n/dictionaries/es"
@@ -50,7 +52,12 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         <HomepageJsonLd />
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <ContactModalProvider>
+            {children}
+            <AgeGateModal />
+          </ContactModalProvider>
+        </LanguageProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

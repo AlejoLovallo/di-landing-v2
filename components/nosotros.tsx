@@ -29,7 +29,7 @@ export function Nosotros() {
                 <h3 className="font-heading text-lg font-bold text-foreground">
                   {value.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-subtle-foreground">
                   {value.description}
                 </p>
               </div>
@@ -45,7 +45,7 @@ export function Nosotros() {
           />
           <div className="absolute -bottom-6 -left-6 hidden border border-primary bg-background px-8 py-6 lg:block">
             <p className="font-heading text-3xl font-bold text-primary">DI</p>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            <p className="text-xs uppercase tracking-[0.25em] text-subtle-foreground">
               {t.aboutUs.label}
             </p>
           </div>

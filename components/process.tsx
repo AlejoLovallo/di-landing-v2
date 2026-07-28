@@ -30,7 +30,7 @@ export function Process() {
               <h3 className="font-heading text-xl font-bold text-foreground">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="text-sm leading-relaxed text-subtle-foreground">
                 {step.description}
               </p>
             </div>
