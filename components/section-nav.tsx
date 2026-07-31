@@ -74,7 +74,7 @@ export function SectionNav() {
               "shrink-0 border-b-2 px-4 py-3.5 text-xs uppercase tracking-[0.2em] transition-colors sm:px-5",
               active === section.id
                 ? "border-primary text-foreground"
-                : "border-transparent text-foreground/65 hover:text-foreground"
+                : "border-transparent text-foreground/65 hover:text-accent"
             )}
             aria-current={active === section.id ? "true" : undefined}
           >

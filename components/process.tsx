@@ -22,7 +22,7 @@ export function Process() {
           {t.process.steps.map((step) => (
             <div
               key={step.number}
-              className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-secondary"
+              className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-accent/5"
             >
               <span className="font-heading text-5xl font-bold text-primary/30">
                 {step.number}

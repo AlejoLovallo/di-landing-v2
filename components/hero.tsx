@@ -18,9 +18,9 @@ export function Hero() {
         alt={t.hero.imageAlt}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-background/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+      <div className="absolute inset-0 bg-background/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/30" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-32 lg:px-10">
         <div className="max-w-2xl">
@@ -45,7 +45,7 @@ export function Hero() {
               variant="outline"
               nativeButton={false}
               render={<a href="#marcas" />}
-              className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:bg-foreground/10"
+              className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
             >
               {t.hero.ctaBrands}
             </Button>
@@ -54,7 +54,7 @@ export function Hero() {
               variant="outline"
               nativeButton={false}
               render={<a href="#destileria" />}
-              className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:bg-foreground/10"
+              className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
             >
               {t.hero.ctaDistillery}
             </Button>

@@ -28,7 +28,7 @@ function LanguageToggle() {
             "px-2.5 py-1.5 text-xs uppercase tracking-widest transition-colors",
             locale === code
               ? "bg-primary text-primary-foreground"
-              : "text-foreground/65 hover:text-foreground"
+              : "text-foreground/65 hover:text-accent"
           )}
           aria-pressed={locale === code}
         >
@@ -88,7 +88,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm uppercase tracking-widest text-foreground/80 transition-colors hover:text-foreground"
+              className="text-sm uppercase tracking-widest text-foreground/80 transition-colors hover:text-accent"
             >
               {link.label}
             </a>
@@ -131,7 +131,7 @@ export function SiteHeader() {
                 rel="noreferrer"
               />
             }
-            className="rounded-none border-foreground/30 bg-transparent px-4 text-foreground hover:bg-foreground/10"
+            className="rounded-none border-foreground/30 bg-transparent px-4 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
           >
             {t.nav.shop}
           </Button>

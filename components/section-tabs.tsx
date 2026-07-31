@@ -40,7 +40,7 @@ export function SectionTabs({
             "shrink-0 border-b-2 px-5 py-4 text-xs uppercase tracking-[0.2em] transition-colors sm:px-6",
             activeTab === tab.id
               ? "border-primary text-foreground"
-              : "border-transparent text-foreground/65 hover:text-foreground"
+              : "border-transparent text-foreground/65 hover:text-accent"
           )}
         >
           {tab.number && (

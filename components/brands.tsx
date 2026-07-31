@@ -63,7 +63,7 @@ function BrandActions({
         variant="outline"
         nativeButton={false}
         render={<a href={instagram} target="_blank" rel="noreferrer" />}
-        className="rounded-none border-border bg-transparent text-foreground hover:bg-foreground/10"
+        className="rounded-none border-border bg-transparent text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
       >
         {instagramLabel}
       </Button>
@@ -118,7 +118,7 @@ export function Brands() {
 
         <article
           key={brand.name}
-          className="group mt-8 overflow-hidden border border-border bg-card transition-colors hover:border-primary/60"
+          className="group mt-8 overflow-hidden border border-border bg-card transition-colors hover:border-accent/60"
           role="tabpanel"
         >
           {meta.featured && gallery ? (

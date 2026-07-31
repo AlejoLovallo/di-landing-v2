@@ -50,7 +50,7 @@ export function SiteFooter() {
                   href={brandHrefs[index]}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-subtle-foreground transition-colors hover:text-primary"
+                  className="text-sm text-subtle-foreground transition-colors hover:text-accent"
                 >
                   {label}
                 </a>
@@ -70,7 +70,7 @@ export function SiteFooter() {
                   href={shopHrefs[index]}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-subtle-foreground transition-colors hover:text-primary"
+                  className="text-sm text-subtle-foreground transition-colors hover:text-accent"
                 >
                   {label}
                 </a>

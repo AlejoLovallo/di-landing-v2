@@ -68,7 +68,7 @@ export function ContactCtaButtons({
             />
           }
           className={cn(
-            "rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:bg-foreground/10",
+            "rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent",
             buttonClassName
           )}
         >
