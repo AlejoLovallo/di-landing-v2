@@ -22,15 +22,15 @@ export function Process() {
           {t.process.steps.map((step) => (
             <div
               key={step.number}
-              className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-secondary"
+              className="group flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-accent/10"
             >
-              <span className="font-heading text-5xl font-bold text-primary/30">
+              <span className="font-heading text-5xl font-bold text-primary/30 transition-colors group-hover:text-accent">
                 {step.number}
               </span>
-              <h3 className="font-heading text-xl font-bold text-foreground">
+              <h3 className="font-heading text-xl font-bold text-foreground transition-colors group-hover:text-accent">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="text-sm leading-relaxed text-subtle-foreground">
                 {step.description}
               </p>
             </div>

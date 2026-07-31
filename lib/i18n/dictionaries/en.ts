@@ -262,4 +262,10 @@ export const en: Dictionary = {
     es: "ES",
     en: "EN",
   },
+  ageGate: {
+    title: "You must be of legal age to enter our site",
+    question: "Are you over 18 years old?",
+    confirm: "Yes",
+    deny: "No",
+  },
 }

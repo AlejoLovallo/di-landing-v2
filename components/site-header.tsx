@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react"
 
 import { useTranslation } from "@/components/language-provider"
+import { useContactModal } from "@/components/contact-modal-provider"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/contact"
 import { images } from "@/lib/images"
 import type { Locale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
@@ -26,7 +28,7 @@ function LanguageToggle() {
             "px-2.5 py-1.5 text-xs uppercase tracking-widest transition-colors",
             locale === code
               ? "bg-primary text-primary-foreground"
-              : "text-muted-foreground hover:text-foreground"
+              : "text-foreground/65 hover:text-accent"
           )}
           aria-pressed={locale === code}
         >
@@ -39,6 +41,7 @@ function LanguageToggle() {
 
 export function SiteHeader() {
   const { t } = useTranslation()
+  const { openContactModal } = useContactModal()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -85,7 +88,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm uppercase tracking-widest text-foreground/80 transition-colors hover:text-accent"
             >
               {link.label}
             </a>
@@ -95,6 +98,31 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageToggle />
           <Button
+            variant="outline"
+            size="sm"
+            nativeButton={false}
+            render={
+              <a
+                href={getWhatsAppUrl(t.contact.whatsappMessage)}
+                target="_blank"
+                rel="noreferrer"
+              />
+            }
+            className="rounded-none border-brand-whatsapp/50 bg-transparent text-foreground hover:border-brand-whatsapp hover:bg-brand-whatsapp/10"
+          >
+            WhatsApp
+          </Button>
+          <Button
+            variant="brand"
+            size="sm"
+            onClick={openContactModal}
+            className="px-4"
+          >
+            {t.contact.writeUs}
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
             nativeButton={false}
             render={
               <a
@@ -103,7 +131,7 @@ export function SiteHeader() {
                 rel="noreferrer"
               />
             }
-            className="rounded-none bg-primary px-4 text-primary-foreground hover:bg-primary/90"
+            className="rounded-none border-foreground/30 bg-transparent px-4 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
           >
             {t.nav.shop}
           </Button>
@@ -132,16 +160,34 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-border py-3 text-sm uppercase tracking-widest text-muted-foreground"
+                className="border-b border-border py-3 text-sm uppercase tracking-widest text-foreground/80"
               >
                 {link.label}
               </a>
             ))}
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false)
+                openContactModal()
+              }}
+              className="border-b border-border py-3 text-left text-sm uppercase tracking-widest text-primary"
+            >
+              {t.contact.writeUs}
+            </button>
+            <a
+              href={getWhatsAppUrl(t.contact.whatsappMessage)}
+              target="_blank"
+              rel="noreferrer"
+              className="border-b border-border py-3 text-sm uppercase tracking-widest text-brand-whatsapp"
+            >
+              {t.contact.whatsapp}
+            </a>
             <a
               href="https://capitangin.mitiendanube.com/"
               target="_blank"
               rel="noreferrer"
-              className="py-3 text-sm uppercase tracking-widest text-primary"
+              className="py-3 text-sm uppercase tracking-widest text-foreground/80"
             >
               {t.nav.shop}
             </a>
