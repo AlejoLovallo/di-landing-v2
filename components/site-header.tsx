@@ -39,19 +39,21 @@ function LanguageToggle() {
   )
 }
 
-export function SiteHeader() {
+export function SiteHeader({ homeHref = "" }: { homeHref?: string }) {
   const { t } = useTranslation()
   const { openContactModal } = useContactModal()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
+  const section = (hash: string) => `${homeHref}${hash}`
+
   const navLinks = [
-    { label: t.nav.brands, href: "#marcas" },
-    { label: t.nav.services, href: "#servicios" },
-    { label: t.nav.distillery, href: "#destileria" },
-    { label: t.nav.aboutUs, href: "#nosotros" },
-    { label: t.nav.process, href: "#proceso" },
-    { label: t.nav.contact, href: "#contacto" },
+    { label: t.nav.brands, href: section("#marcas") },
+    { label: t.nav.services, href: section("#servicios") },
+    { label: t.nav.distillery, href: section("#destileria") },
+    { label: t.nav.aboutUs, href: section("#nosotros") },
+    { label: t.nav.process, href: section("#proceso") },
+    { label: t.nav.contact, href: section("#contacto") },
   ]
 
   useEffect(() => {
@@ -70,7 +72,10 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
-        <a href="#inicio" className="flex items-center gap-3 leading-none">
+        <a
+          href={section("#inicio") || "#inicio"}
+          className="flex items-center gap-3 leading-none"
+        >
           <img
             src={images.logos.diWhite}
             alt="Destilería Independencia"

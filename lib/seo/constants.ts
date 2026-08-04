@@ -4,7 +4,7 @@ export const ORGANIZATION = {
   name: "Destilería Independencia S.R.L.",
   legalName: "Destilería Independencia S.R.L.",
   email: "hola@destileriaindependencia.com",
-  phone: "+54-11-2295-2023",
+  phone: "+54-11-2285-2023",
   logo: `${SITE_URL}/logos/logo-di-blue.png`,
   instagram: "https://www.instagram.com/destileriaindependencia/",
   address: {
