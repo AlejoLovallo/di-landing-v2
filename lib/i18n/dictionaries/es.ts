@@ -16,6 +16,79 @@ export const es: Dictionary = {
     shop: "Tienda",
     openMenu: "Abrir menú",
   },
+  store: {
+    metaTitle: "Tienda | Destilería Independencia",
+    metaDescription:
+      "Conocé el catálogo de Destilería Independencia y Plaza de Grillos: Capitán Gin y vinos del Valle de Uco.",
+    label: "Catálogo",
+    title: "Nuestros productos",
+    subtitle:
+      "Selección de gins y vinos elaborados por Destilería Independencia y Bodega Plaza de Grillos.",
+    backHome: "Volver al inicio",
+    viewImage: "Ver imagen",
+    brands: {
+      di: {
+        name: "Destilería Independencia",
+        tagline: "Capitán Gin",
+      },
+      pdg: {
+        name: "Plaza de Grillos",
+        tagline: "Valle de Uco · Mendoza",
+      },
+    },
+    products: {
+      "capitan-gin-etiqueta-negra": {
+        name: "Capitán Gin Etiqueta Negra",
+        category: "Gin · Infusión intensa",
+        description:
+          "Versión intensa de Capitán Gin, con una infusión profunda pensada para los paladares más audaces.",
+        imageAlts: [
+          "Capitán Gin Etiqueta Negra — frente",
+          "Capitán Gin Etiqueta Negra — dorso",
+        ],
+      },
+      "capitan-gin-london-dry": {
+        name: "Capitán Gin London Dry",
+        category: "Gin · London Dry",
+        description:
+          "Nuestro London Dry equilibrado y aromático, con enebro protagonista y un final limpio.",
+        imageAlts: [
+          "Capitán Gin London Dry — frente",
+          "Capitán Gin London Dry — dorso",
+        ],
+      },
+      "pdg-gran-reserva": {
+        name: "Plaza de Grillos Gran Reserva",
+        category: "Vino · Malbec Gran Reserva",
+        description:
+          "Malbec Gran Reserva del Valle de Uco, Mendoza: elegancia, profundidad y potencial de guarda.",
+        imageAlts: [
+          "Plaza de Grillos Gran Reserva Malbec — botella",
+          "Plaza de Grillos Gran Reserva Malbec — detalle",
+        ],
+      },
+      "pdg-icono": {
+        name: "Plaza de Grillos Ícono",
+        category: "Vino · Valle de Uco",
+        description:
+          "La expresión ícono de la bodega: un vino sofisticado del Valle de Uco, hecho para conversar.",
+        imageAlts: [
+          "Plaza de Grillos Ícono — botella",
+          "Plaza de Grillos Ícono — detalle",
+        ],
+      },
+      "pdg-the-blend": {
+        name: "Plaza de Grillos The Blend",
+        category: "Vino · Blend",
+        description:
+          "Blend elegante del Valle de Uco, equilibrado y versátil, pensado para la mesa y el brindis.",
+        imageAlts: [
+          "Plaza de Grillos The Blend — botella",
+          "Plaza de Grillos The Blend — detalle",
+        ],
+      },
+    },
+  },
   hero: {
     tagline: "Destilería artesanal · Argentina",
     title: "Detrás de muchas marcas, hay una destilería.",

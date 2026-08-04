@@ -23,4 +23,16 @@ export const images = {
     plazaGrillos: "/brands/pdg/bodega.png",
     plazaGrillosBottles: "/brands/pdg/CAP_03.png",
   },
+  store: {
+    capitanEtiquetaNegra: "/store/di/CapitanGin_ML_EtiquetaNegra.png",
+    capitanEtiquetaNegraBack: "/store/di/CapitanGin_ML_EtiquetaNegra_back.png",
+    capitanLondonDry: "/store/di/CapitanGin_ML_LondonDry.png",
+    capitanLondonDryBack: "/store/di/CapitanGin_ML_LondonDry_back.png",
+    pdgGranReserva: "/store/pdg/PlazaDeGrillos_ML_GranReserva.png",
+    pdgGranReservaAlt: "/store/pdg/PlazaDeGrillos_ML_GranReserva_2.png",
+    pdgIcono: "/store/pdg/PlazaDeGrillos_ML_Icono.png",
+    pdgIconoAlt: "/store/pdg/PlazaDeGrillos_ML_Icono_2.png",
+    pdgTheBlend: "/store/pdg/PlazaDeGrillos_ML_TheBlend.png",
+    pdgTheBlendAlt: "/store/pdg/PlazaDeGrillos_ML_TheBlend_2.png",
+  },
 } as const

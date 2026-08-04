@@ -129,7 +129,7 @@ export function getHomepageJsonLd() {
             name: "¿Cómo puedo comprar los productos?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Podés comprar Capitán Gin en capitangin.mitiendanube.com y Plaza de Grillos en plazadegrillos.com. Para consultas comerciales, usá el formulario de contacto del sitio o WhatsApp al +54 11 2295-2023.",
+              text: "Podés comprar Capitán Gin en capitangin.mitiendanube.com y Plaza de Grillos en plazadegrillos.com. Para consultas comerciales, usá el formulario de contacto del sitio o WhatsApp al +54 11 2285-2023.",
             },
           },
           {

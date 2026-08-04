@@ -7,6 +7,13 @@ export type ContactReason =
   | "press"
   | "other"
 
+export type StoreProductCopy = {
+  name: string
+  category: string
+  description: string
+  imageAlts: [string, string]
+}
+
 export type Dictionary = {
   meta: {
     title: string
@@ -21,6 +28,26 @@ export type Dictionary = {
     contact: string
     shop: string
     openMenu: string
+  }
+  store: {
+    metaTitle: string
+    metaDescription: string
+    label: string
+    title: string
+    subtitle: string
+    backHome: string
+    viewImage: string
+    brands: {
+      di: { name: string; tagline: string }
+      pdg: { name: string; tagline: string }
+    }
+    products: {
+      "capitan-gin-etiqueta-negra": StoreProductCopy
+      "capitan-gin-london-dry": StoreProductCopy
+      "pdg-gran-reserva": StoreProductCopy
+      "pdg-icono": StoreProductCopy
+      "pdg-the-blend": StoreProductCopy
+    }
   }
   hero: {
     tagline: string
