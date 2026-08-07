@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { useTranslation } from "@/components/language-provider"
 import { images } from "@/lib/images"
 
@@ -38,11 +40,15 @@ export function Nosotros() {
         </div>
 
         <div className="relative order-1 lg:order-2">
-          <img
-            src={images.di.us}
-            alt={t.aboutUs.imageAlt}
-            className="h-full w-full border border-border object-cover"
-          />
+          <div className="relative aspect-[3/2] w-full border border-border lg:aspect-auto lg:min-h-[28rem]">
+            <Image
+              src={images.di.us}
+              alt={t.aboutUs.imageAlt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
           <div className="absolute -bottom-6 -left-6 hidden border border-primary bg-background px-8 py-6 lg:block">
             <p className="font-heading text-3xl font-bold text-primary">DI</p>
             <p className="text-xs uppercase tracking-[0.25em] text-subtle-foreground">

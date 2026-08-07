@@ -1,11 +1,11 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
-import { Playfair_Display, Inter, Geist_Mono } from "next/font/google"
+import { Playfair_Display, Inter } from "next/font/google"
 
 import { AgeGateModal } from "@/components/age-gate-modal"
 import { ContactModalProvider } from "@/components/contact-modal-provider"
-import { HomepageJsonLd } from "@/components/homepage-jsonld"
 import { LanguageProvider } from "@/components/language-provider"
+import { WhatsAppFab } from "@/components/whatsapp-fab"
 import { es } from "@/lib/i18n/dictionaries/es"
 import { SITE_URL } from "@/lib/seo/constants"
 import "./globals.css"
@@ -20,10 +20,6 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 })
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,9 +30,32 @@ export const metadata: Metadata = {
     apple: "/logos/logo-di-blue.png",
   },
   alternates: {
+    canonical: "/",
     types: {
       "text/plain": [{ url: "/llms.txt", title: "llms.txt" }],
     },
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: SITE_URL,
+    siteName: "Destilería Independencia",
+    title: es.meta.title,
+    description: es.meta.description,
+    images: [
+      {
+        url: "/og.jpg",
+        width: 800,
+        height: 1200,
+        alt: "Destilería Independencia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: es.meta.title,
+    description: es.meta.description,
+    images: ["/og.jpg"],
   },
 }
 
@@ -48,13 +67,13 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${inter.variable} ${geistMono.variable} bg-background`}
+      className={`${playfair.variable} ${inter.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        <HomepageJsonLd />
         <LanguageProvider>
           <ContactModalProvider>
             {children}
+            <WhatsAppFab />
             <AgeGateModal />
           </ContactModalProvider>
         </LanguageProvider>

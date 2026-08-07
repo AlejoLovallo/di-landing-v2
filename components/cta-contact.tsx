@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { ContactCtaButtons } from "@/components/contact-cta-buttons"
 import { useTranslation } from "@/components/language-provider"
 import { images } from "@/lib/images"
@@ -9,10 +11,12 @@ export function CtaContact() {
 
   return (
     <section id="contacto" className="relative overflow-hidden">
-      <img
+      <Image
         src={images.di.gauge}
         alt={t.contact.imageAlt}
-        className="absolute inset-0 h-full w-full object-cover"
+        fill
+        sizes="100vw"
+        className="object-cover"
       />
       <div className="absolute inset-0 bg-background/90" />
       <div className="relative mx-auto max-w-3xl px-6 py-24 text-center lg:py-32">

@@ -1,14 +1,17 @@
 import type { Dictionary } from "@/lib/i18n/types"
+import { homepageFaqEs } from "@/lib/seo/faq"
 
 export const es: Dictionary = {
   meta: {
-    title: "Destilería Independencia | Destilería de espíritus artesanales",
+    title:
+      "Destilería Independencia | Producción a fasón y espíritus artesanales",
     description:
-      "Destilería Independencia elabora gins, vermús y vinos premium en Argentina. Conocé nuestras marcas: Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú y Plaza de Grillos.",
+      "Socio productivo para marcas, distribuidores y gastronomía: gin a fasón y granel, gin tonic embarrilado, vino a granel y desarrollos enológicos. Destilería artesanal en Argentina.",
   },
   nav: {
     brands: "Marcas",
     services: "Servicios",
+    winery: "Bodega",
     distillery: "Destilería",
     aboutUs: "Nosotros",
     process: "Proceso",
@@ -26,6 +29,7 @@ export const es: Dictionary = {
       "Selección de gins y vinos elaborados por Destilería Independencia y Bodega Plaza de Grillos.",
     backHome: "Volver al inicio",
     viewImage: "Ver imagen",
+    buy: "Comprar",
     brands: {
       di: {
         name: "Destilería Independencia",
@@ -45,6 +49,7 @@ export const es: Dictionary = {
         imageAlts: [
           "Capitán Gin Etiqueta Negra — frente",
           "Capitán Gin Etiqueta Negra — dorso",
+          "Placa Destilería Independencia",
         ],
       },
       "capitan-gin-london-dry": {
@@ -55,6 +60,7 @@ export const es: Dictionary = {
         imageAlts: [
           "Capitán Gin London Dry — frente",
           "Capitán Gin London Dry — dorso",
+          "Placa Destilería Independencia",
         ],
       },
       "pdg-gran-reserva": {
@@ -65,6 +71,7 @@ export const es: Dictionary = {
         imageAlts: [
           "Plaza de Grillos Gran Reserva Malbec — botella",
           "Plaza de Grillos Gran Reserva Malbec — detalle",
+          "Placa Destilería Independencia",
         ],
       },
       "pdg-icono": {
@@ -75,6 +82,7 @@ export const es: Dictionary = {
         imageAlts: [
           "Plaza de Grillos Ícono — botella",
           "Plaza de Grillos Ícono — detalle",
+          "Placa Destilería Independencia",
         ],
       },
       "pdg-the-blend": {
@@ -85,6 +93,7 @@ export const es: Dictionary = {
         imageAlts: [
           "Plaza de Grillos The Blend — botella",
           "Plaza de Grillos The Blend — detalle",
+          "Placa Destilería Independencia",
         ],
       },
     },
@@ -93,73 +102,114 @@ export const es: Dictionary = {
     tagline: "Destilería artesanal · Argentina",
     title: "Detrás de muchas marcas, hay una destilería.",
     paragraphs: [
-      "En Destilería Independencia desarrollamos y producimos bebidas espirituosas para empresas, marcas, distribuidores, bares y restaurantes que buscan lanzar, escalar o consolidar sus productos.",
-      "Ofrecemos producción a fasón, elaboración a granel y desarrollo de marcas propias, combinando capacidad industrial, excelencia técnica y flexibilidad operativa. Con un equipo de trabajo consolidado, procesos certificados y productos reconocidos en competencias nacionales e internacionales, transformamos ideas en bebidas listas para el mercado.",
-      "Somos el socio productivo detrás de marcas que crecen.",
+      "Destilería Independencia es una destilería argentina especializada en la elaboración de bebidas espirituosas para terceros, producción a granel y desarrollo de marcas propias. Acompañamos fábricas, marcas, distribuidores, bares y restaurantes que buscan lanzar, escalar y/o consolidar sus productos con un socio productivo confiable y de largo plazo.",
     ],
-    ctaBrands: "Conocer nuestras marcas",
-    ctaDistillery: "Sobre la destilería",
+    ctaQuote: "Cotizá tu proyecto",
+    ctaServices: "Conocé nuestros servicios",
     imageAlt: "Alambique de cobre en la Destilería Independencia",
   },
   stats: [
-    { value: "5", label: "Marcas propias" },
+    { value: "1", label: "Marca propia" },
+    { value: "3", label: "Marcas que confían en nosotros" },
     { value: "100%", label: "Producción artesanal" },
     { value: "Arg", label: "Origen e identidad" },
-    { value: "∞", label: "Pasión por el oficio" },
   ],
   brands: {
-    label: "Nuestras marcas",
-    title: "Marcas que confían en nosotros",
-    subtitle: "Calidad que se refleja en cada proyecto",
-    description:
-      "Trabajamos junto a marcas que eligieron Destilería Independencia como su socio productivo y comercial. Algunas desarrollan sus bebidas con nosotros bajo la modalidad de producción a fasón, mientras que otras forman parte de nuestro portfolio de distribución. Todas comparten el mismo compromiso con la calidad.",
+    label: "Marcas",
     buyOnline: "Comprar online",
     viewInstagram: "Ver en Instagram",
-    items: [
-      {
+    own: {
+      label: "Marca propia",
+      title: "Capitán Gin",
+      description:
+        "Nuestra marca de la casa: gin premium argentino elaborado en Destilería Independencia.",
+      awardsTitle: "3 medallas nacionales",
+      awards: [
+        {
+          medal: "Gran Oro",
+          detail: "London Dry · Argentina Spirits Awards 2024",
+          imageAlt:
+            "Medalla Gran Oro Capitán Gin London Dry Argentina Spirits Awards 2024",
+        },
+        {
+          medal: "Oro",
+          detail: "London Dry · Copa Argentina de Destilados 2025",
+          imageAlt:
+            "Medalla de Oro Capitán Gin London Dry Copa Argentina de Destilados 2025",
+        },
+        {
+          medal: "Plata",
+          detail: "Etiqueta Negra · Argentina Spirits Awards 2024",
+          imageAlt:
+            "Medalla de Plata Capitán Gin Etiqueta Negra Argentina Spirits Awards 2024",
+        },
+      ],
+      item: {
         name: "Capitán Gin",
         category: "Marca propia · London Dry",
         description:
           "Nuestro gin premium argentino. Un London Dry equilibrado y aromático, con un enebro protagonista y un final limpio. La Etiqueta Negra suma una infusión intensa para los paladares más audaces.",
         imageAlt: "Capitán Gin London Dry y Etiqueta Negra",
         galleryAlts: [
-          "Capitán Gin London Dry y Etiqueta Negra",
+          "Detalle de Capitán Gin",
           "Detalle de Capitán Gin Etiqueta Negra",
           "Detalle de Capitán Gin London Dry",
           "Tapón de Capitán Gin Destilería Independencia",
         ],
       },
-      {
-        name: "Gin Etheryo",
-        category: "Gin botánico",
-        description:
-          "Un gin de inspiración botánica, fresco y floral, pensado para quienes buscan una experiencia más delicada y contemporánea en cada trago.",
-        imageAlt: "Botella de Gin Etheryo",
-      },
-      {
-        name: "El Refuerzo Gin Vermú",
-        category: "Gin Vermú",
-        description:
-          "La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.",
-        imageAlt: "Botella de El Refuerzo Gin Vermú",
-      },
-      {
-        name: "Plaza de Grillos",
-        category: "Bodega · Valle de Uco",
-        description:
-          "Vinos elegantes y sofisticados del Valle de Uco, Mendoza. Malbecs y blends con gran potencial de guarda, hechos para conversar.",
-        imageAlt: "Viñedo de Plaza de Grillos en el Valle de Uco",
-        secondaryImageAlt: "Botellas Gran Reserva Malbec de Plaza de Grillos",
-      },
-    ],
+    },
+    trusted: {
+      label: "Marcas que confían en nosotros",
+      title: "Socios productivos y marcas que elegimos acompañar",
+      description:
+        "Trabajamos junto a marcas que eligieron Destilería Independencia como su socio productivo. Desarrollan sus bebidas con nosotros y comparten el mismo compromiso con la calidad.",
+      items: [
+        {
+          name: "Gin Etheryo",
+          category: "Gin botánico",
+          description:
+            "Un gin de inspiración botánica, fresco y floral, pensado para quienes buscan una experiencia más delicada y contemporánea en cada trago.",
+          imageAlt: "Botella de Gin Etheryo",
+        },
+        {
+          name: "El Refuerzo Gin",
+          category: "Gin",
+          description:
+            "La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.",
+          imageAlt: "Botella de El Refuerzo Gin",
+        },
+        {
+          name: "Ribecky Spirits",
+          category: "Gin",
+          description:
+            "Marca de gin que confía en Destilería Independencia como socio productivo para elaborar sus espíritus.",
+          imageAlt: "Ribecky Spirits",
+        },
+      ],
+    },
+  },
+  winery: {
+    label: "Bodega",
+    title: "Plaza de Grillos",
+    subtitle: "Valle de Uco · Mendoza",
+    description:
+      "Fue fundada en 2015 y concebida desde sus inicios como una bodega boutique enfocada en producir vinos de alta calidad en el Valle de Uco, a 1150 metros sobre el nivel del mar, al pie de la cordillera de los Andes, un lugar privilegiado, beneficiado por el buen sol que favorece la elaboración de vinos premium característicos de la región.",
+    category: "Bodega · Valle de Uco",
+    buyOnline: "Comprar online",
+    viewInstagram: "Ver en Instagram",
+    imageAlt: "Viñedo de Plaza de Grillos en el Valle de Uco",
+    secondaryImageAlt: "Botellas Gran Reserva Malbec de Plaza de Grillos",
+    videoLabel: "Video de Bodega Plaza de Grillos en el Valle de Uco",
   },
   services: {
     label: "Nuestros servicios",
     title: "Producción, desarrollo y suministro para tu marca",
     subtitle:
       "Acompañamos fábricas, marcas, distribuidores, bares y restaurantes con un socio productivo confiable.",
+    consultCta: "Consultar por este servicio",
     items: [
       {
+        id: "gin-granel-fason",
         name: "Gin — Granel y Fasón",
         description:
           "Producción de gin premium para fábricas, marcas, distribuidores y proyectos gastronómicos. Elaboramos recetas estándar o desarrollos personalizados, con posibilidad de producción a granel o producto terminado listo para comercialización.",
@@ -169,8 +219,11 @@ export const es: Dictionary = {
           "Desarrollo de receta + RNPA incluido sin cargo",
           "Turno de destilación, botánicos, esterilización y embotellado",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Gin — Granel y Fasón.",
       },
       {
+        id: "gin-tonic-embarrilado",
         name: "Gin Tonic Embarrilado",
         description:
           "Gin tonic listo para servir, elaborado con gin premium y tónica de calidad, disponible en barriles para eventos, bares, restaurantes y servicios de catering. Calidad constante, rapidez de servicio y excelente rentabilidad para el canal gastronómico.",
@@ -180,8 +233,11 @@ export const es: Dictionary = {
           "Ajustes de sabor y perfil según requerimientos",
           "Entrega en barriles de acero inoxidable",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Gin Tonic Embarrilado.",
       },
       {
+        id: "vino-a-granel",
         name: "Vino a Granel",
         description:
           "Vinos jóvenes, frescos y frutados seleccionados para proyectos de gastronomía, fraccionamiento, vermutería y bebidas listas para consumir. Disponibles en distintos formatos y escalas de suministro, con certificación INV y documentación habilitante.",
@@ -191,8 +247,11 @@ export const es: Dictionary = {
           "Fraccionamiento bajo marca propia",
           "Certificado INV y libre de circulación",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Vino a Granel.",
       },
       {
+        id: "otros-desarrollos",
         name: "Otros Desarrollos",
         description:
           "A través de nuestra alianza estratégica con Bodega Plaza de Grillos, ofrecemos acceso a vinos y desarrollos enológicos de origen Valle de Uco para marcas, distribuidores, proyectos gastronómicos y empresas que buscan productos diferenciados.",
@@ -202,12 +261,14 @@ export const es: Dictionary = {
           "Vermú artesanal, Vermú Tonic y Tinto de Verano",
           "Bases vínicas para bebidas listas para consumir (RTD)",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Otros Desarrollos / Plaza de Grillos.",
       },
     ],
   },
   distillery: {
-    label: "La destilería",
-    title: "Independencia es una forma de hacer las cosas",
+    label: "Destilería Independencia",
+    title: "Una forma de hacer las cosas",
     paragraphs: [
       "Nacimos con la convicción de que un buen destilado se construye con tiempo, materia prima honesta y una mirada propia. Esa libertad creativa es la que da nombre a la casa: Destilería Independencia.",
       "Desde nuestros gins hasta los vinos del Valle de Uco, cada producto es el resultado de un proceso cuidado de principio a fin. No seguimos modas: buscamos sabores que perduren y que inviten a compartir.",
@@ -278,6 +339,16 @@ export const es: Dictionary = {
       },
     ],
   },
+  faq: {
+    label: "Preguntas frecuentes",
+    title: "Respuestas claras para tu proyecto",
+    subtitle:
+      "Lo esencial sobre producción a fasón, ubicación y cómo cotizar con Destilería Independencia.",
+    items: homepageFaqEs.map((item) => ({
+      question: item.question,
+      answer: item.answer,
+    })),
+  },
   contact: {
     label: "Contacto",
     title: "¿Querés conocer más o sumar nuestras marcas?",
@@ -299,6 +370,10 @@ export const es: Dictionary = {
       phone: "Teléfono",
       company: "Empresa",
       companyOptional: "Empresa (opcional)",
+      volume: "Volumen estimado",
+      volumeOptional: "Volumen estimado (opcional)",
+      message: "Mensaje",
+      messageOptional: "Mensaje (opcional)",
       reason: "Motivo de contacto",
       reasonPlaceholder: "Seleccioná un motivo",
       reasons: {
@@ -313,7 +388,7 @@ export const es: Dictionary = {
       success: "¡Gracias! Recibimos tu mensaje y te responderemos pronto.",
       error: "No pudimos enviar el formulario. Intentá de nuevo.",
       configError:
-        "El formulario no está configurado. Contactanos por email a hola@destileriaindependencia.com",
+        "El formulario no está configurado. Contactanos por email a info@destileriaindependencia.com",
       close: "Cerrar",
     },
   },
@@ -322,12 +397,19 @@ export const es: Dictionary = {
       "Espíritus artesanales con identidad argentina. Gins, vermús y vinos elaborados con oficio y libertad creativa.",
     brands: "Marcas",
     shops: "Tiendas",
+    contact: "Contacto",
+    legalName: "Destilería Independencia S.R.L.",
+    officeLabel: "Oficina comercial",
+    distilleryLabel: "Planta / destilería",
+    emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
     copyright: "Destilería Independencia. Todos los derechos reservados.",
     legal: "Beber con moderación. Prohibida su venta a menores de 18 años.",
     brandLinks: [
       "Capitán Gin",
       "Gin Etheryo",
-      "El Refuerzo Gin Vermú",
+      "El Refuerzo Gin",
+      "Ribecky Spirits",
       "Plaza de Grillos",
     ],
     shopLinks: ["Capitán Gin Tienda", "Plaza de Grillos"],

@@ -1,8 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 
 import { useTranslation } from "@/components/language-provider"
+import { Button } from "@/components/ui/button"
 import {
   productsByBrand,
   type StoreBrand,
@@ -20,12 +22,14 @@ function ProductCard({ product }: { product: StoreProduct }) {
     <article className="group flex flex-col overflow-hidden border border-border bg-card transition-colors hover:border-accent/60">
       <div className="relative aspect-[3/4] overflow-hidden bg-white">
         {product.images.map((src, index) => (
-          <img
+          <Image
             key={src}
             src={src}
             alt={copy.imageAlts[index]}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
             className={cn(
-              "absolute inset-0 h-full w-full object-contain p-4 transition-all duration-500",
+              "object-contain p-4 transition-all duration-500",
               activeImage === index
                 ? "scale-100 opacity-100"
                 : "scale-105 opacity-0"
@@ -50,16 +54,18 @@ function ProductCard({ product }: { product: StoreProduct }) {
                   : "border-border opacity-70 hover:border-accent/60 hover:opacity-100"
               )}
             >
-              <img
+              <Image
                 src={src}
                 alt=""
+                width={88}
+                height={112}
                 className="h-full w-full object-contain p-0.5"
               />
             </button>
           ))}
         </div>
 
-        <div>
+        <div className="flex flex-1 flex-col">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">
             {copy.category}
           </span>
@@ -69,6 +75,16 @@ function ProductCard({ product }: { product: StoreProduct }) {
           <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
             {copy.description}
           </p>
+          <Button
+            variant="brand"
+            nativeButton={false}
+            render={
+              <a href={product.buyUrl} target="_blank" rel="noreferrer" />
+            }
+            className="mt-6 w-full"
+          >
+            {t.store.buy}
+          </Button>
         </div>
       </div>
     </article>

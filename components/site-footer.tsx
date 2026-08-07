@@ -1,14 +1,37 @@
 "use client"
 
 import { useTranslation } from "@/components/language-provider"
+import { getWhatsAppUrl } from "@/lib/contact"
 import { images } from "@/lib/images"
+import { ORGANIZATION } from "@/lib/seo/constants"
 
-const brandHrefs = [
-  "https://www.instagram.com/capitanginarg/",
-  "https://www.instagram.com/ginetheryo/",
-  "https://www.instagram.com/elrefuerzoginvermu/",
-  "https://www.instagram.com/plazadegrillos/",
-]
+const brandLinks = [
+  {
+    labelKey: 0,
+    href: "https://www.instagram.com/capitanginarg/",
+    name: "Capitán Gin",
+  },
+  {
+    labelKey: 1,
+    href: "https://www.instagram.com/ginetheryo/",
+    name: "Gin Etheryo",
+  },
+  {
+    labelKey: 2,
+    href: "https://www.instagram.com/elrefuerzoginvermu/",
+    name: "El Refuerzo Gin",
+  },
+  {
+    labelKey: 3,
+    href: "https://www.instagram.com/ribeckyspirits/",
+    name: "Ribecky Spirits",
+  },
+  {
+    labelKey: 4,
+    href: "https://www.instagram.com/plazadegrillos/",
+    name: "Plaza de Grillos",
+  },
+] as const
 
 const shopHrefs = [
   "https://capitangin.mitiendanube.com/",
@@ -17,6 +40,7 @@ const shopHrefs = [
 
 export function SiteFooter() {
   const { t } = useTranslation()
+  const whatsappHref = getWhatsAppUrl(t.contact.whatsappMessage)
 
   return (
     <footer className="border-t border-border bg-card">
@@ -37,6 +61,42 @@ export function SiteFooter() {
           <p className="mt-5 max-w-sm text-pretty leading-relaxed text-subtle-foreground">
             {t.footer.description}
           </p>
+          <div className="mt-8 max-w-md space-y-3 text-sm text-subtle-foreground">
+            <p className="font-medium text-foreground">{t.footer.legalName}</p>
+            <p>
+              <span className="text-xs uppercase tracking-[0.2em] text-foreground">
+                {t.footer.distilleryLabel}
+              </span>
+              <br />
+              {ORGANIZATION.distilleryLocation}
+            </p>
+            <p>
+              <span className="text-xs uppercase tracking-[0.2em] text-foreground">
+                {t.footer.emailLabel}
+              </span>
+              <br />
+              <a
+                href={`mailto:${ORGANIZATION.email}`}
+                className="transition-colors hover:text-accent"
+              >
+                {ORGANIZATION.email}
+              </a>
+            </p>
+            <p>
+              <span className="text-xs uppercase tracking-[0.2em] text-foreground">
+                {t.footer.whatsappLabel}
+              </span>
+              <br />
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                +54 9 11 2285-2023
+              </a>
+            </p>
+          </div>
         </div>
 
         <div>
@@ -44,15 +104,15 @@ export function SiteFooter() {
             {t.footer.brands}
           </h3>
           <ul className="mt-5 space-y-3">
-            {t.footer.brandLinks.map((label, index) => (
-              <li key={brandHrefs[index]}>
+            {brandLinks.map((brand) => (
+              <li key={brand.href}>
                 <a
-                  href={brandHrefs[index]}
+                  href={brand.href}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-subtle-foreground transition-colors hover:text-accent"
                 >
-                  {label}
+                  {t.footer.brandLinks[brand.labelKey] ?? brand.name}
                 </a>
               </li>
             ))}
@@ -76,6 +136,37 @@ export function SiteFooter() {
                 </a>
               </li>
             ))}
+          </ul>
+          <h3 className="mt-10 text-xs uppercase tracking-[0.25em] text-foreground">
+            {t.footer.contact}
+          </h3>
+          <ul className="mt-5 space-y-3">
+            <li>
+              <a
+                href={`mailto:${ORGANIZATION.email}`}
+                className="text-sm text-subtle-foreground transition-colors hover:text-accent"
+              >
+                {ORGANIZATION.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-subtle-foreground transition-colors hover:text-accent"
+              >
+                +54 9 11 2285-2023
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contacto"
+                className="text-sm text-subtle-foreground transition-colors hover:text-accent"
+              >
+                {t.nav.contact}
+              </a>
+            </li>
           </ul>
         </div>
       </div>

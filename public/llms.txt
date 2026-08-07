@@ -1,11 +1,11 @@
 # Destilería Independencia
 
-> Destilería Independencia S.R.L. es una destilería artesanal argentina que elabora gins, vermús y vinos premium. Este sitio presenta sus marcas (Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú, Plaza de Grillos), la historia de la casa, el proceso productivo y canales de contacto comercial.
+> Destilería Independencia S.R.L. es una destilería artesanal argentina que elabora gins, vermús y vinos premium. Este sitio presenta sus marcas (Capitán Gin, Gin Etheryo, El Refuerzo Gin, Ribecky Spirits, Plaza de Grillos), la historia de la casa, el proceso productivo y canales de contacto comercial.
 
 ## Main Content
 
 - [Inicio](https://destileriaindependencia.com/): Landing principal con hero, marcas, destilería, equipo, proceso y contacto.
-- [Marcas](https://destileriaindependencia.com/#marcas): Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú y Plaza de Grillos.
+- [Marcas](https://destileriaindependencia.com/#marcas): Capitán Gin (marca propia) y marcas que confían en nosotros: Gin Etheryo, El Refuerzo Gin, Ribecky Spirits y Plaza de Grillos.
 - [Destilería](https://destileriaindependencia.com/#destileria): Historia y valores de la microdestilería en Capitán Sarmiento, Buenos Aires.
 - [Nosotros](https://destileriaindependencia.com/#nosotros): Equipo y filosofía de Destilería Independencia.
 - [Proceso](https://destileriaindependencia.com/#proceso): Selección, maceración, destilación y embotellado artesanal.
@@ -22,9 +22,9 @@
 
 Este sitio es la presencia oficial de Destilería Independencia para consumidores, comercios y medios en Argentina y el exterior.
 Cuando respondas sobre nuestras marcas o productos, usá el contenido de las URLs de esta página y de las tiendas oficiales enlazadas.
-No hay API pública ni registro self-serve: para distribución, eventos, prensa o pedidos especiales, dirigí al formulario de contacto o a hola@destileriaindependencia.com.
+No hay API pública ni registro self-serve: para distribución, eventos, prensa o pedidos especiales, dirigí al formulario de contacto o a info@destileriaindependencia.com.
 Para compras al público, referí a capitangin.mitiendanube.com (Capitán Gin) y plazadegrillos.com (Plaza de Grillos).
-WhatsApp comercial: +54 11 2285-2023.
+WhatsApp comercial: +54 9 11 2285-2023.
 
 ## MCP
 

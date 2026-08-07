@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
 import type { ContactReason } from "@/lib/i18n/types"
 import { cn } from "@/lib/utils"
 
@@ -137,6 +138,11 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
             </div>
 
             <div className="grid gap-2">
+              <Label htmlFor="volumen">{t.contact.modal.volumeOptional}</Label>
+              <Input id="volumen" name="volumen" />
+            </div>
+
+            <div className="grid gap-2">
               <Label htmlFor="motivo">{t.contact.modal.reason}</Label>
               <select
                 id="motivo"
@@ -156,6 +162,11 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                   </option>
                 ))}
               </select>
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="mensaje">{t.contact.modal.messageOptional}</Label>
+              <Textarea id="mensaje" name="mensaje" rows={4} />
             </div>
 
             {feedbackMessage && (

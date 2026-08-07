@@ -34,6 +34,8 @@ export async function submitContactForm(
   const email = formData.get("email")?.toString().trim() ?? ""
   const telefono = formData.get("telefono")?.toString().trim() ?? ""
   const empresa = formData.get("empresa")?.toString().trim() || null
+  const volumen = formData.get("volumen")?.toString().trim() || null
+  const mensaje = formData.get("mensaje")?.toString().trim() || null
   const motivo = formData.get("motivo")?.toString() as ContactReason | undefined
   const locale = formData.get("locale")?.toString() ?? "es"
   const website = formData.get("website")?.toString().trim()
@@ -59,15 +61,29 @@ export async function submitContactForm(
     return { configError: true }
   }
 
-  const { error } = await supabase.from("contact_submissions").insert({
+  const payload = {
     nombre,
     apellido,
     email,
     telefono,
     empresa,
+    volumen,
+    mensaje,
     motivo,
     locale,
-  })
+  }
+
+  let { error } = await supabase.from("contact_submissions").insert(payload)
+
+  if (
+    error &&
+    /volumen|mensaje/i.test(error.message)
+  ) {
+    const { volumen: _volumen, mensaje: _mensaje, ...legacyPayload } = payload
+    ;({ error } = await supabase
+      .from("contact_submissions")
+      .insert(legacyPayload))
+  }
 
   if (error) {
     console.error("Contact form submission error:", error.message)
