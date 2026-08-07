@@ -11,7 +11,7 @@ export type StoreProductCopy = {
   name: string
   category: string
   description: string
-  imageAlts: [string, string]
+  imageAlts: [string, string, string]
 }
 
 export type Dictionary = {
@@ -22,6 +22,7 @@ export type Dictionary = {
   nav: {
     brands: string
     services: string
+    winery: string
     distillery: string
     aboutUs: string
     process: string
@@ -37,6 +38,7 @@ export type Dictionary = {
     subtitle: string
     backHome: string
     viewImage: string
+    buy: string
     brands: {
       di: { name: string; tagline: string }
       pdg: { name: string; tagline: string }
@@ -60,25 +62,55 @@ export type Dictionary = {
   stats: Array<{ value: string; label: string }>
   brands: {
     label: string
+    buyOnline: string
+    viewInstagram: string
+    own: {
+      label: string
+      title: string
+      description: string
+      awardsTitle: string
+      awards: Array<{
+        medal: string
+        detail: string
+        imageAlt: string
+      }>
+      item: {
+        name: string
+        category: string
+        description: string
+        imageAlt: string
+        galleryAlts?: string[]
+      }
+    }
+    trusted: {
+      label: string
+      title: string
+      description: string
+      items: Array<{
+        name: string
+        category: string
+        description: string
+        imageAlt: string
+      }>
+    }
+  }
+  winery: {
+    label: string
     title: string
     subtitle: string
     description: string
+    category: string
     buyOnline: string
     viewInstagram: string
-    items: Array<{
-      name: string
-      category: string
-      description: string
-      imageAlt: string
-      secondaryImageAlt?: string
-      galleryAlts?: string[]
-    }>
+    imageAlt: string
+    secondaryImageAlt: string
   }
   services: {
     label: string
     title: string
     subtitle: string
     items: Array<{
+      id: string
       name: string
       description: string
       features: string[]

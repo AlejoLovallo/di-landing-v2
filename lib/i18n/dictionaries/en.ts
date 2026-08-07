@@ -4,11 +4,12 @@ export const en: Dictionary = {
   meta: {
     title: "Destilería Independencia | Artisan spirits distillery",
     description:
-      "Destilería Independencia crafts premium gins, vermouths and wines in Argentina. Discover our brands: Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú and Plaza de Grillos.",
+      "Destilería Independencia crafts premium gins, vermouths and wines in Argentina. Discover Capitán Gin and the brands that trust us: Gin Etheryo, El Refuerzo Gin, Ribecky Spirits and Plaza de Grillos.",
   },
   nav: {
     brands: "Brands",
     services: "Services",
+    winery: "Winery",
     distillery: "Distillery",
     aboutUs: "About us",
     process: "Process",
@@ -26,6 +27,7 @@ export const en: Dictionary = {
       "A selection of gins and wines crafted by Destilería Independencia and Bodega Plaza de Grillos.",
     backHome: "Back to home",
     viewImage: "View image",
+    buy: "Buy",
     brands: {
       di: {
         name: "Destilería Independencia",
@@ -45,6 +47,7 @@ export const en: Dictionary = {
         imageAlts: [
           "Capitán Gin Black Label — front",
           "Capitán Gin Black Label — back",
+          "Destilería Independencia plate",
         ],
       },
       "capitan-gin-london-dry": {
@@ -55,6 +58,7 @@ export const en: Dictionary = {
         imageAlts: [
           "Capitán Gin London Dry — front",
           "Capitán Gin London Dry — back",
+          "Destilería Independencia plate",
         ],
       },
       "pdg-gran-reserva": {
@@ -65,6 +69,7 @@ export const en: Dictionary = {
         imageAlts: [
           "Plaza de Grillos Gran Reserva — bottle",
           "Plaza de Grillos Gran Reserva — label",
+          "Destilería Independencia plate",
         ],
       },
       "pdg-icono": {
@@ -75,6 +80,7 @@ export const en: Dictionary = {
         imageAlts: [
           "Plaza de Grillos Ícono — bottle",
           "Plaza de Grillos Ícono — label",
+          "Destilería Independencia plate",
         ],
       },
       "pdg-the-blend": {
@@ -85,6 +91,7 @@ export const en: Dictionary = {
         imageAlts: [
           "Plaza de Grillos The Blend — bottle",
           "Plaza de Grillos The Blend — label",
+          "Destilería Independencia plate",
         ],
       },
     },
@@ -93,65 +100,103 @@ export const en: Dictionary = {
     tagline: "Artisan distillery · Argentina",
     title: "Behind many brands, there is a distillery.",
     paragraphs: [
-      "At Destilería Independencia we develop and produce spirits for companies, brands, distributors, bars and restaurants looking to launch, scale or consolidate their products.",
-      "We offer contract production, bulk elaboration and private-label development, combining industrial capacity, technical excellence and operational flexibility. With a consolidated team, certified processes and products recognized in national and international competitions, we turn ideas into market-ready drinks.",
-      "We are the production partner behind brands that grow.",
+      "Destilería Independencia is an Argentine distillery specialized in spirits production for third parties, bulk production and private-label brand development. We support factories, brands, distributors, bars and restaurants looking to launch, scale and/or consolidate their products with a reliable, long-term production partner.",
     ],
     ctaBrands: "Discover our brands",
     ctaDistillery: "About the distillery",
     imageAlt: "Copper still at Destilería Independencia",
   },
   stats: [
-    { value: "5", label: "Own brands" },
+    { value: "1", label: "House brand" },
+    { value: "3", label: "Brands that trust us" },
     { value: "100%", label: "Artisan production" },
     { value: "Arg", label: "Origin & identity" },
-    { value: "∞", label: "Passion for craft" },
   ],
   brands: {
-    label: "Our brands",
-    title: "Brands that trust us",
-    subtitle: "Quality reflected in every project",
-    description:
-      "We work alongside brands that chose Destilería Independencia as their production and commercial partner. Some develop their spirits with us under contract production, while others are part of our distribution portfolio. All share the same commitment to quality.",
+    label: "Brands",
     buyOnline: "Buy online",
     viewInstagram: "View on Instagram",
-    items: [
-      {
+    own: {
+      label: "House brand",
+      title: "Capitán Gin",
+      description:
+        "Our house brand: premium Argentine gin crafted at Destilería Independencia.",
+      awardsTitle: "3 national medals",
+      awards: [
+        {
+          medal: "Grand Gold",
+          detail: "London Dry · Argentina Spirits Awards 2024",
+          imageAlt:
+            "Grand Gold medal Capitán Gin London Dry Argentina Spirits Awards 2024",
+        },
+        {
+          medal: "Gold",
+          detail: "London Dry · Copa Argentina de Destilados 2025",
+          imageAlt:
+            "Gold medal Capitán Gin London Dry Copa Argentina de Destilados 2025",
+        },
+        {
+          medal: "Silver",
+          detail: "Black Label · Argentina Spirits Awards 2024",
+          imageAlt:
+            "Silver medal Capitán Gin Black Label Argentina Spirits Awards 2024",
+        },
+      ],
+      item: {
         name: "Capitán Gin",
         category: "House brand · London Dry",
         description:
           "Our premium Argentine gin. A balanced, aromatic London Dry with prominent juniper and a clean finish. The Black Label adds an intense infusion for bolder palates.",
         imageAlt: "Capitán Gin London Dry and Black Label",
         galleryAlts: [
-          "Capitán Gin London Dry and Black Label",
+          "Capitán Gin detail",
           "Capitán Gin Black Label detail",
           "Capitán Gin London Dry detail",
           "Capitán Gin stopper Destilería Independencia",
         ],
       },
-      {
-        name: "Gin Etheryo",
-        category: "Botanical gin",
-        description:
-          "A botanically inspired gin, fresh and floral, designed for those seeking a more delicate and contemporary experience in every sip.",
-        imageAlt: "Gin Etheryo bottle",
-      },
-      {
-        name: "El Refuerzo Gin Vermú",
-        category: "Gin Vermouth",
-        description:
-          "The perfect union of gin and vermouth. Bitter, herbal and citrus notes that pay homage to the Argentine aperitif tradition.",
-        imageAlt: "El Refuerzo Gin Vermú bottle",
-      },
-      {
-        name: "Plaza de Grillos",
-        category: "Winery · Uco Valley",
-        description:
-          "Elegant, sophisticated wines from the Uco Valley, Mendoza. Malbecs and blends with great aging potential, made for conversation.",
-        imageAlt: "Plaza de Grillos vineyard in the Uco Valley",
-        secondaryImageAlt: "Plaza de Grillos Gran Reserva Malbec bottles",
-      },
-    ],
+    },
+    trusted: {
+      label: "Brands that trust us",
+      title: "Production partners we are proud to craft with",
+      description:
+        "We work alongside brands that chose Destilería Independencia as their production partner. They develop their spirits with us and share the same commitment to quality.",
+      items: [
+        {
+          name: "Gin Etheryo",
+          category: "Botanical gin",
+          description:
+            "A botanically inspired gin, fresh and floral, designed for those seeking a more delicate and contemporary experience in every sip.",
+          imageAlt: "Gin Etheryo bottle",
+        },
+        {
+          name: "El Refuerzo Gin",
+          category: "Gin",
+          description:
+            "The perfect union of gin and vermouth. Bitter, herbal and citrus notes that pay homage to the Argentine aperitif tradition.",
+          imageAlt: "El Refuerzo Gin bottle",
+        },
+        {
+          name: "Ribecky Spirits",
+          category: "Gin",
+          description:
+            "A gin brand that trusts Destilería Independencia as its production partner to craft its spirits.",
+          imageAlt: "Ribecky Spirits",
+        },
+      ],
+    },
+  },
+  winery: {
+    label: "Winery",
+    title: "Plaza de Grillos",
+    subtitle: "Uco Valley · Mendoza",
+    description:
+      "Founded in 2015 and conceived from the start as a boutique winery focused on producing high-quality wines in the Uco Valley, at 1,150 meters above sea level at the foot of the Andes — a privileged place, favored by generous sun that supports the crafting of premium wines characteristic of the region.",
+    category: "Winery · Uco Valley",
+    buyOnline: "Buy online",
+    viewInstagram: "View on Instagram",
+    imageAlt: "Plaza de Grillos vineyard in the Uco Valley",
+    secondaryImageAlt: "Plaza de Grillos Gran Reserva Malbec bottles",
   },
   services: {
     label: "Our services",
@@ -160,6 +205,7 @@ export const en: Dictionary = {
       "We support factories, brands, distributors, bars and restaurants with a reliable production partner.",
     items: [
       {
+        id: "gin-granel-fason",
         name: "Gin — Bulk & Contract",
         description:
           "Premium gin production for factories, brands, distributors and hospitality projects. We craft standard recipes or custom developments, with bulk production or finished product ready for sale.",
@@ -171,6 +217,7 @@ export const en: Dictionary = {
         ],
       },
       {
+        id: "gin-tonic-embarrilado",
         name: "Barrelled Gin & Tonic",
         description:
           "Ready-to-serve gin and tonic made with premium gin and quality tonic, available in barrels for events, bars, restaurants and catering. Consistent quality, fast service and strong margins for the hospitality channel.",
@@ -182,6 +229,7 @@ export const en: Dictionary = {
         ],
       },
       {
+        id: "vino-a-granel",
         name: "Bulk Wine",
         description:
           "Young, fresh and fruity wines selected for hospitality, private-label bottling, vermouth projects and ready-to-drink beverages. Available in different formats and supply scales, with INV certification and enabling documentation.",
@@ -193,6 +241,7 @@ export const en: Dictionary = {
         ],
       },
       {
+        id: "otros-desarrollos",
         name: "Other Developments",
         description:
           "Through our strategic alliance with Bodega Plaza de Grillos, we offer access to Uco Valley wines and enological developments for brands, distributors, hospitality projects and companies seeking differentiated products.",
@@ -206,8 +255,8 @@ export const en: Dictionary = {
     ],
   },
   distillery: {
-    label: "The distillery",
-    title: "Independencia is a way of doing things",
+    label: "Destilería Independencia",
+    title: "A way of doing things",
     paragraphs: [
       "We were born with the conviction that a great spirit is built with time, honest raw materials and a vision of our own. That creative freedom is what gives the house its name: Destilería Independencia.",
       "From our gins to the wines of the Uco Valley, every product is the result of a careful process from start to finish. We don't follow trends: we seek flavors that endure and invite sharing.",
@@ -326,7 +375,8 @@ export const en: Dictionary = {
     brandLinks: [
       "Capitán Gin",
       "Gin Etheryo",
-      "El Refuerzo Gin Vermú",
+      "El Refuerzo Gin",
+      "Ribecky Spirits",
       "Plaza de Grillos",
     ],
     shopLinks: ["Capitán Gin Shop", "Plaza de Grillos"],

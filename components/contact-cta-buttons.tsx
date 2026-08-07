@@ -3,7 +3,6 @@
 import { useTranslation } from "@/components/language-provider"
 import { useContactModal } from "@/components/contact-modal-provider"
 import { Button } from "@/components/ui/button"
-import { getWhatsAppUrl } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 type ContactCtaButtonsProps = {
@@ -36,24 +35,6 @@ export function ContactCtaButtons({
         className={cn("px-8", buttonClassName)}
       >
         {t.contact.writeUs}
-      </Button>
-      <Button
-        size={size}
-        variant="outline"
-        nativeButton={false}
-        render={
-          <a
-            href={getWhatsAppUrl(t.contact.whatsappMessage)}
-            target="_blank"
-            rel="noreferrer"
-          />
-        }
-        className={cn(
-          "rounded-none border-brand-whatsapp/50 bg-transparent px-8 text-foreground hover:border-brand-whatsapp hover:bg-brand-whatsapp/10",
-          buttonClassName
-        )}
-      >
-        {t.contact.whatsapp}
       </Button>
       {showInstagram && (
         <Button

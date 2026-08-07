@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react"
 
 import { useTranslation } from "@/components/language-provider"
-import { useContactModal } from "@/components/contact-modal-provider"
+import { ServicesNavDropdown } from "@/components/services-nav-dropdown"
 import { Button } from "@/components/ui/button"
-import { getWhatsAppUrl } from "@/lib/contact"
 import { images } from "@/lib/images"
 import type { Locale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
@@ -41,7 +40,6 @@ function LanguageToggle() {
 
 export function SiteHeader({ homeHref = "" }: { homeHref?: string }) {
   const { t } = useTranslation()
-  const { openContactModal } = useContactModal()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -49,10 +47,9 @@ export function SiteHeader({ homeHref = "" }: { homeHref?: string }) {
 
   const navLinks = [
     { label: t.nav.brands, href: section("#marcas") },
-    { label: t.nav.services, href: section("#servicios") },
     { label: t.nav.distillery, href: section("#destileria") },
+    { label: t.nav.winery, href: section("#bodega") },
     { label: t.nav.aboutUs, href: section("#nosotros") },
-    { label: t.nav.process, href: section("#proceso") },
     { label: t.nav.contact, href: section("#contacto") },
   ]
 
@@ -71,78 +68,56 @@ export function SiteHeader({ homeHref = "" }: { homeHref?: string }) {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:gap-8 lg:px-10">
         <a
           href={section("#inicio") || "#inicio"}
-          className="flex items-center gap-3 leading-none"
+          className="relative z-10 flex shrink-0 items-center gap-3 leading-none"
         >
           <img
             src={images.logos.diWhite}
             alt="Destilería Independencia"
             className="h-12 w-12 object-contain"
           />
-          <span className="font-heading text-lg font-bold leading-tight tracking-tight text-foreground">
+          <span className="hidden font-heading text-lg font-bold leading-tight tracking-tight text-foreground xl:block">
             Destilería
             <br />
             Independencia
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex xl:gap-7">
+          <a
+            href={navLinks[0].href}
+            className="shrink-0 text-xs uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:text-accent xl:text-sm xl:tracking-widest"
+          >
+            {navLinks[0].label}
+          </a>
+          <ServicesNavDropdown homeHref={homeHref} variant="header" />
+          {navLinks.slice(1).map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm uppercase tracking-widest text-foreground/80 transition-colors hover:text-accent"
+              className="shrink-0 text-xs uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:text-accent xl:text-sm xl:tracking-widest"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden shrink-0 items-center gap-3 lg:flex">
           <LanguageToggle />
           <Button
             variant="outline"
             size="sm"
             nativeButton={false}
-            render={
-              <a
-                href={getWhatsAppUrl(t.contact.whatsappMessage)}
-                target="_blank"
-                rel="noreferrer"
-              />
-            }
-            className="rounded-none border-brand-whatsapp/50 bg-transparent text-foreground hover:border-brand-whatsapp hover:bg-brand-whatsapp/10"
-          >
-            WhatsApp
-          </Button>
-          <Button
-            variant="brand"
-            size="sm"
-            onClick={openContactModal}
-            className="px-4"
-          >
-            {t.contact.writeUs}
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            nativeButton={false}
-            render={
-              <a
-                href="https://capitangin.mitiendanube.com/"
-                target="_blank"
-                rel="noreferrer"
-              />
-            }
+            render={<a href="/tienda" />}
             className="rounded-none border-foreground/30 bg-transparent px-4 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
           >
             {t.nav.shop}
           </Button>
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
           <LanguageToggle />
           <button
             className="flex flex-col gap-1.5"
@@ -158,9 +133,21 @@ export function SiteHeader({ homeHref = "" }: { homeHref?: string }) {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background/95 backdrop-blur-md md:hidden">
+        <div className="border-t border-border bg-background/95 backdrop-blur-md lg:hidden">
           <nav className="flex flex-col px-6 py-4">
-            {navLinks.map((link) => (
+            <a
+              href={navLinks[0].href}
+              onClick={() => setOpen(false)}
+              className="border-b border-border py-3 text-sm uppercase tracking-widest text-foreground/80"
+            >
+              {navLinks[0].label}
+            </a>
+            <ServicesNavDropdown
+              homeHref={homeHref}
+              variant="mobile"
+              onNavigate={() => setOpen(false)}
+            />
+            {navLinks.slice(1).map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -170,28 +157,9 @@ export function SiteHeader({ homeHref = "" }: { homeHref?: string }) {
                 {link.label}
               </a>
             ))}
-            <button
-              type="button"
-              onClick={() => {
-                setOpen(false)
-                openContactModal()
-              }}
-              className="border-b border-border py-3 text-left text-sm uppercase tracking-widest text-primary"
-            >
-              {t.contact.writeUs}
-            </button>
             <a
-              href={getWhatsAppUrl(t.contact.whatsappMessage)}
-              target="_blank"
-              rel="noreferrer"
-              className="border-b border-border py-3 text-sm uppercase tracking-widest text-brand-whatsapp"
-            >
-              {t.contact.whatsapp}
-            </a>
-            <a
-              href="https://capitangin.mitiendanube.com/"
-              target="_blank"
-              rel="noreferrer"
+              href="/tienda"
+              onClick={() => setOpen(false)}
               className="py-3 text-sm uppercase tracking-widest text-foreground/80"
             >
               {t.nav.shop}

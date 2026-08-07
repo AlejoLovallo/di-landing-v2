@@ -1,6 +1,7 @@
 /**
  * Destilería Independencia design tokens.
  * CSS runtime values live in app/globals.css — keep both in sync.
+ * Human-readable guide: DESIGN.md
  */
 
 export const brand = {

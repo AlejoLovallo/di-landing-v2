@@ -7,7 +7,7 @@
 @theme inline {
   --font-heading: var(--font-playfair), 'Playfair Display Fallback';
   --font-sans: var(--font-inter), 'Inter Fallback';
-  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --color-brand-whatsapp: var(--brand-whatsapp);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

@@ -7,6 +7,7 @@ const brandHrefs = [
   "https://www.instagram.com/capitanginarg/",
   "https://www.instagram.com/ginetheryo/",
   "https://www.instagram.com/elrefuerzoginvermu/",
+  "https://www.instagram.com/ribeckyspirits/",
   "https://www.instagram.com/plazadegrillos/",
 ]
 

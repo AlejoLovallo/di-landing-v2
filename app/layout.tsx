@@ -1,11 +1,12 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
-import { Playfair_Display, Inter, Geist_Mono } from "next/font/google"
+import { Playfair_Display, Inter } from "next/font/google"
 
 import { AgeGateModal } from "@/components/age-gate-modal"
 import { ContactModalProvider } from "@/components/contact-modal-provider"
 import { HomepageJsonLd } from "@/components/homepage-jsonld"
 import { LanguageProvider } from "@/components/language-provider"
+import { WhatsAppFab } from "@/components/whatsapp-fab"
 import { es } from "@/lib/i18n/dictionaries/es"
 import { SITE_URL } from "@/lib/seo/constants"
 import "./globals.css"
@@ -19,10 +20,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-})
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
@@ -48,13 +45,14 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${inter.variable} ${geistMono.variable} bg-background`}
+      className={`${playfair.variable} ${inter.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         <HomepageJsonLd />
         <LanguageProvider>
           <ContactModalProvider>
             {children}
+            <WhatsAppFab />
             <AgeGateModal />
           </ContactModalProvider>
         </LanguageProvider>

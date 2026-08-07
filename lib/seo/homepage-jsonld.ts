@@ -12,7 +12,7 @@ export function getHomepageJsonLd() {
         url: SITE_URL,
         logo: ORGANIZATION.logo,
         description:
-          "Destilería artesanal argentina que elabora gins, vermús y vinos premium bajo marcas propias como Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú y Plaza de Grillos.",
+          "Destilería artesanal argentina que elabora gins, vermús y vinos premium bajo marcas propias como Capitán Gin (marca propia) y marcas que confían en nosotros: Gin Etheryo, El Refuerzo Gin, Ribecky Spirits y Plaza de Grillos.",
         email: ORGANIZATION.email,
         telephone: ORGANIZATION.phone,
         sameAs: [
@@ -20,6 +20,7 @@ export function getHomepageJsonLd() {
           "https://www.instagram.com/capitanginarg/",
           "https://www.instagram.com/ginetheryo/",
           "https://www.instagram.com/elrefuerzoginvermu/",
+          "https://www.instagram.com/ribeckyspirits/",
           "https://www.instagram.com/plazadegrillos/",
           "https://capitangin.mitiendanube.com/",
           "https://plazadegrillos.com/",
@@ -113,7 +114,7 @@ export function getHomepageJsonLd() {
             name: "¿Qué productos elabora Destilería Independencia?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Destilería Independencia elabora gins artesanales (Capitán Gin, Gin Etheryo), El Refuerzo Gin Vermú y vinos de Plaza de Grillos del Valle de Uco, Mendoza.",
+              text: "Destilería Independencia elabora gins artesanales (Capitán Gin, Gin Etheryo, Ribecky Spirits), El Refuerzo Gin y vinos de Plaza de Grillos del Valle de Uco, Mendoza.",
             },
           },
           {
@@ -129,7 +130,7 @@ export function getHomepageJsonLd() {
             name: "¿Cómo puedo comprar los productos?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Podés comprar Capitán Gin en capitangin.mitiendanube.com y Plaza de Grillos en plazadegrillos.com. Para consultas comerciales, usá el formulario de contacto del sitio o WhatsApp al +54 11 2285-2023.",
+              text: "Podés comprar Capitán Gin en capitangin.mitiendanube.com y Plaza de Grillos en plazadegrillos.com. Para consultas comerciales, usá el formulario de contacto del sitio o WhatsApp al +54 9 11 2285-2023.",
             },
           },
           {
@@ -145,7 +146,7 @@ export function getHomepageJsonLd() {
             name: "¿Cuáles son las marcas de Destilería Independencia?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Las marcas propias son Capitán Gin (London Dry), Gin Etheryo (botánico), El Refuerzo Gin Vermú y Plaza de Grillos (bodega en Valle de Uco).",
+              text: "La marca propia es Capitán Gin (London Dry). Las marcas que confían en Destilería Independencia incluyen Gin Etheryo, El Refuerzo Gin, Ribecky Spirits y Plaza de Grillos (bodega en Valle de Uco).",
             },
           },
         ],

@@ -19,7 +19,7 @@
     {
       "id": "brand-information",
       "name": "Información de marcas",
-      "description": "Responde preguntas sobre Capitán Gin, Gin Etheryo, El Refuerzo Gin Vermú y Plaza de Grillos usando el contenido público del sitio.",
+      "description": "Responde preguntas sobre Capitán Gin (marca propia) y marcas que confían en nosotros: Gin Etheryo, El Refuerzo Gin, Ribecky Spirits y Plaza de Grillos usando el contenido público del sitio.",
       "tags": ["spirits", "gin", "wine", "argentina"],
       "inputModes": ["text/plain"],
       "outputModes": ["text/plain"]
@@ -27,7 +27,7 @@
     {
       "id": "commercial-contact",
       "name": "Contacto comercial",
-      "description": "Orienta a usuarios hacia el formulario de contacto, email hola@destileriaindependencia.com o WhatsApp +54 11 2295-2023 para distribución, eventos y prensa.",
+      "description": "Orienta a usuarios hacia el formulario de contacto, email hola@destileriaindependencia.com o WhatsApp +54 9 11 2285-2023 para distribución, eventos y prensa.",
       "tags": ["contact", "distribution", "wholesale"],
       "inputModes": ["text/plain"],
       "outputModes": ["text/plain"]
