@@ -1,10 +1,12 @@
 import type { Dictionary } from "@/lib/i18n/types"
+import { homepageFaqEs } from "@/lib/seo/faq"
 
 export const es: Dictionary = {
   meta: {
-    title: "Destilería Independencia | Destilería de espíritus artesanales",
+    title:
+      "Destilería Independencia | Producción a fasón y espíritus artesanales",
     description:
-      "Destilería Independencia elabora gins, vermús y vinos premium en Argentina. Conocé Capitán Gin y las marcas que confían en nosotros: Gin Etheryo, El Refuerzo Gin, Ribecky Spirits y Plaza de Grillos.",
+      "Socio productivo para marcas, distribuidores y gastronomía: gin a fasón y granel, gin tonic embarrilado, vino a granel y desarrollos enológicos. Destilería artesanal en Argentina.",
   },
   nav: {
     brands: "Marcas",
@@ -102,8 +104,8 @@ export const es: Dictionary = {
     paragraphs: [
       "Destilería Independencia es una destilería argentina especializada en la elaboración de bebidas espirituosas para terceros, producción a granel y desarrollo de marcas propias. Acompañamos fábricas, marcas, distribuidores, bares y restaurantes que buscan lanzar, escalar y/o consolidar sus productos con un socio productivo confiable y de largo plazo.",
     ],
-    ctaBrands: "Conocer nuestras marcas",
-    ctaDistillery: "Sobre la destilería",
+    ctaQuote: "Cotizá tu proyecto",
+    ctaServices: "Conocé nuestros servicios",
     imageAlt: "Alambique de cobre en la Destilería Independencia",
   },
   stats: [
@@ -203,6 +205,7 @@ export const es: Dictionary = {
     title: "Producción, desarrollo y suministro para tu marca",
     subtitle:
       "Acompañamos fábricas, marcas, distribuidores, bares y restaurantes con un socio productivo confiable.",
+    consultCta: "Consultar por este servicio",
     items: [
       {
         id: "gin-granel-fason",
@@ -215,6 +218,8 @@ export const es: Dictionary = {
           "Desarrollo de receta + RNPA incluido sin cargo",
           "Turno de destilación, botánicos, esterilización y embotellado",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Gin — Granel y Fasón.",
       },
       {
         id: "gin-tonic-embarrilado",
@@ -227,6 +232,8 @@ export const es: Dictionary = {
           "Ajustes de sabor y perfil según requerimientos",
           "Entrega en barriles de acero inoxidable",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Gin Tonic Embarrilado.",
       },
       {
         id: "vino-a-granel",
@@ -239,6 +246,8 @@ export const es: Dictionary = {
           "Fraccionamiento bajo marca propia",
           "Certificado INV y libre de circulación",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Vino a Granel.",
       },
       {
         id: "otros-desarrollos",
@@ -251,6 +260,8 @@ export const es: Dictionary = {
           "Vermú artesanal, Vermú Tonic y Tinto de Verano",
           "Bases vínicas para bebidas listas para consumir (RTD)",
         ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Otros Desarrollos / Plaza de Grillos.",
       },
     ],
   },
@@ -327,6 +338,16 @@ export const es: Dictionary = {
       },
     ],
   },
+  faq: {
+    label: "Preguntas frecuentes",
+    title: "Respuestas claras para tu proyecto",
+    subtitle:
+      "Lo esencial sobre producción a fasón, ubicación y cómo cotizar con Destilería Independencia.",
+    items: homepageFaqEs.map((item) => ({
+      question: item.question,
+      answer: item.answer,
+    })),
+  },
   contact: {
     label: "Contacto",
     title: "¿Querés conocer más o sumar nuestras marcas?",
@@ -348,6 +369,10 @@ export const es: Dictionary = {
       phone: "Teléfono",
       company: "Empresa",
       companyOptional: "Empresa (opcional)",
+      volume: "Volumen estimado",
+      volumeOptional: "Volumen estimado (opcional)",
+      message: "Mensaje",
+      messageOptional: "Mensaje (opcional)",
       reason: "Motivo de contacto",
       reasonPlaceholder: "Seleccioná un motivo",
       reasons: {
@@ -362,7 +387,7 @@ export const es: Dictionary = {
       success: "¡Gracias! Recibimos tu mensaje y te responderemos pronto.",
       error: "No pudimos enviar el formulario. Intentá de nuevo.",
       configError:
-        "El formulario no está configurado. Contactanos por email a hola@destileriaindependencia.com",
+        "El formulario no está configurado. Contactanos por email a info@destileriaindependencia.com",
       close: "Cerrar",
     },
   },
@@ -371,6 +396,12 @@ export const es: Dictionary = {
       "Espíritus artesanales con identidad argentina. Gins, vermús y vinos elaborados con oficio y libertad creativa.",
     brands: "Marcas",
     shops: "Tiendas",
+    contact: "Contacto",
+    legalName: "Destilería Independencia S.R.L.",
+    officeLabel: "Oficina comercial",
+    distilleryLabel: "Planta / destilería",
+    emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
     copyright: "Destilería Independencia. Todos los derechos reservados.",
     legal: "Beber con moderación. Prohibida su venta a menores de 18 años.",
     brandLinks: [

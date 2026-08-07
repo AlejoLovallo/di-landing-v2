@@ -18,10 +18,14 @@ export type StoreProduct = {
   buyUrl: string
 }
 
-/** Shared placeholder until per-product Mercado Libre links are provided */
+/** Shared placeholder until per-product Mercado Libre links are provided by the business */
 export const MERCADO_LIBRE_PLACEHOLDER =
   "https://www.mercadolibre.com.ar/"
 
+/**
+ * Catalog buy links. Keep `buyUrl` as `MERCADO_LIBRE_PLACEHOLDER` until each
+ * Mercado Libre listing URL is confirmed — then replace per product below.
+ */
 export const storeProducts: StoreProduct[] = [
   {
     id: "capitan-gin-etiqueta-negra",

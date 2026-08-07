@@ -55,8 +55,8 @@ export type Dictionary = {
     tagline: string
     title: string
     paragraphs: string[]
-    ctaBrands: string
-    ctaDistillery: string
+    ctaQuote: string
+    ctaServices: string
     imageAlt: string
   }
   stats: Array<{ value: string; label: string }>
@@ -109,11 +109,13 @@ export type Dictionary = {
     label: string
     title: string
     subtitle: string
+    consultCta: string
     items: Array<{
       id: string
       name: string
       description: string
       features: string[]
+      whatsappMessage: string
     }>
   }
   distillery: {
@@ -137,6 +139,12 @@ export type Dictionary = {
     title: string
     steps: Array<{ number: string; title: string; description: string }>
   }
+  faq: {
+    label: string
+    title: string
+    subtitle: string
+    items: Array<{ question: string; answer: string }>
+  }
   contact: {
     label: string
     title: string
@@ -155,6 +163,10 @@ export type Dictionary = {
       phone: string
       company: string
       companyOptional: string
+      volume: string
+      volumeOptional: string
+      message: string
+      messageOptional: string
       reason: string
       reasonPlaceholder: string
       reasons: Record<ContactReason, string>
@@ -170,6 +182,12 @@ export type Dictionary = {
     description: string
     brands: string
     shops: string
+    contact: string
+    legalName: string
+    officeLabel: string
+    distilleryLabel: string
+    emailLabel: string
+    whatsappLabel: string
     copyright: string
     legal: string
     brandLinks: string[]

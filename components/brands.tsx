@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 
 import { useTranslation } from "@/components/language-provider"
@@ -115,9 +116,12 @@ export function Brands() {
             <article className="border border-border bg-card">
               <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
                 <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden bg-secondary p-4 lg:aspect-auto lg:min-h-[28rem] lg:p-6">
-                  <img
+                  <Image
                     src={images.brands.capitan}
                     alt={own.imageAlt}
+                    width={720}
+                    height={900}
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                     className="max-h-full w-full object-contain"
                   />
                 </div>
@@ -147,10 +151,12 @@ export function Brands() {
                     key={src}
                     className="relative aspect-[2/3] overflow-hidden border-border bg-secondary lg:border-l lg:first:border-l-0"
                   >
-                    <img
+                    <Image
                       src={src}
                       alt={own.galleryAlts?.[photoIndex] ?? own.imageAlt}
-                      className="absolute inset-0 h-full w-full object-cover object-center"
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      className="object-cover object-center"
                     />
                   </div>
                 ))}
@@ -164,9 +170,12 @@ export function Brands() {
                   {t.brands.own.awards.map((award, index) => (
                     <div key={award.medal + award.detail} className="flex flex-col gap-4">
                       <div className="overflow-hidden border border-border bg-secondary">
-                        <img
+                        <Image
                           src={capitanAwardImages[index]}
                           alt={award.imageAlt}
+                          width={640}
+                          height={360}
+                          sizes="(max-width: 640px) 100vw, 33vw"
                           className="aspect-[16/9] w-full object-cover object-center"
                         />
                       </div>
@@ -213,9 +222,12 @@ export function Brands() {
             >
               <div className="grid lg:grid-cols-2">
                 <div className="relative overflow-hidden bg-secondary">
-                  <img
+                  <Image
                     src={meta.image}
                     alt={brand.imageAlt}
+                    width={900}
+                    height={1100}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="h-72 w-full object-cover object-center transition-transform duration-700 group-hover:scale-105 lg:h-full lg:min-h-[28rem]"
                   />
                 </div>

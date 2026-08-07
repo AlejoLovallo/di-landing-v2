@@ -1,10 +1,10 @@
 export const images = {
   di: {
-    still: "/di/distillery-still.jpg",
-    detail: "/di/di_prom.PNG",
-    gauge: "/di/distillery-gauge.jpg",
+    still: "/di/distillery-still.webp",
+    detail: "/di/di_prom.webp",
+    gauge: "/di/distillery-gauge.webp",
     team: "/team.jpeg",
-    us: "/us.jpg",
+    us: "/us.webp",
   },
   logos: {
     diWhite: "/logos/di-white-transparent.png",

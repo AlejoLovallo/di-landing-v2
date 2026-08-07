@@ -3,7 +3,7 @@ export const SITE_URL = "https://destileriaindependencia.com"
 export const ORGANIZATION = {
   name: "Destilería Independencia S.R.L.",
   legalName: "Destilería Independencia S.R.L.",
-  email: "hola@destileriaindependencia.com",
+  email: "info@destileriaindependencia.com",
   phone: "+54-9-11-2285-2023",
   logo: `${SITE_URL}/logos/logo-di-blue.png`,
   instagram: "https://www.instagram.com/destileriaindependencia/",

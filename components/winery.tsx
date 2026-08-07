@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { useTranslation } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
 import { images } from "@/lib/images"
@@ -29,17 +31,21 @@ export function Winery() {
         <article className="border border-border bg-background">
           <div className="grid lg:grid-cols-2">
             <div className="relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[32rem]">
-              <img
+              <Image
                 src={images.brands.plazaGrillos}
                 alt={t.winery.imageAlt}
-                className="absolute inset-0 h-full w-full object-cover object-center"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
               />
             </div>
             <div className="relative aspect-[4/5] overflow-hidden border-t border-border lg:aspect-auto lg:min-h-[32rem] lg:border-t-0 lg:border-l">
-              <img
+              <Image
                 src={images.brands.plazaGrillosBottles}
                 alt={t.winery.secondaryImageAlt}
-                className="absolute inset-0 h-full w-full object-cover object-center"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
               />
             </div>
           </div>

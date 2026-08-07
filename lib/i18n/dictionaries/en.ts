@@ -2,9 +2,10 @@ import type { Dictionary } from "@/lib/i18n/types"
 
 export const en: Dictionary = {
   meta: {
-    title: "Destilería Independencia | Artisan spirits distillery",
+    title:
+      "Destilería Independencia | Contract production & artisan spirits",
     description:
-      "Destilería Independencia crafts premium gins, vermouths and wines in Argentina. Discover Capitán Gin and the brands that trust us: Gin Etheryo, El Refuerzo Gin, Ribecky Spirits and Plaza de Grillos.",
+      "Production partner for brands, distributors and hospitality: bulk and contract gin, barreled gin & tonic, bulk wine and enological developments. Artisan distillery in Argentina.",
   },
   nav: {
     brands: "Brands",
@@ -102,8 +103,8 @@ export const en: Dictionary = {
     paragraphs: [
       "Destilería Independencia is an Argentine distillery specialized in spirits production for third parties, bulk production and private-label brand development. We support factories, brands, distributors, bars and restaurants looking to launch, scale and/or consolidate their products with a reliable, long-term production partner.",
     ],
-    ctaBrands: "Discover our brands",
-    ctaDistillery: "About the distillery",
+    ctaQuote: "Get a project quote",
+    ctaServices: "Explore our services",
     imageAlt: "Copper still at Destilería Independencia",
   },
   stats: [
@@ -203,6 +204,7 @@ export const en: Dictionary = {
     title: "Production, development and supply for your brand",
     subtitle:
       "We support factories, brands, distributors, bars and restaurants with a reliable production partner.",
+    consultCta: "Ask about this service",
     items: [
       {
         id: "gin-granel-fason",
@@ -215,6 +217,8 @@ export const en: Dictionary = {
           "Recipe development + RNPA included at no charge",
           "Distillation run, botanicals, sterilization and bottling",
         ],
+        whatsappMessage:
+          "Hi Destilería Independencia, I'd like to ask about Gin — Bulk & Contract production.",
       },
       {
         id: "gin-tonic-embarrilado",
@@ -227,6 +231,8 @@ export const en: Dictionary = {
           "Flavor and profile adjustments on request",
           "Delivered in stainless steel barrels",
         ],
+        whatsappMessage:
+          "Hi Destilería Independencia, I'd like to ask about Barrelled Gin & Tonic.",
       },
       {
         id: "vino-a-granel",
@@ -239,6 +245,8 @@ export const en: Dictionary = {
           "Private-label bottling",
           "INV certificate and free circulation documents",
         ],
+        whatsappMessage:
+          "Hi Destilería Independencia, I'd like to ask about Bulk Wine.",
       },
       {
         id: "otros-desarrollos",
@@ -251,6 +259,8 @@ export const en: Dictionary = {
           "Artisan vermouth, Vermouth Tonic and Tinto de Verano",
           "Wine bases for ready-to-drink beverages (RTD)",
         ],
+        whatsappMessage:
+          "Hi Destilería Independencia, I'd like to ask about Other Developments / Plaza de Grillos.",
       },
     ],
   },
@@ -327,6 +337,39 @@ export const en: Dictionary = {
       },
     ],
   },
+  faq: {
+    label: "FAQ",
+    title: "Clear answers for your project",
+    subtitle:
+      "Essentials on contract production, location and how to get a quote from Destilería Independencia.",
+    items: [
+      {
+        question: "What services does Destilería Independencia offer?",
+        answer:
+          "We offer bulk and contract gin production, barreled gin & tonic, bulk wine and other enological developments with Bodega Plaza de Grillos. We support factories, brands, distributors, bars and restaurants as a production partner.",
+      },
+      {
+        question: "Where is Destilería Independencia located?",
+        answer:
+          "The micro-distillery is in Capitán Sarmiento, Buenos Aires Province, about 150 km from Buenos Aires City (roughly 1 h 40 by car). You get there via National Route 8, leaving the city on the Panamericana (Pilar branch) and continuing northwest on RN 8.",
+      },
+      {
+        question: "How do I get a quote for production or contract manufacturing?",
+        answer:
+          "Fill out the contact form on the site or write via WhatsApp at +54 9 11 2285-2023 / info@destileriaindependencia.com with the service type, estimated volume and approximate timelines. We'll follow up to build a quote.",
+      },
+      {
+        question: "Do you work with bars, shops and distributors?",
+        answer:
+          "Yes. Destilería Independencia works with shops, bars, distributors and hospitality partners. Use the contact form selecting distribution as the reason, or email info@destileriaindependencia.com.",
+      },
+      {
+        question: "Do products have certifications?",
+        answer:
+          "We work with enabling processes and documentation by product type, including RNPA when applicable for contract gin developments, and INV certification / free circulation for bulk wine.",
+      },
+    ],
+  },
   contact: {
     label: "Contact",
     title: "Want to learn more or carry our brands?",
@@ -347,6 +390,10 @@ export const en: Dictionary = {
       phone: "Phone",
       company: "Company",
       companyOptional: "Company (optional)",
+      volume: "Estimated volume",
+      volumeOptional: "Estimated volume (optional)",
+      message: "Message",
+      messageOptional: "Message (optional)",
       reason: "Reason for contact",
       reasonPlaceholder: "Select a reason",
       reasons: {
@@ -361,7 +408,7 @@ export const en: Dictionary = {
       success: "Thank you! We received your message and will reply soon.",
       error: "We couldn't send the form. Please try again.",
       configError:
-        "The form is not configured. Contact us at hola@destileriaindependencia.com",
+        "The form is not configured. Contact us at info@destileriaindependencia.com",
       close: "Close",
     },
   },
@@ -370,6 +417,12 @@ export const en: Dictionary = {
       "Artisan spirits with Argentine identity. Gins, vermouths and wines crafted with skill and creative freedom.",
     brands: "Brands",
     shops: "Shops",
+    contact: "Contact",
+    legalName: "Destilería Independencia S.R.L.",
+    officeLabel: "Commercial office",
+    distilleryLabel: "Plant / distillery",
+    emailLabel: "Email",
+    whatsappLabel: "WhatsApp",
     copyright: "Destilería Independencia. All rights reserved.",
     legal: "Drink responsibly. Sale to minors under 18 is prohibited.",
     brandLinks: [

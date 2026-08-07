@@ -2,6 +2,8 @@
 
 import { useTranslation } from "@/components/language-provider"
 import { ProcessSteps } from "@/components/process"
+import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/contact"
 
 export function Services() {
   const { t } = useTranslation()
@@ -49,6 +51,24 @@ export function Services() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  nativeButton={false}
+                  render={
+                    <a
+                      href={getWhatsAppUrl(service.whatsappMessage)}
+                      target="_blank"
+                      rel="noreferrer"
+                    />
+                  }
+                  className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
+                >
+                  {t.services.consultCta}
+                </Button>
+              </div>
 
               {service.id === "gin-granel-fason" && (
                 <div className="mt-14 border border-border bg-background p-8 transition-colors group-hover:border-accent/60 lg:mt-16 lg:p-12">
