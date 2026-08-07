@@ -9,6 +9,6 @@
     "type": "none",
     "note": "No public API authentication. Contact form submissions are handled server-side via Supabase when configured."
   },
-  "contact_email": "hola@destileriaindependencia.com",
+  "contact_email": "info@destileriaindependencia.com",
   "legal_info_url": "https://destileriaindependencia.com/"
 }

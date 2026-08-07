@@ -199,6 +199,7 @@ export const es: Dictionary = {
     viewInstagram: "Ver en Instagram",
     imageAlt: "Viñedo de Plaza de Grillos en el Valle de Uco",
     secondaryImageAlt: "Botellas Gran Reserva Malbec de Plaza de Grillos",
+    videoLabel: "Video de Bodega Plaza de Grillos en el Valle de Uco",
   },
   services: {
     label: "Nuestros servicios",

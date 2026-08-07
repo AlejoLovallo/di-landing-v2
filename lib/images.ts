@@ -26,6 +26,7 @@ export const images = {
     ribecky: "/brands/ribecky/ribecky.jpg",
     plazaGrillos: "/brands/pdg/bodega.png",
     plazaGrillosBottles: "/brands/pdg/CAP_03.png",
+    plazaGrillosVideo: "/brands/pdg/pdg-vid.mp4",
   },
   store: {
     general: "/store/general/di_placa.png",

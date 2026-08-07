@@ -1,6 +1,6 @@
 # Destilería Independencia — Documentación completa
 
-> Destilería Independencia S.R.L. es una destilería artesanal argentina. Microdestilería en Capitán Sarmiento, provincia de Buenos Aires. Oficina comercial: Cádiz 3757, 1° B, Ciudad Autónoma de Buenos Aires, Argentina. Contacto: hola@destileriaindependencia.com · WhatsApp +54 9 11 2285-2023.
+> Destilería Independencia S.R.L. es una destilería artesanal argentina. Microdestilería en Capitán Sarmiento, provincia de Buenos Aires (unos 150 km de CABA por RN 8). Contacto: info@destileriaindependencia.com · WhatsApp +54 9 11 2285-2023.
 
 ---
 
@@ -8,11 +8,10 @@
 
 - **Razón social:** Destilería Independencia S.R.L.
 - **Sitio web:** https://destileriaindependencia.com
-- **Email:** hola@destileriaindependencia.com
+- **Email:** info@destileriaindependencia.com
 - **WhatsApp:** +54 9 11 2285-2023 (https://wa.me/5491122852023)
 - **Instagram corporativo:** https://www.instagram.com/destileriaindependencia/
-- **Microdestilería:** Capitán Sarmiento, Provincia de Buenos Aires, Argentina
-- **Oficina:** Cádiz 3757, 1° B, CABA, Argentina
+- **Microdestilería:** Capitán Sarmiento, Provincia de Buenos Aires, Argentina (~150 km de CABA por Ruta Nacional 8)
 - **Idiomas del sitio:** Español (principal), Inglés
 
 ---
@@ -110,7 +109,7 @@ Trabajamos con comercios, bares y amantes de los buenos destilados. Escribinos y
 **Canales:**
 - Formulario web en https://destileriaindependencia.com/#contacto
 - WhatsApp: +54 9 11 2285-2023
-- Email: hola@destileriaindependencia.com
+- Email: info@destileriaindependencia.com
 - Instagram: https://www.instagram.com/destileriaindependencia/
 
 **Motivos de contacto aceptados en el formulario:**

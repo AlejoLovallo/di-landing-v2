@@ -1,10 +1,65 @@
 "use client"
 
 import Image from "next/image"
+import { useEffect, useRef, useState } from "react"
 
 import { useTranslation } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
 import { images } from "@/lib/images"
+
+function WineryVideo({
+  src,
+  poster,
+  label,
+}: {
+  src: string
+  poster: string
+  label: string
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setShouldLoad(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: "200px 0px" }
+    )
+
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!shouldLoad) return
+    const video = videoRef.current
+    if (!video) return
+    void video.play().catch(() => {
+      /* Autoplay can be blocked; poster remains visible */
+    })
+  }, [shouldLoad])
+
+  return (
+    <video
+      ref={videoRef}
+      className="absolute inset-0 h-full w-full object-cover object-center"
+      muted
+      playsInline
+      loop
+      preload="none"
+      poster={poster}
+      src={shouldLoad ? src : undefined}
+      aria-label={label}
+    />
+  )
+}
 
 export function Winery() {
   const { t } = useTranslation()
@@ -30,13 +85,11 @@ export function Winery() {
 
         <article className="border border-border bg-background">
           <div className="grid lg:grid-cols-2">
-            <div className="relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[32rem]">
-              <Image
-                src={images.brands.plazaGrillos}
-                alt={t.winery.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
+            <div className="relative aspect-[4/5] overflow-hidden bg-secondary lg:aspect-auto lg:min-h-[32rem]">
+              <WineryVideo
+                src={images.brands.plazaGrillosVideo}
+                poster={images.brands.plazaGrillos}
+                label={t.winery.videoLabel}
               />
             </div>
             <div className="relative aspect-[4/5] overflow-hidden border-t border-border lg:aspect-auto lg:min-h-[32rem] lg:border-t-0 lg:border-l">

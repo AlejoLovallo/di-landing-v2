@@ -104,6 +104,7 @@ export type Dictionary = {
     viewInstagram: string
     imageAlt: string
     secondaryImageAlt: string
+    videoLabel: string
   }
   services: {
     label: string

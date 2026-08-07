@@ -198,6 +198,7 @@ export const en: Dictionary = {
     viewInstagram: "View on Instagram",
     imageAlt: "Plaza de Grillos vineyard in the Uco Valley",
     secondaryImageAlt: "Plaza de Grillos Gran Reserva Malbec bottles",
+    videoLabel: "Plaza de Grillos winery video from the Uco Valley",
   },
   services: {
     label: "Our services",
