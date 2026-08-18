@@ -37,6 +37,7 @@ export type Dictionary = {
     subtitle: string
     backHome: string
     viewImage: string
+    buy: string
     brands: {
       di: { name: string; tagline: string }
       pdg: { name: string; tagline: string }

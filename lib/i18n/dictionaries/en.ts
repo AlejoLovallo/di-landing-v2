@@ -26,6 +26,7 @@ export const en: Dictionary = {
       "A selection of gins and wines crafted by Destilería Independencia and Bodega Plaza de Grillos.",
     backHome: "Back to home",
     viewImage: "View image",
+    buy: "Buy",
     brands: {
       di: {
         name: "Destilería Independencia",

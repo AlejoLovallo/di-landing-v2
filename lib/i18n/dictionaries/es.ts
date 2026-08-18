@@ -26,6 +26,7 @@ export const es: Dictionary = {
       "Selección de gins y vinos elaborados por Destilería Independencia y Bodega Plaza de Grillos.",
     backHome: "Volver al inicio",
     viewImage: "Ver imagen",
+    buy: "Comprar",
     brands: {
       di: {
         name: "Destilería Independencia",
