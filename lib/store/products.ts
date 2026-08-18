@@ -12,9 +12,9 @@ export type StoreProductId =
 export type StoreProduct = {
   id: StoreProductId
   brand: StoreBrand
-  /** Front, back, then shared Destilería Independencia plate */
-  images: readonly [string, string, string]
-  /** Mercado Libre product URL — replace with final listings when available */
+  /** Primary + secondary images (Shopify linking later) */
+  images: readonly [string, string]
+  /** Mercado Libre listing URL */
   buyUrl: string
 }
 
@@ -35,7 +35,8 @@ export const storeProducts: StoreProduct[] = [
       images.store.capitanEtiquetaNegraBack,
       images.store.general,
     ],
-    buyUrl: MERCADO_LIBRE_PLACEHOLDER,
+    buyUrl:
+      "https://www.mercadolibre.com.ar/gin-capitan-etiqueta-negra-750-ml/up/MLAU2860963623?pdp_filters=item_id:MLA1462842225",
   },
   {
     id: "capitan-gin-london-dry",
@@ -45,37 +46,29 @@ export const storeProducts: StoreProduct[] = [
       images.store.capitanLondonDryBack,
       images.store.general,
     ],
-    buyUrl: MERCADO_LIBRE_PLACEHOLDER,
+    buyUrl:
+      "https://www.mercadolibre.com.ar/gin-capitan-london-dry-750-ml/up/MLAU2865851030?pdp_filters=item_id:MLA1967195790",
   },
   {
     id: "pdg-gran-reserva",
     brand: "pdg",
-    images: [
-      images.store.pdgGranReserva,
-      images.store.pdgGranReservaAlt,
-      images.store.general,
-    ],
-    buyUrl: MERCADO_LIBRE_PLACEHOLDER,
+    images: [images.store.pdgGranReserva, images.store.pdgGranReservaAlt],
+    buyUrl:
+      "https://www.mercadolibre.com.ar/vino-plaza-de-grillos-gran-reserva-malbec-750-ml/up/MLAU2861621707?pdp_filters=item_id:MLA1967363676",
   },
   {
     id: "pdg-icono",
     brand: "pdg",
-    images: [
-      images.store.pdgIcono,
-      images.store.pdgIconoAlt,
-      images.store.general,
-    ],
-    buyUrl: MERCADO_LIBRE_PLACEHOLDER,
+    images: [images.store.pdgIcono, images.store.pdgIconoAlt],
+    buyUrl:
+      "https://www.mercadolibre.com.ar/vino-plaza-de-grillos-icono-malbec-750-ml/up/MLAU2866653280?pdp_filters=item_id:MLA1967351862",
   },
   {
     id: "pdg-the-blend",
     brand: "pdg",
-    images: [
-      images.store.pdgTheBlend,
-      images.store.pdgTheBlendAlt,
-      images.store.general,
-    ],
-    buyUrl: MERCADO_LIBRE_PLACEHOLDER,
+    images: [images.store.pdgTheBlend, images.store.pdgTheBlendAlt],
+    buyUrl:
+      "https://www.mercadolibre.com.ar/vino-plaza-de-grillos-the-blend-750-ml/up/MLAU2864199097?pdp_filters=item_id:MLA1463100429",
   },
 ]
 
