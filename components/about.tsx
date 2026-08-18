@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { useTranslation } from "@/components/language-provider"
 import { images } from "@/lib/images"
 
@@ -10,11 +12,15 @@ export function About() {
     <section id="destileria" className="relative overflow-hidden bg-card py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <div className="relative">
-          <img
-            src={images.di.detail}
-            alt={t.distillery.imageAlt}
-            className="aspect-[4/5] h-full w-full border border-border object-cover lg:aspect-[3/4]"
-          />
+          <div className="relative aspect-[4/5] w-full border border-border lg:aspect-[3/4]">
+            <Image
+              src={images.di.detail}
+              alt={t.distillery.imageAlt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
           <div className="absolute -bottom-6 -right-6 hidden border border-accent bg-background px-8 py-6 lg:block">
             <p className="font-heading text-3xl font-bold text-accent">
               {t.distillery.badgeTitle}

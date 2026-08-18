@@ -18,6 +18,14 @@ export type StoreProduct = {
   buyUrl: string
 }
 
+/** Shared placeholder until per-product Mercado Libre links are provided by the business */
+export const MERCADO_LIBRE_PLACEHOLDER =
+  "https://www.mercadolibre.com.ar/"
+
+/**
+ * Catalog buy links. Keep `buyUrl` as `MERCADO_LIBRE_PLACEHOLDER` until each
+ * Mercado Libre listing URL is confirmed — then replace per product below.
+ */
 export const storeProducts: StoreProduct[] = [
   {
     id: "capitan-gin-etiqueta-negra",
@@ -25,6 +33,7 @@ export const storeProducts: StoreProduct[] = [
     images: [
       images.store.capitanEtiquetaNegra,
       images.store.capitanEtiquetaNegraBack,
+      images.store.general,
     ],
     buyUrl:
       "https://www.mercadolibre.com.ar/gin-capitan-etiqueta-negra-750-ml/up/MLAU2860963623?pdp_filters=item_id:MLA1462842225",
@@ -35,6 +44,7 @@ export const storeProducts: StoreProduct[] = [
     images: [
       images.store.capitanLondonDry,
       images.store.capitanLondonDryBack,
+      images.store.general,
     ],
     buyUrl:
       "https://www.mercadolibre.com.ar/gin-capitan-london-dry-750-ml/up/MLAU2865851030?pdp_filters=item_id:MLA1967195790",

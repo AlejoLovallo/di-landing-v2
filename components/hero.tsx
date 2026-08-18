@@ -1,22 +1,28 @@
 "use client"
 
-import { ContactCtaButtons } from "@/components/contact-cta-buttons"
+import Image from "next/image"
+
 import { useTranslation } from "@/components/language-provider"
+import { useContactModal } from "@/components/contact-modal-provider"
 import { Button } from "@/components/ui/button"
 import { images } from "@/lib/images"
 
 export function Hero() {
   const { t } = useTranslation()
+  const { openContactModal } = useContactModal()
 
   return (
     <section
       id="inicio"
       className="relative flex min-h-screen items-center overflow-hidden"
     >
-      <img
+      <Image
         src={images.di.still}
         alt={t.hero.imageAlt}
-        className="absolute inset-0 h-full w-full object-cover"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
       />
       <div className="absolute inset-0 bg-background/40" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-transparent" />
@@ -37,26 +43,23 @@ export function Hero() {
             ))}
           </div>
 
-          <ContactCtaButtons className="mt-10" />
-
-          <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
-              variant="outline"
-              nativeButton={false}
-              render={<a href="#marcas" />}
-              className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
+              variant="brand"
+              onClick={() => openContactModal()}
+              className="px-8"
             >
-              {t.hero.ctaBrands}
+              {t.hero.ctaQuote}
             </Button>
             <Button
               size="lg"
               variant="outline"
               nativeButton={false}
-              render={<a href="#destileria" />}
+              render={<a href="#servicios" />}
               className="rounded-none border-foreground/30 bg-transparent px-8 text-foreground hover:border-accent hover:bg-accent/10 hover:text-accent"
             >
-              {t.hero.ctaDistillery}
+              {t.hero.ctaServices}
             </Button>
           </div>
         </div>

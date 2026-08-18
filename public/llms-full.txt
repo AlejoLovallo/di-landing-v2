@@ -1,6 +1,6 @@
 # Destilería Independencia — Documentación completa
 
-> Destilería Independencia S.R.L. es una destilería artesanal argentina. Microdestilería en Capitán Sarmiento, provincia de Buenos Aires. Oficina comercial: Cádiz 3757, 1° B, Ciudad Autónoma de Buenos Aires, Argentina. Contacto: hola@destileriaindependencia.com · WhatsApp +54 11 2285-2023.
+> Destilería Independencia S.R.L. es una destilería artesanal argentina. Microdestilería en Capitán Sarmiento, provincia de Buenos Aires (unos 150 km de CABA por RN 8). Contacto: info@destileriaindependencia.com · WhatsApp +54 9 11 2285-2023.
 
 ---
 
@@ -8,11 +8,10 @@
 
 - **Razón social:** Destilería Independencia S.R.L.
 - **Sitio web:** https://destileriaindependencia.com
-- **Email:** hola@destileriaindependencia.com
-- **WhatsApp:** +54 11 2285-2023 (https://wa.me/5491122952023)
+- **Email:** info@destileriaindependencia.com
+- **WhatsApp:** +54 9 11 2285-2023 (https://wa.me/5491122852023)
 - **Instagram corporativo:** https://www.instagram.com/destileriaindependencia/
-- **Microdestilería:** Capitán Sarmiento, Provincia de Buenos Aires, Argentina
-- **Oficina:** Cádiz 3757, 1° B, CABA, Argentina
+- **Microdestilería:** Capitán Sarmiento, Provincia de Buenos Aires, Argentina (~150 km de CABA por Ruta Nacional 8)
 - **Idiomas del sitio:** Español (principal), Inglés
 
 ---
@@ -44,9 +43,13 @@ Nuestro gin premium argentino. Un London Dry equilibrado y aromático, con un en
 Un gin de inspiración botánica, fresco y floral, pensado para quienes buscan una experiencia más delicada y contemporánea en cada trago.
 - Instagram: https://www.instagram.com/ginetheryo/
 
-### El Refuerzo Gin Vermú — Gin Vermú
+### El Refuerzo Gin — Gin
 La unión perfecta entre el gin y el vermú. Notas amargas, herbales y cítricas que rinden homenaje a la tradición del aperitivo argentino.
 - Instagram: https://www.instagram.com/elrefuerzoginvermu/
+
+### Ribecky Spirits — Gin
+Marca de gin que confía en Destilería Independencia como socio productivo para elaborar sus espíritus.
+- Instagram: https://www.instagram.com/ribeckyspirits/
 
 ### Plaza de Grillos — Bodega · Valle de Uco
 Vinos elegantes y sofisticados del Valle de Uco, Mendoza. Malbecs y blends con gran potencial de guarda, hechos para conversar.
@@ -105,8 +108,8 @@ Trabajamos con comercios, bares y amantes de los buenos destilados. Escribinos y
 
 **Canales:**
 - Formulario web en https://destileriaindependencia.com/#contacto
-- WhatsApp: +54 11 2285-2023
-- Email: hola@destileriaindependencia.com
+- WhatsApp: +54 9 11 2285-2023
+- Email: info@destileriaindependencia.com
 - Instagram: https://www.instagram.com/destileriaindependencia/
 
 **Motivos de contacto aceptados en el formulario:**
@@ -161,7 +164,7 @@ nombre=María&apellido=López&email=maria@ejemplo.com&telefono=+541123456789&mot
 ### WhatsApp (enlace externo)
 
 ```
-GET https://wa.me/5491122952023?text={mensaje_codificado}
+GET https://wa.me/5491122852023?text={mensaje_codificado}
 ```
 Sin autenticación. Mensaje predeterminado en español disponible en el sitio.
 
@@ -192,7 +195,7 @@ No hay API unificada de pedidos desde destileriaindependencia.com.
 ## Preguntas frecuentes
 
 **¿Qué productos elaboran?**  
-Gins artesanales (Capitán Gin, Gin Etheryo), El Refuerzo Gin Vermú y vinos Plaza de Grillos del Valle de Uco.
+Gins artesanales (Capitán Gin, Gin Etheryo, Ribecky Spirits), El Refuerzo Gin y vinos Plaza de Grillos del Valle de Uco.
 
 **¿Dónde están ubicados?**  
 Microdestilería en Capitán Sarmiento, PBA. Oficina en Cádiz 3757, CABA.

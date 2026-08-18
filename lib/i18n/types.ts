@@ -11,7 +11,7 @@ export type StoreProductCopy = {
   name: string
   category: string
   description: string
-  imageAlts: [string, string]
+  imageAlts: [string, string, string]
 }
 
 export type Dictionary = {
@@ -22,6 +22,7 @@ export type Dictionary = {
   nav: {
     brands: string
     services: string
+    winery: string
     distillery: string
     aboutUs: string
     process: string
@@ -54,35 +55,68 @@ export type Dictionary = {
     tagline: string
     title: string
     paragraphs: string[]
-    ctaBrands: string
-    ctaDistillery: string
+    ctaQuote: string
+    ctaServices: string
     imageAlt: string
   }
   stats: Array<{ value: string; label: string }>
   brands: {
     label: string
+    buyOnline: string
+    viewInstagram: string
+    own: {
+      label: string
+      title: string
+      description: string
+      awardsTitle: string
+      awards: Array<{
+        medal: string
+        detail: string
+        imageAlt: string
+      }>
+      item: {
+        name: string
+        category: string
+        description: string
+        imageAlt: string
+        galleryAlts?: string[]
+      }
+    }
+    trusted: {
+      label: string
+      title: string
+      description: string
+      items: Array<{
+        name: string
+        category: string
+        description: string
+        imageAlt: string
+      }>
+    }
+  }
+  winery: {
+    label: string
     title: string
     subtitle: string
     description: string
+    category: string
     buyOnline: string
     viewInstagram: string
-    items: Array<{
-      name: string
-      category: string
-      description: string
-      imageAlt: string
-      secondaryImageAlt?: string
-      galleryAlts?: string[]
-    }>
+    imageAlt: string
+    secondaryImageAlt: string
+    videoLabel: string
   }
   services: {
     label: string
     title: string
     subtitle: string
+    consultCta: string
     items: Array<{
+      id: string
       name: string
       description: string
       features: string[]
+      whatsappMessage: string
     }>
   }
   distillery: {
@@ -106,6 +140,12 @@ export type Dictionary = {
     title: string
     steps: Array<{ number: string; title: string; description: string }>
   }
+  faq: {
+    label: string
+    title: string
+    subtitle: string
+    items: Array<{ question: string; answer: string }>
+  }
   contact: {
     label: string
     title: string
@@ -124,6 +164,10 @@ export type Dictionary = {
       phone: string
       company: string
       companyOptional: string
+      volume: string
+      volumeOptional: string
+      message: string
+      messageOptional: string
       reason: string
       reasonPlaceholder: string
       reasons: Record<ContactReason, string>
@@ -139,6 +183,12 @@ export type Dictionary = {
     description: string
     brands: string
     shops: string
+    contact: string
+    legalName: string
+    officeLabel: string
+    distilleryLabel: string
+    emailLabel: string
+    whatsappLabel: string
     copyright: string
     legal: string
     brandLinks: string[]

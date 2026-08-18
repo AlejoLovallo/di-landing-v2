@@ -44,7 +44,7 @@ export function SectionTabs({
           )}
         >
           {tab.number && (
-            <span className="mr-2 font-mono text-primary/70">{tab.number}</span>
+            <span className="mr-2 tabular-nums text-primary/70">{tab.number}</span>
           )}
           {tab.label}
         </button>

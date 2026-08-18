@@ -11,7 +11,7 @@ export function Marquee() {
         {t.stats.map((stat) => (
           <div
             key={stat.label}
-            className="flex flex-col items-center gap-2 px-4 py-10 text-center [&:nth-child(3)]:border-t [&:nth-child(4)]:border-t lg:[&:nth-child(n)]:border-t-0"
+            className="flex flex-col items-center justify-center gap-2 px-4 py-10 text-center [&:nth-child(3)]:border-t [&:nth-child(4)]:border-t lg:[&:nth-child(n)]:border-t-0"
           >
             <span className="font-heading text-4xl font-bold text-accent">
               {stat.value}

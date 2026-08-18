@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 
 import { useTranslation } from "@/components/language-provider"
@@ -21,12 +22,14 @@ function ProductCard({ product }: { product: StoreProduct }) {
     <article className="group flex flex-col overflow-hidden border border-border bg-card transition-colors hover:border-accent/60">
       <div className="relative aspect-[3/4] overflow-hidden bg-white">
         {product.images.map((src, index) => (
-          <img
+          <Image
             key={src}
             src={src}
             alt={copy.imageAlts[index]}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
             className={cn(
-              "absolute inset-0 h-full w-full object-contain p-4 transition-all duration-500",
+              "object-contain p-4 transition-all duration-500",
               activeImage === index
                 ? "scale-100 opacity-100"
                 : "scale-105 opacity-0"
@@ -51,9 +54,11 @@ function ProductCard({ product }: { product: StoreProduct }) {
                   : "border-border opacity-70 hover:border-accent/60 hover:opacity-100"
               )}
             >
-              <img
+              <Image
                 src={src}
                 alt=""
+                width={88}
+                height={112}
                 className="h-full w-full object-contain p-0.5"
               />
             </button>

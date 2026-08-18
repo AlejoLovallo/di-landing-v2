@@ -1,10 +1,10 @@
 export const images = {
   di: {
-    still: "/di/distillery-still.jpg",
-    detail: "/di/di_prom.PNG",
-    gauge: "/di/distillery-gauge.jpg",
+    still: "/di/distillery-still.webp",
+    detail: "/di/di_prom.webp",
+    gauge: "/di/distillery-gauge.webp",
     team: "/team.jpeg",
-    us: "/us.jpg",
+    us: "/us.webp",
   },
   logos: {
     diWhite: "/logos/di-white-transparent.png",
@@ -18,12 +18,18 @@ export const images = {
     capitanEtiquetaNegra: "/brands/capitan/DSC_0106.jpg",
     capitanLondonDry: "/brands/capitan/DSC_0129.jpg",
     capitanCork: "/brands/capitan/capitan-cork.jpg",
+    capitanAwardGranOro: "/brands/capitan/awards/ASA_premio_oro.png",
+    capitanAwardOroCopa: "/brands/capitan/awards/banner_premio_oro.png",
+    capitanAwardPlata: "/brands/capitan/awards/ASA_premio_plata.png",
     etheryo: "/brands/etheryo/etheryo.png",
     refuerzo: "/brands/refuerzo/refuerzo.png",
+    ribecky: "/brands/ribecky/ribecky.jpg",
     plazaGrillos: "/brands/pdg/bodega.png",
     plazaGrillosBottles: "/brands/pdg/CAP_03.png",
+    plazaGrillosVideo: "/brands/pdg/pdg-vid.mp4",
   },
   store: {
+    general: "/store/general/di_placa.png",
     capitanEtiquetaNegra: "/store/di/CapitanGin_ML_EtiquetaNegra.png",
     capitanEtiquetaNegraBack: "/store/di/CapitanGin_ML_EtiquetaNegra_back.png",
     capitanLondonDry: "/store/di/CapitanGin_ML_LondonDry.png",
