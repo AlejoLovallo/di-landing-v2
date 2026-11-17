@@ -28,6 +28,21 @@ const brandLinks = [
   },
   {
     labelKey: 4,
+    href: "https://www.instagram.com/destileriaindependencia/",
+    name: "Poncho Gin",
+  },
+  {
+    labelKey: 5,
+    href: "https://www.instagram.com/destileriaindependencia/",
+    name: "Oselei",
+  },
+  {
+    labelKey: 6,
+    href: "https://www.instagram.com/destileriaindependencia/",
+    name: "Duelas y Espíritu",
+  },
+  {
+    labelKey: 7,
     href: "https://www.instagram.com/plazadegrillos/",
     name: "Plaza de Grillos",
   },

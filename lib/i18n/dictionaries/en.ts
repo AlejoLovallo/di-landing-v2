@@ -5,10 +5,11 @@ export const en: Dictionary = {
     title:
       "Destilería Independencia | Contract production & artisan spirits",
     description:
-      "Production partner for brands, distributors and hospitality: bulk and contract gin, barreled gin & tonic, bulk wine and enological developments. Artisan distillery in Argentina.",
+      "Production partner for brands, distributors and hospitality: bulk and contract gin, barreled gin & tonic, vermouth, bulk wine and enological developments. Artisan distillery in Argentina.",
   },
   nav: {
     brands: "Brands",
+    awards: "Awards",
     services: "Services",
     winery: "Winery",
     distillery: "Distillery",
@@ -109,7 +110,7 @@ export const en: Dictionary = {
   },
   stats: [
     { value: "1", label: "House brand" },
-    { value: "3", label: "Brands that trust us" },
+    { value: "6", label: "Brands that trust us" },
     { value: "100%", label: "Artisan production" },
     { value: "Arg", label: "Origin & identity" },
   ],
@@ -122,27 +123,6 @@ export const en: Dictionary = {
       title: "Capitán Gin",
       description:
         "Our house brand: premium Argentine gin crafted at Destilería Independencia.",
-      awardsTitle: "3 national medals",
-      awards: [
-        {
-          medal: "Grand Gold",
-          detail: "London Dry · Argentina Spirits Awards 2024",
-          imageAlt:
-            "Grand Gold medal Capitán Gin London Dry Argentina Spirits Awards 2024",
-        },
-        {
-          medal: "Gold",
-          detail: "London Dry · Copa Argentina de Destilados 2025",
-          imageAlt:
-            "Gold medal Capitán Gin London Dry Copa Argentina de Destilados 2025",
-        },
-        {
-          medal: "Silver",
-          detail: "Black Label · Argentina Spirits Awards 2024",
-          imageAlt:
-            "Silver medal Capitán Gin Black Label Argentina Spirits Awards 2024",
-        },
-      ],
       item: {
         name: "Capitán Gin",
         category: "House brand · London Dry",
@@ -184,8 +164,58 @@ export const en: Dictionary = {
             "A gin brand that trusts Destilería Independencia as its production partner to craft its spirits.",
           imageAlt: "Ribecky Spirits",
         },
+        {
+          name: "Poncho Gin",
+          category: "Gin",
+          description:
+            "A gin brand crafted with Destilería Independencia. Placeholder copy — update with the brand story and profile.",
+          imageAlt: "Poncho Gin bottle",
+        },
+        {
+          name: "Oselei",
+          category: "Spirit",
+          description:
+            "A brand crafted with Destilería Independencia. Placeholder copy — update with the brand story and profile.",
+          imageAlt: "Oselei bottle",
+        },
+        {
+          name: "Duelas y Espíritu",
+          category: "Spirit",
+          description:
+            "A brand crafted with Destilería Independencia. Placeholder copy — update with the brand story and profile.",
+          imageAlt: "Duelas y Espíritu bottle",
+        },
       ],
     },
+  },
+  awards: {
+    label: "Awards",
+    title: "Recognition that backs the craft",
+    description:
+      "Medals and distinctions earned by our house brand and production partners in national competitions.",
+    items: [
+      {
+        medal: "Grand Gold",
+        detail: "London Dry · Argentina Spirits Awards 2024",
+        brand: "Capitán Gin",
+        imageAlt:
+          "Grand Gold medal Capitán Gin London Dry Argentina Spirits Awards 2024",
+      },
+      {
+        medal: "Gold",
+        detail: "London Dry · Copa Argentina de Destilados 2025",
+        brand: "Capitán Gin",
+        imageAlt:
+          "Gold medal Capitán Gin London Dry Copa Argentina de Destilados 2025",
+      },
+      {
+        medal: "Silver",
+        detail: "Black Label · Argentina Spirits Awards 2024",
+        brand: "Capitán Gin",
+        imageAlt:
+          "Silver medal Capitán Gin Black Label Argentina Spirits Awards 2024",
+      },
+    ],
   },
   winery: {
     label: "Winery",
@@ -236,6 +266,20 @@ export const en: Dictionary = {
           "Hi Destilería Independencia, I'd like to ask about Barrelled Gin & Tonic.",
       },
       {
+        id: "vermouth",
+        name: "Vermouth",
+        description:
+          "Development and production of artisan vermouth for brands, bars and hospitality projects. We craft classic or custom profiles with selected wine bases and house botanicals.",
+        features: [
+          "Classic recipes or custom developments",
+          "Selected wine bases and house botanicals",
+          "Bulk production or finished product under your brand",
+          "Support for vermouth bar and RTD formulations",
+        ],
+        whatsappMessage:
+          "Hi Destilería Independencia, I'd like to ask about Vermouth.",
+      },
+      {
         id: "vino-a-granel",
         name: "Bulk Wine",
         description:
@@ -281,6 +325,15 @@ export const en: Dictionary = {
     badgeTitle: "Craft",
     badgeSubtitle: "in every spirit",
     imageAlt: "Botanicals and copper still at Destilería Independencia",
+    town: {
+      label: "Our town",
+      title: "Capitán Sarmiento",
+      paragraphs: [
+        "Our micro-distillery is in Capitán Sarmiento, Buenos Aires Province, about 150 km from Buenos Aires City. A town in the northwest of the province where a slower pace and artisan craft meet.",
+        "You get there via National Route 8, leaving the city on the Panamericana (Pilar branch) and continuing northwest. That is where we craft every batch with the same attention to detail that defines the house.",
+      ],
+      imageAlt: "Capitán Sarmiento, Buenos Aires Province",
+    },
   },
   aboutUs: {
     label: "About us",
@@ -347,7 +400,7 @@ export const en: Dictionary = {
       {
         question: "What services does Destilería Independencia offer?",
         answer:
-          "We offer bulk and contract gin production, barreled gin & tonic, bulk wine and other enological developments with Bodega Plaza de Grillos. We support factories, brands, distributors, bars and restaurants as a production partner.",
+          "We offer bulk and contract gin production, barreled gin & tonic, vermouth, bulk wine and other enological developments with Bodega Plaza de Grillos. We support factories, brands, distributors, bars and restaurants as a production partner.",
       },
       {
         question: "Where is Destilería Independencia located?",
@@ -431,6 +484,9 @@ export const en: Dictionary = {
       "Gin Etheryo",
       "El Refuerzo Gin",
       "Ribecky Spirits",
+      "Poncho Gin",
+      "Oselei",
+      "Duelas y Espíritu",
       "Plaza de Grillos",
     ],
     shopLinks: ["Capitán Gin Shop", "Plaza de Grillos"],

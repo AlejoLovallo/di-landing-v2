@@ -1,4 +1,5 @@
 import { About } from "@/components/about"
+import { Awards } from "@/components/awards"
 import { Brands } from "@/components/brands"
 import { CtaContact } from "@/components/cta-contact"
 import { Faq } from "@/components/faq"
@@ -20,6 +21,7 @@ export default function Page() {
         <Hero />
         <Marquee />
         <Brands />
+        <Awards />
         <Services />
         <About />
         <Winery />

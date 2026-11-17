@@ -5,7 +5,7 @@ export const homepageFaqEs = [
   {
     question: "¿Qué servicios ofrece Destilería Independencia?",
     answer:
-      "Ofrecemos producción de gin a granel y a fasón, gin tonic embarrilado, vino a granel y otros desarrollos enológicos junto a Bodega Plaza de Grillos. Acompañamos fábricas, marcas, distribuidores, bares y restaurantes como socio productivo.",
+      "Ofrecemos producción de gin a granel y a fasón, gin tonic embarrilado, vermouth, vino a granel y otros desarrollos enológicos junto a Bodega Plaza de Grillos. Acompañamos fábricas, marcas, distribuidores, bares y restaurantes como socio productivo.",
   },
   {
     question: "¿Dónde está ubicada Destilería Independencia?",

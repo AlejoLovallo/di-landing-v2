@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 
 const SECTION_IDS = [
   "marcas",
+  "premios",
   "servicios",
   "bodega",
   "destileria",

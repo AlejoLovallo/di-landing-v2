@@ -57,6 +57,18 @@ const trustedMeta = [
     image: images.brands.ribecky,
     instagram: "https://www.instagram.com/ribeckyspirits/",
   },
+  {
+    image: images.brands.poncho,
+    instagram: "https://www.instagram.com/destileriaindependencia/",
+  },
+  {
+    image: images.brands.oselei,
+    instagram: "https://www.instagram.com/destileriaindependencia/",
+  },
+  {
+    image: images.brands.duelas,
+    instagram: "https://www.instagram.com/destileriaindependencia/",
+  },
 ] as const
 
 const capitanGallery = [
@@ -64,12 +76,6 @@ const capitanGallery = [
   images.brands.capitanEtiquetaNegra,
   images.brands.capitanLondonDry,
   images.brands.capitanCork,
-] as const
-
-const capitanAwardImages = [
-  images.brands.capitanAwardGranOro,
-  images.brands.capitanAwardOroCopa,
-  images.brands.capitanAwardPlata,
 ] as const
 
 export function Brands() {
@@ -160,36 +166,6 @@ export function Brands() {
                     />
                   </div>
                 ))}
-              </div>
-
-              <div className="border-t border-border bg-background p-6 lg:p-10">
-                <p className="mb-6 text-xs uppercase tracking-[0.3em] text-accent">
-                  {t.brands.own.awardsTitle}
-                </p>
-                <div className="grid gap-6 sm:grid-cols-3">
-                  {t.brands.own.awards.map((award, index) => (
-                    <div key={award.medal + award.detail} className="flex flex-col gap-4">
-                      <div className="overflow-hidden border border-border bg-secondary">
-                        <Image
-                          src={capitanAwardImages[index]}
-                          alt={award.imageAlt}
-                          width={640}
-                          height={360}
-                          sizes="(max-width: 640px) 100vw, 33vw"
-                          className="aspect-[16/9] w-full object-cover object-center"
-                        />
-                      </div>
-                      <div>
-                        <p className="font-heading text-lg font-bold text-accent">
-                          {award.medal}
-                        </p>
-                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                          {award.detail}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </article>
           </div>

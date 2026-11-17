@@ -6,10 +6,11 @@ export const es: Dictionary = {
     title:
       "Destilería Independencia | Producción a fasón y espíritus artesanales",
     description:
-      "Socio productivo para marcas, distribuidores y gastronomía: gin a fasón y granel, gin tonic embarrilado, vino a granel y desarrollos enológicos. Destilería artesanal en Argentina.",
+      "Socio productivo para marcas, distribuidores y gastronomía: gin a fasón y granel, gin tonic embarrilado, vermouth, vino a granel y desarrollos enológicos. Destilería artesanal en Argentina.",
   },
   nav: {
     brands: "Marcas",
+    awards: "Premios",
     services: "Servicios",
     winery: "Bodega",
     distillery: "Destilería",
@@ -110,7 +111,7 @@ export const es: Dictionary = {
   },
   stats: [
     { value: "1", label: "Marca propia" },
-    { value: "3", label: "Marcas que confían en nosotros" },
+    { value: "6", label: "Marcas que confían en nosotros" },
     { value: "100%", label: "Producción artesanal" },
     { value: "Arg", label: "Origen e identidad" },
   ],
@@ -123,27 +124,6 @@ export const es: Dictionary = {
       title: "Capitán Gin",
       description:
         "Nuestra marca de la casa: gin premium argentino elaborado en Destilería Independencia.",
-      awardsTitle: "3 medallas nacionales",
-      awards: [
-        {
-          medal: "Gran Oro",
-          detail: "London Dry · Argentina Spirits Awards 2024",
-          imageAlt:
-            "Medalla Gran Oro Capitán Gin London Dry Argentina Spirits Awards 2024",
-        },
-        {
-          medal: "Oro",
-          detail: "London Dry · Copa Argentina de Destilados 2025",
-          imageAlt:
-            "Medalla de Oro Capitán Gin London Dry Copa Argentina de Destilados 2025",
-        },
-        {
-          medal: "Plata",
-          detail: "Etiqueta Negra · Argentina Spirits Awards 2024",
-          imageAlt:
-            "Medalla de Plata Capitán Gin Etiqueta Negra Argentina Spirits Awards 2024",
-        },
-      ],
       item: {
         name: "Capitán Gin",
         category: "Marca propia · London Dry",
@@ -185,8 +165,58 @@ export const es: Dictionary = {
             "Marca de gin que confía en Destilería Independencia como socio productivo para elaborar sus espíritus.",
           imageAlt: "Ribecky Spirits",
         },
+        {
+          name: "Poncho Gin",
+          category: "Gin",
+          description:
+            "Marca de gin elaborada junto a Destilería Independencia. Copy genérico — actualizar con la historia y el perfil de la marca.",
+          imageAlt: "Botella de Poncho Gin",
+        },
+        {
+          name: "Oselei",
+          category: "Espíritu",
+          description:
+            "Marca elaborada junto a Destilería Independencia. Copy genérico — actualizar con la historia y el perfil de la marca.",
+          imageAlt: "Botella de Oselei",
+        },
+        {
+          name: "Duelas y Espíritu",
+          category: "Espíritu",
+          description:
+            "Marca elaborada junto a Destilería Independencia. Copy genérico — actualizar con la historia y el perfil de la marca.",
+          imageAlt: "Botella de Duelas y Espíritu",
+        },
       ],
     },
+  },
+  awards: {
+    label: "Premios",
+    title: "Reconocimientos que respaldan el oficio",
+    description:
+      "Medallas y distinciones obtenidas por nuestras marcas y las de nuestros socios productivos en competencias nacionales.",
+    items: [
+      {
+        medal: "Gran Oro",
+        detail: "London Dry · Argentina Spirits Awards 2024",
+        brand: "Capitán Gin",
+        imageAlt:
+          "Medalla Gran Oro Capitán Gin London Dry Argentina Spirits Awards 2024",
+      },
+      {
+        medal: "Oro",
+        detail: "London Dry · Copa Argentina de Destilados 2025",
+        brand: "Capitán Gin",
+        imageAlt:
+          "Medalla de Oro Capitán Gin London Dry Copa Argentina de Destilados 2025",
+      },
+      {
+        medal: "Plata",
+        detail: "Etiqueta Negra · Argentina Spirits Awards 2024",
+        brand: "Capitán Gin",
+        imageAlt:
+          "Medalla de Plata Capitán Gin Etiqueta Negra Argentina Spirits Awards 2024",
+      },
+    ],
   },
   winery: {
     label: "Bodega",
@@ -237,6 +267,20 @@ export const es: Dictionary = {
           "Hola Destilería Independencia, me interesa consultar por Gin Tonic Embarrilado.",
       },
       {
+        id: "vermouth",
+        name: "Vermouth",
+        description:
+          "Desarrollo y producción de vermouth artesanal para marcas, bares y proyectos gastronómicos. Formulamos perfiles clásicos o a medida, con bases vínicas seleccionadas y botánicos propios.",
+        features: [
+          "Recetas clásicas o desarrollos a medida",
+          "Bases vínicas seleccionadas y botánicos propios",
+          "Producción a granel o producto terminado con tu marca",
+          "Acompañamiento en formulaciones para vermutería y RTD",
+        ],
+        whatsappMessage:
+          "Hola Destilería Independencia, me interesa consultar por Vermouth.",
+      },
+      {
         id: "vino-a-granel",
         name: "Vino a Granel",
         description:
@@ -282,6 +326,15 @@ export const es: Dictionary = {
     badgeTitle: "Oficio",
     badgeSubtitle: "en cada destilado",
     imageAlt: "Botánicos y alambique de cobre en la Destilería Independencia",
+    town: {
+      label: "Nuestro pueblo",
+      title: "Capitán Sarmiento",
+      paragraphs: [
+        "Nuestra microdestilería está en Capitán Sarmiento, provincia de Buenos Aires, a unos 150 km de la Ciudad de Buenos Aires. Un pueblo del noroeste bonaerense donde el ritmo pausado y el oficio artesanal se encuentran.",
+        "Se llega por la Ruta Nacional 8, saliendo de Capital por Panamericana (ramal Pilar) y continuando hacia el noroeste. Ahí elaboramos cada lote con la misma atención al detalle que define a la casa.",
+      ],
+      imageAlt: "Capitán Sarmiento, provincia de Buenos Aires",
+    },
   },
   aboutUs: {
     label: "Nosotros",
@@ -410,6 +463,9 @@ export const es: Dictionary = {
       "Gin Etheryo",
       "El Refuerzo Gin",
       "Ribecky Spirits",
+      "Poncho Gin",
+      "Oselei",
+      "Duelas y Espíritu",
       "Plaza de Grillos",
     ],
     shopLinks: ["Capitán Gin Tienda", "Plaza de Grillos"],

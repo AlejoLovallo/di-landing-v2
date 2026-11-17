@@ -21,6 +21,7 @@ export type Dictionary = {
   }
   nav: {
     brands: string
+    awards: string
     services: string
     winery: string
     distillery: string
@@ -68,12 +69,6 @@ export type Dictionary = {
       label: string
       title: string
       description: string
-      awardsTitle: string
-      awards: Array<{
-        medal: string
-        detail: string
-        imageAlt: string
-      }>
       item: {
         name: string
         category: string
@@ -93,6 +88,17 @@ export type Dictionary = {
         imageAlt: string
       }>
     }
+  }
+  awards: {
+    label: string
+    title: string
+    description: string
+    items: Array<{
+      medal: string
+      detail: string
+      brand: string
+      imageAlt: string
+    }>
   }
   winery: {
     label: string
@@ -127,6 +133,12 @@ export type Dictionary = {
     badgeTitle: string
     badgeSubtitle: string
     imageAlt: string
+    town: {
+      label: string
+      title: string
+      paragraphs: string[]
+      imageAlt: string
+    }
   }
   aboutUs: {
     label: string
